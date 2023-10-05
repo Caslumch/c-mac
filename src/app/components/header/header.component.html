@@ -1,28 +1,28 @@
 <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
-    <div class="row container-fluid">
+    <div class="container-fluid">
         <div class="d-none d-md-block col-md-6 d-flex">
             <a class="navbar-brand mr-auto" id="reload" href="#">
                 <img src="../../../assets/logo-site-c.png" (error)="handleImageError()" alt="Rita RH"
                     class="file-img sidebar-menu-logo" />
             </a>
         </div>
-        <div class="m-2 row">
-            <div class="col-12">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" (click)="toggleNavbar()">
-                    <span class="pi pi-bars" style="font-size: 20px;"></span>
-                </button>
-            </div>
-        </div>
-        <!-- Botão do menu para dispositivos móveis -->
 
-        <div class="col-12 col-md-6 d-flex justify-content-center justify-content-md-end text-md-end text-center">
+        <!-- Botão do menu para dispositivos móveis -->
+        <div class="m-md-0 m-2 row ">
+            <div class="col-12 col-md-2"> <button class=" navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="menu-d pi pi-bars"></span>
+                </button></div>
+        </div>
+        <div class="col-12 col-md-6 d-flex justify-content-initial justify-content-md-end text-md-end text-center">
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav options d-flex flex-column flex-md-row align-items-center">
                     <li *ngFor="let o of optionsMenu" class="opt-navbar nav-item">
-                        <a id="inicio" class="nav-link typeOpt" href="#">{{o.option}}</a>
+                        <a id="inicio" class=" nav-link typeOpt" href="#">{{o.option}}</a>
                     </li>
                 </ul>
-                <div class="btn-navbar mt-4 text-center">Inicio</div>
+                <div class="btn-navbar mt-4">Inicio</div>
             </div>
         </div>
     </div>
