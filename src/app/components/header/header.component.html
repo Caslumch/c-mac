@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
-    <div class="container-fluid">
+    <div class="row container-fluid">
         <div class="d-none d-md-block col-md-6 d-flex">
             <a class="navbar-brand mr-auto" id="reload" href="#">
                 <img src="../../../assets/logo-site-c.png" (error)="handleImageError()" alt="Rita RH"
@@ -12,14 +12,14 @@
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="pi pi-bars"></span>
         </button>
-        <div class="col-12 col-md-6 d-flex justify-content-initial justify-content-md-end text-md-end text-center">
+        <div class="col-12 col-md-6 d-flex justify-content-center justify-content-md-end text-md-end text-center">
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav options d-flex flex-column flex-md-row align-items-center">
                     <li *ngFor="let o of optionsMenu" class="opt-navbar nav-item">
                         <a id="inicio" class="nav-link typeOpt" href="#">{{o.option}}</a>
                     </li>
                 </ul>
-                <div class="btn-navbar mt-4">Inicio</div>
+                <div class="btn-navbar mt-4 text-center">Inicio</div>
             </div>
         </div>
     </div>
