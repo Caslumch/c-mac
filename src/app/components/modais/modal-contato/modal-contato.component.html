@@ -1,0 +1,33 @@
+<p-dialog  [(visible)]="displayModal" [style]="ehMobile ? { width: '90vw', height: '200vw' } : {width: '20vw', height: '50vw'} ">
+    <div class="titleModal text-center col-12">Mande um email.</div>
+    <div class="row">
+        
+        <div class="mt-4 col-12 col-md-12">
+            <div class="field">
+                <input type="text" name="nome" class="w-full" pInputText />
+            </div>
+        </div>
+        <div class="mt-4 col-12 col-md-12">
+            <div class="field">
+                <input type="text" name="email" class="w-full" pInputText />
+
+            </div>
+        </div>
+        <div class="mt-4 col-12 col-md-12 form-group">
+            <div class="field">
+                <input type="text" name="cpf" mask="000.000.000-00" class="w-full" pInputText />
+            </div>
+        </div>
+        <div class="mt-4 col-12">
+            <textarea class="w-full" placeholder="Assunto" rows="5" cols="30" pInputTextarea></textarea>
+        </div>
+
+    </div>
+    <div class="row d-flex justify-content-center">
+        <div class="col-12 col-md-12 mt-4">
+            <p-button class="w-full" label="Enviar"></p-button>
+        </div>
+
+    </div>
+
+</p-dialog>

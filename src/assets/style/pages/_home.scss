@@ -81,5 +81,11 @@
 }
 
 .iconSocial {
+    text-decoration: none;
+    cursor: pointer;
     font-size: 30px;
 }
+
+.iconSocial:hover {
+    text-decoration: none;
+  }

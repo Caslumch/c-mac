@@ -10,16 +10,29 @@
                 </div>
                 <div
                     class="m-0 m-md-3 col-12 col-md-3 d-flex d-md-block justify-content-center justify-content-md-initial">
-                    <p-button label="Minhas Redes" styleClass="p-button-outlined"></p-button>
+                    <p-button (click)="modalInvlidCpf()" icon="pi pi-external-link" label="Fale Comigo"
+                        styleClass="p-button-outlined"></p-button>
+
                 </div>
-    
+
             </div>
             <div class="row justify-content-center">
-                <div (click)="redes()" class="mt-5 mt-md-0 iconSocial col-2 col-md-1 pi pi-github"></div>
-                <div (click)="redes()" class="mt-5 mt-md-0 iconSocial col-2 col-md-1 pi pi-instagram"></div>
-                <div (click)="redes()" class="mt-5 mt-md-0 iconSocial col-2 col-md-1 pi pi-linkedin"></div>
-                <div (click)="redes()" class="mt-5 mt-md-0 iconSocial col-2 col-md-1 pi pi-github"></div>
+                <div class="col-2 col-md-1">
+                    <a class="mt-5 mt-md-0 iconSocial  pi pi-github" href="https://github.com/Caslumch" target="_blank"
+                        style="color: #d3d3d3;"></a>
+                </div>
+                <div class="col-2 col-md-1">
+                    <a class="mt-5 mt-md-0 iconSocial  pi pi-instagram"
+                        href="https://www.instagram.com/caslumch/?hl=pt-br" target="_blank" style="color: #d3d3d3;"></a>
+                </div>
+                <div class="col-2 col-md-1">
+                    <a class="mt-5 mt-md-0 iconSocial  pi pi-linkedin"
+                        href="https://www.linkedin.com/in/lucas-machado-16a42422b/" target="_blank"
+                        style="color: #d3d3d3;"></a>
+                </div>
             </div>
         </div>
     </div>
 </div>
+
+<app-modal-contato #mContato></app-modal-contato>

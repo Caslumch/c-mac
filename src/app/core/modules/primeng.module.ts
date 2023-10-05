@@ -5,7 +5,8 @@ import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
 import { PanelModule } from 'primeng/panel';
 import { DividerModule } from 'primeng/divider';
-
+import { DialogModule } from 'primeng/dialog';
+import { InputTextareaModule } from 'primeng/inputtextarea';
 
 
 @NgModule({
@@ -16,6 +17,8 @@ import { DividerModule } from 'primeng/divider';
     PanelModule,
     DividerModule,
     InputTextModule,
+    DialogModule,
+    InputTextareaModule
   ],
   exports: [
     DropdownModule,
@@ -23,6 +26,8 @@ import { DividerModule } from 'primeng/divider';
     PanelModule,
     DividerModule,
     InputTextModule,
+    DialogModule,
+    InputTextareaModule
 
   ],
   providers: [],

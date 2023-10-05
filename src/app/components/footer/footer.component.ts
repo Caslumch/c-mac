@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 
 
 @Component({
@@ -6,14 +6,24 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './footer.component.html',
 })
 export class FooterComponent implements OnInit {
+  constructor() {}
+
+  @ViewChild('mContato') mContato?: any;
 
   simbol: string = `<\\`
   ngOnInit(): void {
-    
+
   }
 
   redes = () => {
     alert('redes')
   }
+
+
+  modalInvlidCpf = () => {
+    this.mContato.openModal();
+  };
+  
+
 
 }

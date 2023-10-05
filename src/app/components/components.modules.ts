@@ -5,11 +5,14 @@ import { RouterModule } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { PrimeNGModules } from '../core/modules/primeng.module';
+import { ModalContatoComponent } from './modais/modal-contato/modal-contato.component';
 
 @NgModule({
   declarations: [
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    ModalContatoComponent
+    
 
   ],
   imports: [
@@ -22,6 +25,7 @@ import { PrimeNGModules } from '../core/modules/primeng.module';
   exports: [ 
     HeaderComponent,
     FooterComponent,
+    ModalContatoComponent,
     PrimeNGModules
 
   ],

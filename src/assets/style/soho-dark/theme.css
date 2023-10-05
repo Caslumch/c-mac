@@ -1192,12 +1192,12 @@ p-inputswitch.ng-dirty.ng-invalid > .p-inputswitch {
   font-family: Lato, Helvetica, sans-serif;
   font-size: 1rem;
   color: rgba(255, 255, 255, 0.87);
-  background: #1d1e27;
+  background: #3b3b3b;
   padding: 0.75rem 0.75rem;
   border: 1px solid #3e4053;
   transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
   appearance: none;
-  border-radius: 6px;
+  border-radius: 25px;
 }
 .p-inputtext:enabled:hover {
   border-color: #bbbcbe;
@@ -4478,17 +4478,22 @@ p-treeselect.p-treeselect-clearable .p-treeselect-clear-icon {
 }
 
 .p-dialog {
-  border-radius: 6px;
-  box-shadow: 0px 11px 15px -7px rgba(0, 0, 0, 0.2), 0px 24px 38px 3px rgba(0, 0, 0, 0.14), 0px 9px 46px 8px rgba(0, 0, 0, 0.12);
-  border: 1px solid #3e4053;
+  /* border-radius: 6px; */
+  /* box-shadow: 0px 11px 15px -7px rgba(0, 0, 0, 0.2), 0px 24px 38px 3px rgba(0, 0, 0, 0.14), 0px 9px 46px 8px rgba(0, 0, 0, 0.12); */
+  border: 1px solid #d5d5d5;
+  border-top-right-radius: 25px;
+  border-top-left-radius: 25px;
+
+  border-bottom-right-radius: 25px;
+  border-bottom-left-radius: 25px;
 }
 .p-dialog .p-dialog-header {
   border-bottom: 0 none;
-  background: #282936;
+  background: #232323;
   color: rgba(255, 255, 255, 0.87);
   padding: 1.5rem;
-  border-top-right-radius: 6px;
-  border-top-left-radius: 6px;
+  border-top-right-radius: 25px;
+  border-top-left-radius: 25px;
 }
 .p-dialog .p-dialog-header .p-dialog-title {
   font-weight: 700;
@@ -4518,17 +4523,17 @@ p-treeselect.p-treeselect-clearable .p-treeselect-clear-icon {
   margin-right: 0;
 }
 .p-dialog .p-dialog-content {
-  background: #282936;
-  color: rgba(255, 255, 255, 0.87);
+  background: #232323;
+  color: white;
   padding: 0 1.5rem 2rem 1.5rem;
 }
 .p-dialog .p-dialog-content:last-of-type {
-  border-bottom-right-radius: 6px;
-  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 25px;
+  border-bottom-left-radius: 25px;
 }
 .p-dialog .p-dialog-footer {
   border-top: 0 none;
-  background: #282936;
+  background: #232323;
   color: rgba(255, 255, 255, 0.87);
   padding: 0 1.5rem 1.5rem 1.5rem;
   text-align: right;
