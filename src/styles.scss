@@ -1,10 +1,18 @@
-@import "../src/assets/style/soho-dark/theme.css";
-@import "../node_modules/primeng/resources/primeng.min.css";
+// Importe os estilos do Bootstrap
+@import "~bootstrap/dist/css/bootstrap.css";
+
+// Importe os estilos do PrimeNG e PrimeIcons
+@import "~primeicons/primeicons.css";
+@import "~primeng/resources/primeng.min.css";
+
+// Importe outros estilos personalizados
 @import "assets/style/_app";
-@import "primeicons/primeicons.css";
 @import "assets/vendors/bootstrap/css/bootstrap.min.css";
+@import "./custom-styles.scss";
 
-
+// Defina estilos globais
 body {
     background-color: #0C0C0C;
 }
+
+// Outros estilos globais

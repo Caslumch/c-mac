@@ -1,48 +1,26 @@
-<!-- <div class="navbar-header w-full flex  navbar-expand-lg bd-navbar sticky-top">
-    <div class="ml-1 mr-1 row">
-        <div class="col-2 mt-2">
-            <img src="../../../assets/logo-site-c.png" onerror="this.onerror=null; this.src='assets/img/logo.png'"
-                alt="Rita RH" class="file-img sidebar-menu-logo" />
+<nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
+    <div class="container-fluid">
+        <div class="d-none d-md-block col-md-8 d-flex">
+            <a class="navbar-brand mr-auto" id="reload" href="#">
+                <img src="../../../assets/logo-site-c.png" (error)="handleImageError()" alt="Rita RH"
+                    class="file-img sidebar-menu-logo" />
+            </a>
         </div>
-        <div class="col-12 col-md-8 d-flex justify-content-end">
-            <div *ngFor="let o of optionsMenu" class="opt-navbar">
-                {{o.option}}
-            </div>
 
-            <div class="btn-navbar mt-4">Inicio</div>
-        </div>
-        <div class="col-6 col-md-3 mt-2">
+        <!-- Botão do menu para dispositivos móveis -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="pi pi-bars"></span>
+        </button>
+        <div class="col-12 col-md-6 d-flex justify-content-initial justify-content-md-end text-md-end text-center">
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav options d-flex flex-column flex-md-row align-items-center">
+                    <li *ngFor="let o of optionsMenu" class="opt-navbar nav-item">
+                        <a id="inicio" class="nav-link typeOpt" href="#">{{o.option}}</a>
+                    </li>
+                </ul>
+                <div class="btn-navbar mt-4">Inicio</div>
+            </div>
         </div>
     </div>
-</div> -->
-
-
-<header class="header">
-    <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="container-fluid">
-            <div class="d-none d-md-block col-md-8 d-flex">
-                <a class="navbar-brand mr-auto" id="reload" href="#">
-                    <img src="../../../assets/logo-site-c.png" (error)="handleImageError()" alt="Rita RH"
-                        class="file-img sidebar-menu-logo" />
-                </a>
-            </div>
-
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" (click)="toggleNavbar()">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="col-12 col-md-6 d-flex justify-content-initial justify-content-md-end text-md-end text-center"
-                [ngClass]="{ 'show': navbarVisible }" id="navbarNav">
-                <div class="collapse navbar-collapse">
-                    <ul class="navbar-nav options d-flex flex-column flex-md-row align-items-center">
-                        <li *ngFor="let o of optionsMenu" class="opt-navbar nav-item">
-                            <a id="inicio" class="nav-link typeOpt" href="#">{{o.option}}</a>
-                        </li>
-                    </ul>
-                    <div class="btn-navbar mt-4">Inicio</div>
-                </div>
-            </div>
-        </div>
-    </nav>
-</header>
+</nav>

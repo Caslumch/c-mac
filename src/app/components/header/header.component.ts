@@ -12,7 +12,7 @@ export class HeaderComponent {
     { option: 'Contato', id: 3 }
   ];
 
-  navbarVisible = false; 
+  navbarVisible: boolean = false;
 
   toggleNavbar() {
     debugger;
