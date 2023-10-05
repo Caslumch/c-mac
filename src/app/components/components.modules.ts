@@ -3,10 +3,13 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+import { PrimeNGModules } from '../core/modules/primeng.module';
 
 @NgModule({
   declarations: [
-    HeaderComponent
+    HeaderComponent,
+    FooterComponent
 
   ],
   imports: [
@@ -14,9 +17,12 @@ import { HeaderComponent } from './header/header.component';
     FormsModule,
     ReactiveFormsModule,
     RouterModule,
+    PrimeNGModules
   ],
-  exports: [
-    HeaderComponent
+  exports: [ 
+    HeaderComponent,
+    FooterComponent,
+    PrimeNGModules
 
   ],
 })

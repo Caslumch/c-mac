@@ -10,20 +10,6 @@
     height: auto;
 }
 
-.div-fullscreen {
-    background-color: black;
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-}
-
-.sidebar-menu-logo {
-    max-width: 120px;
-    margin-left: 66px;
-}
-
 .opt-navbar {
     font-family: "Aldrich", sans-serif;
     margin-top: 30px;
@@ -42,6 +28,33 @@
     padding: 0 5px;
     cursor: pointer;
 }
+
+@media (max-width: 767px) {
+    .navbar-header {
+      overflow-x: auto; /* Adiciona uma barra de rolagem horizontal quando necessário */
+      white-space: nowrap; /* Impede a quebra de linha dos itens do menu */
+    }
+  
+    .opt-navbar {
+      display: inline-block; /* Exibe os itens do menu em uma linha horizontal */
+    }
+  }
+
+.div-fullscreen {
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.sidebar-menu-logo {
+    max-width: 120px;
+    margin-left: 66px;
+}
+
+
 
 .btn-navbar {
     font-family: "Aldrich", sans-serif;
@@ -70,7 +83,8 @@
 }
 
 .file-img {
-    position: absolute;
+    position: unset;
     max-width: 45%;
     max-height: 100%;
 }
+

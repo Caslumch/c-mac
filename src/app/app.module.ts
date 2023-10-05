@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/modulos/home/home.component';
 import { ComponentsModule } from './components/components.modules';
 import { DropdownModule } from 'primeng/dropdown';
+// import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { DropdownModule } from 'primeng/dropdown';
     BrowserAnimationsModule,
     AppRoutingModule,
     InputTextModule,
-    ComponentsModule
+    ComponentsModule,
+    // NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

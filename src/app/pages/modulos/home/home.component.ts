@@ -6,8 +6,8 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './home.component.html',
 })
 export class HomeComponent implements OnInit {
-
-  simbol: string = "</"
+  simbolStyle : string = 'color: #d4ff5b; cursor: pointer'
+  simbol: string = `<\\`
   ngOnInit(): void {
     
   }
