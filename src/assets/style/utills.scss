@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Aldrich");
+
 .cursor {
   cursor: pointer;
 }
@@ -162,4 +164,19 @@ h6.titulo-page {
 
 .titleModal {
   font-size: 30px;
+}
+
+.title {
+  font-size: 30px;
+}
+
+.text-hi-title {
+  // margin-top: 60px;
+  // margin-left: 63px;
+  font-family: "Aldrich", sans-serif;
+  font-size: 50px
+}
+
+.bline { 
+  white-space: pre-line;
 }

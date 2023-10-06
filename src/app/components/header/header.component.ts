@@ -8,9 +8,9 @@ export class HeaderComponent implements OnInit {
   up = 'pi-angle-up'
 
   optionsMenu = [
-    { option: 'Sobre', id: 1 },
-    { option: 'Projetos', id: 2 },
-    { option: 'Contato', id: 3 }
+    { option: 'Sobre', id: 1, routerLink: 'sobre', },
+    { option: 'Projetos', id: 2, routerLink: 'projetos', },
+    { option: 'Contato', id: 3, routerLink: 'contato', }
   ];
   
   ngOnInit(): void {

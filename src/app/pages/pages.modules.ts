@@ -12,6 +12,7 @@ import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
 import { PanelModule } from 'primeng/panel';
 import { DividerModule } from 'primeng/divider';
+import { AboutComponent } from './modulos/about/about.component';
 
 const routes: Routes = [
     {
@@ -19,6 +20,7 @@ const routes: Routes = [
         children: [
             { path: '', redirectTo: 'home', pathMatch: 'full' },
             { path: 'home', component: HomeComponent },
+            { path: 'sobre', component: AboutComponent },
         ],
     },
     {
@@ -33,7 +35,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-    declarations: [HomeComponent],
+    declarations: [HomeComponent, AboutComponent],
     providers: [ConfirmationService, MessageService],
     imports: [
         DropdownModule, ButtonModule,PanelModule,DividerModule,
