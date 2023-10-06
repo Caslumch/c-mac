@@ -180,3 +180,15 @@ h6.titulo-page {
 .bline { 
   white-space: pre-line;
 }
+
+.imgConfig {margin-top: 80px;
+  align-items: center;
+  width: 200px;
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  .imgConfig {
+    width: 100px;
+  }
+}

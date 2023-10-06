@@ -13,6 +13,8 @@ import { ButtonModule } from 'primeng/button';
 import { PanelModule } from 'primeng/panel';
 import { DividerModule } from 'primeng/divider';
 import { AboutComponent } from './modulos/about/about.component';
+import { ContactComponent } from './modulos/contact/contact.component';
+import { ProjectsComponent } from './modulos/projects/projects.component';
 
 const routes: Routes = [
     {
@@ -21,6 +23,8 @@ const routes: Routes = [
             { path: '', redirectTo: 'home', pathMatch: 'full' },
             { path: 'home', component: HomeComponent },
             { path: 'sobre', component: AboutComponent },
+            { path: 'projetos', component: ProjectsComponent },
+            { path: 'contato', component: ContactComponent },
         ],
     },
     {
@@ -35,7 +39,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-    declarations: [HomeComponent, AboutComponent],
+    declarations: [HomeComponent, AboutComponent, ProjectsComponent, ContactComponent],
     providers: [ConfirmationService, MessageService],
     imports: [
         DropdownModule, ButtonModule,PanelModule,DividerModule,

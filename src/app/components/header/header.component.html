@@ -15,14 +15,14 @@
                     <span class="menu-d pi pi-bars"></span>
                 </button></div>
         </div>
-        <div class="col-12 col-md-6 d-flex justify-content-initial justify-content-md-end text-md-end text-center">
+        <div class="col-12 col-md-5 d-flex justify-content-initial justify-content-md-end text-md-end text-center">
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav options d-flex flex-column flex-md-row align-items-center">
                     <li *ngFor="let o of optionsMenu" class="opt-navbar nav-item">
-                        <a id="inicio" class=" nav-link typeOpt" href="#">{{o.option}}</a>
+                        <a id="inicio" [routerLink]="['/' + o.routerLink]" class=" nav-link typeOpt" href="#">{{o.option}}</a>
                     </li>
                 </ul>
-                <div class="btn-navbar mt-4">Inicio</div>
+                <div class="btn-navbar mt-4" [routerLink]="['/home']">Inicio</div>
             </div>
         </div>
     </div>

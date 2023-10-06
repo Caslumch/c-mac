@@ -5,7 +5,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { InputTextModule } from 'primeng/inputtext';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './pages/modulos/home/home.component';
 import { ComponentsModule } from './components/components.modules';
 import { DropdownModule } from 'primeng/dropdown';
 // import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
