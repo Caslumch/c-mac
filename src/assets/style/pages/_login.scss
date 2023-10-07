@@ -1,8 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat");
 
 .text-hi {
-    // margin-top: 70px;
-    // margin-left: 63px;
     font-family: "Montserrat", sans-serif;
 }
 
@@ -23,9 +21,9 @@
 
 .input-container {
     position: absolute;
-    top: 50%; /* Alinha verticalmente no centro */
-    left: 41%; /* Alinha horizontalmente no centro */
-    transform: translate(-50%, -50%); /* Move o contêiner de volta para ajustar a posição */
+    top: 50%;
+    left: 41%; 
+    transform: translate(-50%, -50%); 
 }
 
 .input-container label {
@@ -34,7 +32,6 @@
     margin-bottom: 5px;
   }
 
-/* Estilos opcionais para os inputs */
 .input-container input {
     height: 50px;
     background: #3D3D3D;

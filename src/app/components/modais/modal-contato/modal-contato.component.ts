@@ -1,6 +1,6 @@
 import { Component, ElementRef, Input, OnInit, ViewChildren } from '@angular/core';
 import { BaseForm } from '../../base-form/base-form.component';
-import { UntypedFormBuilder } from '@angular/forms';
+import { UntypedFormBuilder, Validators } from '@angular/forms';
 import { UserController } from 'src/app/core/controllers/user/user.controller';
 // import { FormArray, FormControlName, FormGroup, UntypedFormGroup } from '@angular/forms';
 
@@ -33,11 +33,11 @@ export class ModalContatoComponent extends BaseForm implements OnInit {
 
   createForm = () => {
     this.form = this.form = this.fb.group({
-      nome: [''],
-      email: [''],
-      telefone: [''],
+      nome: ['', [Validators.required]],
+      email: ['', [Validators.required]],
+      telefone: ['', [Validators.required]],
       assunto: [''],
-      text: [''],
+      text: ['', [Validators.required]],
     })
   }
 

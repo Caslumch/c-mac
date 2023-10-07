@@ -28,13 +28,21 @@
             <div class="mt-4 col-12">
                 <textarea class="w-full" placeholder="Escreva em detalhes o que tem pensado" formControlName="text" rows="5" cols="30" pInputTextarea></textarea>
             </div>
+
+            <div class="mt-4 col-12 text-center">
+                <p class="mch-fs-17 iconWhatsapp">Me chame no whatsapp se prefirir </p>
+                <a class="mt-5 mt-md-0 iconSocial  pi pi-whatsapp"
+                    href=" https://wa.me/5511963034276" target="_blank"
+                    ></a>
+            </div>
+
     
         </div>
     </form>
 
     <div class="row d-flex justify-content-center">
         <div class="col-12 col-md-12 mt-4">
-            <p-button (onClick)="save()" class="w-full" label="Enviar"></p-button>
+            <p-button [disabled]="!form.valid" (onClick)="save()" class="w-full" label="Enviar"></p-button>
         </div>
 
     </div>

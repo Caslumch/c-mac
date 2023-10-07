@@ -90,9 +90,6 @@ h6.titulo-page {
 }
 
 
-
-
-
 .text-decoration-underline {
   text-decoration: underline;
 }
@@ -142,11 +139,11 @@ h6.titulo-page {
   transform: translateY(-50%);
 }
 
-.break-word{
+.break-word {
   word-wrap: break-word;
 }
 
-.color-warning-icon{
+.color-warning-icon {
   color: $primary;
 }
 
@@ -157,8 +154,8 @@ h6.titulo-page {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); 
-  z-index: 999; 
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
   display: none;
 }
 
@@ -171,17 +168,23 @@ h6.titulo-page {
 }
 
 .text-hi-title {
-  // margin-top: 60px;
-  // margin-left: 63px;
   font-family: "Aldrich", sans-serif;
-  font-size: 50px
+  font-size: 40px
 }
 
-.bline { 
+@media (max-width: 768px) {
+  .text-hi-title {
+    font-family: "Aldrich", sans-serif;
+    font-size: 30px
+  }
+}
+
+.bline {
   white-space: pre-line;
 }
 
-.imgConfig {margin-top: 80px;
+.imgConfig {
+  margin-top: 80px;
   align-items: center;
   width: 200px;
   max-width: 100%;
@@ -193,15 +196,17 @@ h6.titulo-page {
   }
 }
 
-/* Para navegadores WebKit (Chrome, Safari, etc.) */
+// estilização do scrollbar geraal
+
+// /* Para navegadores WebKit (Chrome, Safari, etc.) 
 ::-webkit-scrollbar {
   width: 5px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color:#2f2f2f;
+  background-color: #2f2f2f;
   border-radius: 5px;
-  width: 3px; /* Diminua o valor da largura para tornar o thumb mais estreito */
+  width: 3px;
 }
 
 /* Para navegadores Firefox */
@@ -212,5 +217,10 @@ scrollbar {
 thumb {
   background-color: #2f2f2f;
   border-radius: 5px;
-  width: 3px; /* Diminua o valor da largura para tornar o thumb mais estreito */
+  width: 3px;
+}
+
+.iconWhatsapp {
+
+  font-family: "Aldrich", sans-serif;
 }

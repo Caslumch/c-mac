@@ -2,8 +2,6 @@
 @import url("https://fonts.googleapis.com/css?family=Aldrich");
 
 .text-hi {
-    // margin-top: 60px;
-    // margin-left: 63px;
     font-family: "Montserrat", sans-serif;
     font-size: 50px
 }
@@ -34,7 +32,6 @@
     height: 250px;
     top: 50px;
 }
-// Escolha a abordagem que melhor atenda às necessidades de design e conteúdo do seu site. Se você optar por remover a altura fixa ou adicionar rolagem, certifique-se de testar o layout em diferentes tamanhos de tela para garantir que ele funcione corretamente em todos os dispositivos.
 
 
 
@@ -67,7 +64,6 @@
 
 .subTitleInsights {
     color: grey;
-    // margin-top: 20px;
     margin-left: 30px;
 }
 
@@ -79,11 +75,19 @@
 .icon-large {
     cursor: pointer;
     font-size: 48px;
-    /* Tamanho desejado */
     top: -20px;
 }
 
 .iconSocial {
+    
+    color: #d3d3d3;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+.iconSocial:hover {
+    color: #8d8d8d;
     text-decoration: none;
     cursor: pointer;
     font-size: 30px;
