@@ -19,7 +19,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav options d-flex flex-column flex-md-row align-items-center">
                     <li *ngFor="let o of optionsMenu" class="opt-navbar nav-item">
-                        <a id="inicio" [routerLink]="['/' + o.routerLink]" class=" nav-link typeOpt" href="#">{{o.option}}</a>
+                        <a id="inicio" [routerLink]="['/' + o.routerLink]" class=" optMenu typeOpt" [routerLinkActive]="['linkSelect']" href="#">{{o.option}}</a>
                     </li>
                 </ul>
                 <div class="btn-navbar mt-4" [routerLink]="['/home']">Inicio</div>

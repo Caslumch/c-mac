@@ -18,12 +18,14 @@
 /* Defina a cor do texto do cabeçalho, se necessário */
 .navbar-custom .navbar-brand,
 .navbar-custom .navbar-nav .nav-link {
-    color: #FFFFFF; /* Cor do texto (branco neste exemplo) */
+    color: #FFFFFF;
+    /* Cor do texto (branco neste exemplo) */
 }
 
 /* Altere a cor do ícone do botão de alternância, se desejar */
 .navbar-custom .navbar-toggler-icon {
-    background-color: #FFFFFF; /* Cor de fundo do ícone do botão de alternância (branco neste exemplo) */
+    background-color: #FFFFFF;
+    /* Cor de fundo do ícone do botão de alternância (branco neste exemplo) */
 }
 
 
@@ -48,27 +50,34 @@
 
 /* Personalize o botão de expansão */
 .navbar-toggler {
-    background-color: transparent; /* Cor de fundo do botão */
-    border: none; /* Remova a borda do botão */
-    outline: none; /* Remova a borda de foco */
+    background-color: transparent;
+    /* Cor de fundo do botão */
+    border: none;
+    /* Remova a borda do botão */
+    outline: none;
+    /* Remova a borda de foco */
     cursor: pointer;
 }
 
 /* Personalize o ícone do botão de expansão */
 .navbar-toggler-icon {
-    background-color: #fff; /* Cor de fundo do ícone */
+    background-color: #fff;
+    /* Cor de fundo do ícone */
 }
 
 @media (max-width: 767px) {
     .navbar-header {
-      overflow-x: auto; /* Adiciona uma barra de rolagem horizontal quando necessário */
-      white-space: nowrap; /* Impede a quebra de linha dos itens do menu */
+        overflow-x: auto;
+        /* Adiciona uma barra de rolagem horizontal quando necessário */
+        white-space: nowrap;
+        /* Impede a quebra de linha dos itens do menu */
     }
-  
+
     .opt-navbar {
-      display: inline-block; /* Exibe os itens do menu em uma linha horizontal */
+        display: inline-block;
+        /* Exibe os itens do menu em uma linha horizontal */
     }
-  }
+}
 
 .div-fullscreen {
     background-color: black;
@@ -119,3 +128,23 @@
     width: 100px;
 }
 
+.linkSelect {
+    border-bottom: 3px solid #D4FF5B;
+}
+
+@media (max-width: 768px) {
+    .linkSelect {
+        border-bottom: none
+    }
+}
+
+.optMenu {
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+.optMenu:hover {
+    text-decoration: none;
+    color: #858585;
+}
