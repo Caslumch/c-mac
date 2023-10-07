@@ -4483,7 +4483,7 @@ p-treeselect.p-treeselect-clearable .p-treeselect-clear-icon {
   border: 1px solid #d5d5d5;
   border-top-right-radius: 25px;
   border-top-left-radius: 25px;
-
+  overflow: hidden;
   border-bottom-right-radius: 25px;
   border-bottom-left-radius: 25px;
 }

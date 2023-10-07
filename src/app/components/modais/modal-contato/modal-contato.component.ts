@@ -27,6 +27,7 @@ export class ModalContatoComponent extends BaseForm implements OnInit {
   ngOnInit(): void {
     this.createForm()
     this.ehMobile = window.screen.width < 992;
+    debugger;
 
   }
 
