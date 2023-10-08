@@ -35,10 +35,6 @@
 
 
 
-
-
-
-
 @media (max-width: 768px) {
 
     .insights {
@@ -79,7 +75,7 @@
 }
 
 .iconSocial {
-    
+
     color: #d3d3d3;
     text-decoration: none;
     cursor: pointer;
@@ -95,4 +91,45 @@
 
 .iconSocial:hover {
     text-decoration: none;
-  }
+}
+
+.panelElement {
+    position: relative;
+    transition: 0.1s;
+}
+
+.panelElement:hover {
+    transform: scale(1.02);
+    /* Aumenta o tamanho em 20% ao passar o mouse */
+    cursor: pointer;
+}
+
+.imgStacks {
+    max-height: 100%;
+    border-radius: 25px;
+    max-width: 100%;
+    width: 498px;
+    height: 200px;
+    border: 1px solid #6b6b6b;
+    object-fit: cover;
+    overflow: hidden;
+
+}
+
+.imgStacks::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 0, 0, 0.5); /* Cor vermelha (ajuste conforme necessário) */
+    opacity: 0; /* Inicialmente, tornamos a camada de cor transparente */
+    border-radius: inherit;
+    transition: opacity 0.3s; /* Adicionamos uma transição de opacidade para suavizar a mudança */
+    z-index: 1;
+}
+
+.imgStacks:hover::before {
+    opacity: 1; /* Quando o mouse passar sobre a imagem, tornamos a camada de cor visível */
+}
