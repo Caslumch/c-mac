@@ -89,10 +89,21 @@
     border-radius: 30px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
+    display: inline-table;
     font-size: 16px;
     cursor: pointer;
     border: none;
+    transition: 0.2s;
+}
+
+
+
+.btn-navbar:hover {
+    color: #fff;
+    transform: scale(1.05);
+    /* Aumenta o tamanho em 20% ao passar o mouse */
+    cursor: pointer;
+    background-color: #3d3d3d;
 }
 
 .file-img {

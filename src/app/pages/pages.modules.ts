@@ -22,9 +22,9 @@ const routes: Routes = [
         children: [
             { path: '', redirectTo: 'home', pathMatch: 'full' },
             { path: 'home', component: HomeComponent },
-            { path: 'sobre', component: AboutComponent },
-            { path: 'projetos', component: ProjectsComponent },
-            { path: 'contato', component: ContactComponent },
+            { path: 'about', component: AboutComponent },
+            { path: 'projects', component: ProjectsComponent },
+            { path: 'contact', component: ContactComponent },
         ],
     },
     {
