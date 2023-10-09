@@ -2,6 +2,7 @@
 
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -31,4 +32,30 @@ export class UserController {
 
     return this.http.post(this.sendGridApiUrl, data, { headers });
   }
+
+  _baseUrlWatherMap = "https://api.openweathermap.org/data/2.5/"
+  private key = "3744c7390deaf333d69741cbcd2df7fd"
+
+  city = 'São Paulo'
+
+  // getWatherMap = fetch(`https://api.openweathermap.org/data/2.5/weather?q=${this.city}&appid=${this.key}`)
+  // .then(response => response.json())
+  // .then(data => {
+  //   // Faça algo com os dados da resposta
+  //   console.log(data);
+  //   debugger;
+  //   return data
+  // })
+  // .catch(error => {
+  //   // Trate os erros
+  //   console.error(error);
+  // });
+
+
+  getWatherMap(latitude: number, longitude: number ): Observable<any> {
+    return this.http.get<any>(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${this.key}
+    `)
+  }
+
+
 }
