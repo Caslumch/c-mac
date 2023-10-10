@@ -250,10 +250,19 @@ thumb {
 
 
 .custom-p-dialog {
-  width: 15vw;
-  height: 9vw;
+  width: 17vw;
+  height: 8vw;
   border: 2px solid #D4FF5B;
   // opacity: 0.4;
+}
+
+@media (max-width: 1330px) {
+  .custom-p-dialog {
+    width: 20vw;
+    height: 12vw;
+    border: 2px solid #D4FF5B;
+    opacity: 0.9;
+  }
 }
 
 .location {

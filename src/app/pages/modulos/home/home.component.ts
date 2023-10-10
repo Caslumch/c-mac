@@ -31,7 +31,9 @@ export class HomeComponent implements OnInit {
     { id: 6, temp: '< 0', Title: 'Na sua cidade está Frio e com possibilidade de neve.', img: '' },
     { id: 7, temp: '> 35', Title: 'Na sua cidade está Muito quente e ensolarado, risco de calor intenso.', img: '' },
     { id: 9, temp: '= 0', Title: 'Frio com possibilidade de geada', img: '' },
-];
+  ];
+
+
 
 
 
@@ -67,12 +69,14 @@ export class HomeComponent implements OnInit {
   }
 
   dadosWeather: any
+  dados: any = []
   getWatherMap = () => {
     this.userController.getWatherMap(this.latitude, this.longitude).subscribe({
       next: (r) => {
         this.dadosWeather = r
+        console.log(Math.floor(this.dadosWeather.main.temp));
+        this.dados = this.dadosTempo.filter((item: any) => item.temp === Math.floor(this.dadosWeather.main.temp))
         debugger;
-        console.log(this.dadosWeather);
         this.mWeather.openModal();
       },
       error: () => {

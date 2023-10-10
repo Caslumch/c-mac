@@ -12,9 +12,10 @@ export class ModalWeatherComponent implements OnInit {
   displayModal: boolean = false;
 
   @Input() dadosWeather: any = [];
-
+  ehMobile: any
   ngOnInit(): void {
-    
+    this.ehMobile = window.screen.width < 992;
+
   }
 
   openModal = () => (this.displayModal = true);
