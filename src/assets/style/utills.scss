@@ -224,6 +224,7 @@ thumb {
 
   font-family: "Aldrich", sans-serif;
 }
+
 .pulse {
   max-width: 100%;
   max-height: 100%;
@@ -253,7 +254,7 @@ thumb {
   width: 17vw;
   height: 8vw;
   border: 2px solid #D4FF5B;
-  // opacity: 0.4;
+  opacity: 0.9;
 }
 
 @media (max-width: 1330px) {
@@ -274,6 +275,31 @@ thumb {
   color: #D4FF5B;
   margin-top: 10px;
   margin-right: 5px;
+}
+
+
+.pulse-weather {
+  max-width: 100%;
+  max-height: 100%;
+  width: 7px;
+  height: 7px;
+  background-color: rgb(119, 118, 118);
+  border-radius: 50%;
+  display: inline-block; /* Altere para inline-block */
+  margin-right: 5px; /* Adicione um espaçamento à direita, se desejado */
+  animation: pulse 1.5s linear infinite;
+  position: relative;
+  // top: -2px;
+}
+
+
+@keyframes pulse-weather {
+  0% {
+    box-shadow: 0 0 0 0 rgb(138, 138, 138);
+  }
+  100% {
+    box-shadow: 0 0 0 5px rgb(168, 35, 35, 0);
+  }
 }
 
 

@@ -40,7 +40,7 @@ export class HomeComponent implements OnInit {
 
   async ngOnInit(): Promise<void> {
     this.getLocale()
-    setInterval(this.close, 10000);
+    setInterval(this.close, 11000);
   }
 
   position: string = 'bottomright';

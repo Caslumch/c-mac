@@ -10,7 +10,8 @@ export class ModalWeatherComponent implements OnInit {
   }
 
   displayModal: boolean = false;
-
+  simbolStyle: string = 'color: #d4ff5b; cursor: pointer'
+  simbol: string = ` | `;
   @Input() dadosWeather: any = [];
   ehMobile: any
   ngOnInit(): void {
@@ -20,6 +21,6 @@ export class ModalWeatherComponent implements OnInit {
 
   openModal = () => (this.displayModal = true);
 
-  closeModal = () => (this.displayModal = false);
+  // closeModal = () => (this.displayModal = false);
 
 }

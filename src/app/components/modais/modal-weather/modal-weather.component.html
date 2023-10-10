@@ -1,16 +1,16 @@
-<p-dialog [position]="'bottomright'" [showHeader]="false" [(visible)]="displayModal" styleClass="custom-p-dialog"
+<p-dialog  [position]="'bottomright'" [showHeader]="false" [(visible)]="displayModal" styleClass="custom-p-dialog"
 [draggable]="false">
 <div class="row">
     <div class="mt-2 mch-fs-17 d-flex justify-content-center col-12">
         <div class="location d-flex justify-content-center">
             <label class="mch-fs-12 mch-color-grey2">
                 <span class="iconLocale pi pi-map-marker"></span>
-            </label><span class="mr-2 mch-fs-15 w-full">{{'O Tempo agora em ' + dadosWeather?.name}}</span>
+            </label><span class="mr-2 mch-fs-15 w-full">{{'O Tempo agora em ' + dadosWeather?.name}}.</span>
         </div>
     </div>
     <div class="col-12 d-flex justify-content-center">
 
-        <label class="mt-4 mr-4 mch-fs-15">{{(dadosWeather?.main.temp | number: '1.0-0') + ' °C'}}</label>
+        <label class="mt-4 mr-4 mch-fs-17">{{(dadosWeather?.main.temp | number: '1.0-0') + ' °C'}}</label>
         <img class="icone " src="https://openweathermap.org/img/wn/04n.png">
     </div>
     <div class="col-6 ">
@@ -19,9 +19,9 @@
 
     </div>
     <div class="col-12 text-center">
-        <p class="mch-fs-17 mch-color-grey2">
-            <span class="pulse"></span> {{dadosWeather?.weather[0].description}}
-        </p>
+        <label class="mch-fs-16 mch-color-grey2">
+            <span class="pulse-weather"></span> {{dadosWeather?.weather[0].description}}.<span  [style]="simbolStyle" >{{simbol}}</span> {{'Umidade: ' + dadosWeather?.main.humidity + '%'}}
+        </label >
         <!-- <p class="umidade">{{'Umidade: ' + dadosWeather?.main.humidity + '%'}}</p> -->
 
     </div>
