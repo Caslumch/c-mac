@@ -24,7 +24,7 @@
             </div>
 
             <div class="mt-4 row">
-                <div [routerLink]="['/projects']" class="panelElement mt-4 col-12 col-md-6">
+                <!-- <div [routerLink]="['/projects']" class="panelElement mt-4 col-12 col-md-6">
                     <div class="image-container">
                         <img class="imgStacks" src="./assets/projects.jpg" alt="about">
                         <div class="overlay">
@@ -39,9 +39,9 @@
                             <label class="label">Fotografia</label>
                         </div>
                     </div>
-                </div>
+                </div> -->
 
-                <!-- <div class="panelElement mt-4 col-12 col-md-6">
+                <div class="panelElement mt-4 col-12 col-md-6">
                     <p-panel>
                         <p>
                             Pedro Machado da Silva
@@ -55,12 +55,20 @@
                 </div>
                 <div class="panelElement mt-4 col-12 col-md-6">
                     <p-panel>
-
+                        <p>
+                            Pedro Machado da Silva
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo
+                        </p>
                     </p-panel>
-                </div> -->
+                </div>
+
             </div>
         </div>
         <app-footer></app-footer>
     </div>
 </div>
-<app-modal-weather [dadosWeather]="dadosWeather" #mWeather ></app-modal-weather>
+<app-modal-weather [dadosWeather]="dadosWeather" [src]="src" #mWeather ></app-modal-weather>

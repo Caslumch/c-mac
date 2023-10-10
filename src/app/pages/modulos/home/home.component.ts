@@ -69,14 +69,15 @@ export class HomeComponent implements OnInit {
   }
 
   dadosWeather: any
+  src: any
   dados: any = []
   getWatherMap = () => {
     this.userController.getWatherMap(this.latitude, this.longitude).subscribe({
       next: (r) => {
         this.dadosWeather = r
+        this.src = this.dadosWeather?.weather[0].icon
         console.log(Math.floor(this.dadosWeather.main.temp));
         this.dados = this.dadosTempo.filter((item: any) => item.temp === Math.floor(this.dadosWeather.main.temp))
-        debugger;
         this.mWeather.openModal();
       },
       error: () => {
