@@ -1,0 +1,23 @@
+<p-dialog [position]="'bottomright'" [showHeader]="false" [(visible)]="displayModal" styleClass="custom-p-dialog"
+[draggable]="false">
+<div class="row">
+    <div class="mt-4 mch-fs-17 col-12">
+        <label class="">Parece que vai chover ai em</label>
+    </div>
+    <div class="col-6">
+        <div class="location">
+            <label class="mch-fs-12 mch-color-grey2">
+                <span class="iconLocale pi pi-map-marker"></span>
+            </label><span class="mch-fs-17">{{dadosWeather?.name}}</span>
+        </div>
+        <p class="temp">{{(dadosWeather?.main.temp | number: '1.0-0') + ' °C'}}</p>
+    </div>
+    <div class="col-6 caixa-menor">
+        <img class="icone" src="https://openweathermap.org/img/wn/04n.png">
+        <label class="mch-fs-15">{{dadosWeather?.weather[0].description}}</label>
+    </div>
+    <div class="col-12 text-center">
+        <p class="umidade">{{'Umidade: ' + dadosWeather?.main.humidity + '%'}}</p>
+    </div>
+</div>
+</p-dialog>

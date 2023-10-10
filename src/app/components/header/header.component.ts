@@ -20,7 +20,7 @@ export class HeaderComponent implements OnInit {
   navbarVisible: boolean = false;
 
   toggleNavbar() {
-    debugger;
+    
     this.navbarVisible = !this.navbarVisible;
     if (!this.navbarVisible) {
       this.up = 'pi-angle-down'

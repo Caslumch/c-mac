@@ -249,4 +249,24 @@ thumb {
 }
 
 
+.custom-p-dialog {
+  width: 15vw;
+  height: 9vw;
+  border: 2px solid #D4FF5B;
+  // opacity: 0.4;
+}
+
+.location {
+  display: flex;
+  align-items: center; /* Centraliza verticalmente */
+}
+
+.iconLocale {
+  color: #D4FF5B;
+  margin-top: 10px;
+  margin-right: 5px;
+}
+
+
+
 

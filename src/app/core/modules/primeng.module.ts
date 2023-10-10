@@ -7,6 +7,7 @@ import { PanelModule } from 'primeng/panel';
 import { DividerModule } from 'primeng/divider';
 import { DialogModule } from 'primeng/dialog';
 import { InputTextareaModule } from 'primeng/inputtextarea';
+import { OverlayPanelModule } from 'primeng/overlaypanel';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { InputTextareaModule } from 'primeng/inputtextarea';
     DividerModule,
     InputTextModule,
     DialogModule,
-    InputTextareaModule
+    InputTextareaModule,
+    OverlayPanelModule
   ],
   exports: [
     DropdownModule,
@@ -27,7 +29,8 @@ import { InputTextareaModule } from 'primeng/inputtextarea';
     DividerModule,
     InputTextModule,
     DialogModule,
-    InputTextareaModule
+    InputTextareaModule,
+    OverlayPanelModule
 
   ],
   providers: [],

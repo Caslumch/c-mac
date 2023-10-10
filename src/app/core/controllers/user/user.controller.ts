@@ -43,7 +43,7 @@ export class UserController {
   // .then(data => {
   //   // Faça algo com os dados da resposta
   //   console.log(data);
-  //   debugger;
+  //   
   //   return data
   // })
   // .catch(error => {
@@ -52,8 +52,8 @@ export class UserController {
   // });
 
 
-  getWatherMap(latitude: number, longitude: number ): Observable<any> {
-    return this.http.get<any>(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${this.key}
+  getWatherMap(latitude: number, longitude: number): Observable<any> {
+    return this.http.get<any>(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${this.key}&lang=pt_br&units=metric
     `)
   }
 

@@ -27,7 +27,7 @@ export class ModalContatoComponent extends BaseForm implements OnInit {
   ngOnInit(): void {
     this.createForm()
     this.ehMobile = window.screen.width < 992;
-    debugger;
+    
 
   }
 
@@ -47,14 +47,14 @@ export class ModalContatoComponent extends BaseForm implements OnInit {
     assunto: ${this.form.value.assunto}, texto: ${this.form.value.text}
     `
     this.form.value
-    debugger;
+    
 
     this.userController.enviarEmail(this.destinatario, this.form.value.assunto, body).subscribe({
       next: () => {
-        debugger;
+        
       },
       error: () => {
-        debugger;
+        
       }
     })
 
