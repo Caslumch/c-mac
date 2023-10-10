@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { AuthController } from 'src/app/core/controllers/user/auth.controller';
 import { UserController } from 'src/app/core/controllers/user/user.controller';
 
 
@@ -9,7 +10,8 @@ import { UserController } from 'src/app/core/controllers/user/user.controller';
 })
 export class HomeComponent implements OnInit {
   constructor(
-    private userController: UserController
+    private userController: UserController,
+    private authController: AuthController
   ) { }
 
   @ViewChild('mWeather') mWeather?: any;
@@ -40,7 +42,18 @@ export class HomeComponent implements OnInit {
 
   async ngOnInit(): Promise<void> {
     this.getLocale()
+    this.getAuth()
     setInterval(this.close, 11000);
+
+  }
+
+  getAuth = () => {
+    this.authController.getToken().subscribe({
+      next: (resp) => {
+        debugger;
+        this.authController.getCurrentlyPlaying(resp.access_token)
+      }
+    })
   }
 
   position: string = 'bottomright';

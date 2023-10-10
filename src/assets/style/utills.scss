@@ -307,7 +307,10 @@ thumb {
 // }
 
 .cloud-weather {
-
+  /* Defina a opacidade inicial para 0 (imagem invisível) */
+  opacity: 1;
+  /* Adicione uma transição suave para a propriedade opacity */
+  transition: opacity 7s ease-in-out;
 }
 
 
