@@ -50,7 +50,6 @@ export class HomeComponent implements OnInit {
   getAuth = () => {
     this.authController.getToken().subscribe({
       next: (resp) => {
-        debugger;
         this.authController.getCurrentlyPlaying(resp.access_token)
       }
     })

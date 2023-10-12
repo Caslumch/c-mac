@@ -22,8 +22,8 @@ export class ModalWeatherComponent implements OnInit {
   ngOnInit(): void {
     this.dadosWeather
     this.link = `https://openweathermap.org/img/wn/${this.src}.png`
-    debugger;
     this.ehMobile = window.screen.width < 992;
+    debugger;
 
   }
 
