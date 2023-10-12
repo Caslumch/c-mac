@@ -257,10 +257,10 @@ thumb {
   opacity: 0.9;
 }
 
-@media (max-width: 1330px) {
+@media (max-width: 1370px) {
   .custom-p-dialog {
     width: 20vw;
-    height: 12vw;
+    height: 11vw;
     border: 2px solid #D4FF5B;
     opacity: 0.9;
   }
@@ -307,7 +307,10 @@ thumb {
 // }
 
 .cloud-weather {
-
+  /* Defina a opacidade inicial para 0 (imagem invisível) */
+  opacity: 1;
+  /* Adicione uma transição suave para a propriedade opacity */
+  transition: opacity 7s ease-in-out;
 }
 
 
