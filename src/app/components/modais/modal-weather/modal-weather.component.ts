@@ -23,7 +23,6 @@ export class ModalWeatherComponent implements OnInit {
     this.dadosWeather
     this.link = `https://openweathermap.org/img/wn/${this.src}.png`
     this.ehMobile = window.screen.width < 992;
-    debugger;
 
   }
 

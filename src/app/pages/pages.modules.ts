@@ -15,6 +15,8 @@ import { DividerModule } from 'primeng/divider';
 import { AboutComponent } from './modulos/about/about.component';
 import { ContactComponent } from './modulos/contact/contact.component';
 import { ProjectsComponent } from './modulos/projects/projects.component';
+import { OtherController } from '../core/controllers/user/others.controller';
+import { HttpClientModule } from '@angular/common/http';
 
 const routes: Routes = [
     {
@@ -40,7 +42,7 @@ const routes: Routes = [
 
 @NgModule({
     declarations: [HomeComponent, AboutComponent, ProjectsComponent, ContactComponent],
-    providers: [ConfirmationService, MessageService],
+    providers: [ConfirmationService, MessageService, OtherController],
     imports: [
         DropdownModule, ButtonModule,PanelModule,DividerModule,
         InputTextModule,
@@ -49,7 +51,8 @@ const routes: Routes = [
         FormsModule,
         ReactiveFormsModule,
         RouterModule.forChild(routes),
-        ComponentsModule
+        ComponentsModule,
+        HttpClientModule
     ]
 })
 export class PagesModule { }

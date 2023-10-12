@@ -23,7 +23,7 @@ export class AuthController {
         const headers = new HttpHeaders({
             'Authorization': 'Basic ' + btoa(this.client_id + ':' + this.client_secret),
             'Content-Type': 'application/x-www-form-urlencoded',
-            'redirect_uri': this.REDIRECT_URI
+            // 'redirect_uri': this.REDIRECT_URI
         });
 
         const body = 'grant_type=client_credentials';
@@ -31,28 +31,20 @@ export class AuthController {
 
     }
 
-    // getCurrentlyPlaying(token: string): Observable<any> {
-    //     const headers = new HttpHeaders({
-    //         'Accept-Encoding': 'application/json',
-    //         'Authorization': `Bearer ${token}`
-    //     })
-    //     return this.http.get(this.apiUrl, { headers: headers })
-    // }
-
     getCurrentlyPlaying(token: string) {
         const params = {
             redirect_uri: `http://localhost:4200/home`
         };
-    //    const data = {grant_type: "client_credentials"}
+        //    const data = {grant_type: "client_credentials"}
         const headers = {
             Accept: 'application/json',
             Authorization: `Bearer ${token}`,
             'Content-Type': 'application/json',
-           
+
         };
 
 
-        axios.get<any>('https://api.spotify.com/v1/me/player/currently-playing', { headers, params})
+        axios.get<any>('https://api.spotify.com/v1/me/player/currently-playing', { headers, params })
             .then((playingTrackRes) => {
                 // Aqui você pode tratar a resposta da requisição Axios
                 console.log(playingTrackRes);
