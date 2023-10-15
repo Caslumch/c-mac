@@ -27,18 +27,18 @@ export class HomeComponent implements OnInit {
   
   async ngOnInit(): Promise<void> {
     this.getLocale()
-    // this.getAuth();
+    this.getAuth();
     setInterval(this.close, 11000);
 
   }
 
-  // getAuth = () => {
-  //   this.authController.getToken().subscribe({
-  //     next: (resp) => {
-  //       this.authController.getCurrentlyPlaying(resp.access_token)
-  //     }
-  //   })
-  // }
+  getAuth = () => {
+    this.authController.getToken().subscribe({
+      next: (resp) => {
+        this.authController.getCurrentlyPlaying(resp.access_token)
+      }
+    })
+  }
 
   position: string = 'bottomright';
   modalInvlidCpf = () => {
