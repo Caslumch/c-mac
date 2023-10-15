@@ -3,6 +3,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { environment } from 'environment';
 
 @Injectable({
   providedIn: 'root'
@@ -10,6 +11,9 @@ import { Observable } from 'rxjs';
 export class UserController {
   private sendGridApiUrl = 'https://api.sendgrid.com/v3/mail/send';
   private sendGridApiKey = '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'; // Substitua com sua API Key do SendGrid
+
+  private _baseUrl = environment.API
+  private api = environment.BASE_URL
 
   constructor(private http: HttpClient) { }
 
@@ -38,9 +42,9 @@ export class UserController {
 
 
 
-  getWatherMap(latitude: number, longitude: number): Observable<any> {
-    return this.http.get<any>(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${this.key}&lang=pt_br&units=metric
-    `)
+  getWatherMap(data: any): Observable<any> {
+    const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+    return this.http.post<any>(`${this._baseUrl}weather-app`, data, { headers });
   }
 
 

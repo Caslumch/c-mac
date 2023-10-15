@@ -13,7 +13,6 @@ export class HomeComponent implements OnInit {
   constructor(
     private userController: UserController,
     private authController: AuthController,
-    private otherController: OtherController,
   ) { }
 
   @ViewChild('mWeather') mWeather?: any;
@@ -24,18 +23,18 @@ export class HomeComponent implements OnInit {
   simbolStyle: string = 'color: #d4ff5b; cursor: pointer'
   simbol: string = `<\\`;
   ehMobile = false
-  
+
   async ngOnInit(): Promise<void> {
     this.getLocale()
     this.getAuth();
     setInterval(this.close, 11000);
-
   }
 
   getAuth = () => {
     this.authController.getToken().subscribe({
       next: (resp) => {
-        this.authController.getCurrentlyPlaying(resp.access_token)
+        debugger;
+        // this.authController.getCurrentlyPlaying(resp.access_token)
       }
     })
   }
@@ -51,9 +50,13 @@ export class HomeComponent implements OnInit {
       try {
         if ("geolocation" in navigator) {
           navigator.geolocation.getCurrentPosition((position) => {
-            this.latitude = position.coords.latitude;
-            this.longitude = position.coords.longitude;
-            this.getWatherMap();
+            const data =
+            {
+              latitude: position.coords.latitude,
+              longitude: position.coords.longitude,
+
+            }
+            this.getWatherMap(data);
           });
         } else {
           console.log("Geolocalização não está disponível no seu navegador.");
@@ -68,12 +71,11 @@ export class HomeComponent implements OnInit {
   dadosWeather: any
   src: any
   dados: any = []
-  getWatherMap = () => {
-    this.userController.getWatherMap(this.latitude, this.longitude).subscribe({
+  getWatherMap = (data: any) => {
+    this.userController.getWatherMap(data).subscribe({
       next: (r) => {
-        this.dadosWeather = r
-        this.src = this.dadosWeather?.weather[0].icon
-        
+        this.dadosWeather = r.data
+        this.src = this.dadosWeather?.weather[0]?.icon
         this.mWeather.openModal();
       },
       error: () => {
@@ -87,9 +89,6 @@ export class HomeComponent implements OnInit {
     this.mWeather.closeModal()
   }
 
-  // getO = async () => {
-  //   const o = await this.otherController.getDados()
-  // }
 
 
 

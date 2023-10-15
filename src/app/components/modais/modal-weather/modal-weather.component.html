@@ -11,7 +11,7 @@
         <div class="col-12 d-flex justify-content-center">
 
             <label class="title-weather mt-3 mr-4 mch-fs-17">{{(dadosWeather?.main.temp | number: '1.0-0') + ' °C'}}</label>
-            <img class="cloud-weather" [src]="'https://openweathermap.org/img/wn/' + dadosWeather?.weather[0].icon + '.png'">
+            <img class="cloud-weather" [src]="dadosWeather ? 'https://openweathermap.org/img/wn/' + dadosWeather.weather[0].icon + '.png' :  'https://openweathermap.org/img/wn/04d.png'">
         </div>
         <div class="col-6 ">
         </div>

@@ -2,11 +2,15 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import axios from 'axios';
+import { environment } from 'environment';
 
 @Injectable({
     providedIn: 'root'
 })
+
 export class AuthController {
+
+    _baseUrl = environment.API
     private url = 'https://accounts.spotify.com/api/token';
     private client_id = '558fb50a1db142cf8343b0bbc6bd9da2';
     private client_secret = 'a929bedef31d4c9bb67ab40c44e558f9';
@@ -31,23 +35,30 @@ export class AuthController {
 
     }
 
-    getCurrentlyPlaying(token: string) {
+    // getCurrentlyPlaying(token: string) {
 
-        const headers = {
-            Accept: 'application/json',
-            Authorization: `Bearer ${token}`,
-            'Content-Type': 'application/json',
+    //     const headers = {
+    //         Accept: 'application/json',
+    //         Authorization: `Bearer ${token}`,
+    //         'Content-Type': 'application/json',
 
-        };
+    //     };
 
 
-        axios.get<any>('https://api.spotify.com/v1/me/player/currently-playing', { headers })
-            .then((playingTrackRes) => {
-                console.log(playingTrackRes);
-            })
-            .catch((error) => {
-                console.error(error);
-            });
+    //     axios.get<any>('https://api.spotify.com/v1/me/player/currently-playing', { headers })
+    //         .then((playingTrackRes) => {
+    //             console.log(playingTrackRes);
+    //         })
+    //         .catch((error) => {
+    //             console.error(error);
+    //         });
+    // }
+
+
+    getNada(): Observable<any> {
+        debugger
+        return this.http.get<any>(`${this._baseUrl}
+        `)
     }
 
 
