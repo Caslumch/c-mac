@@ -7,7 +7,6 @@
             </a>
         </div>
 
-        <!-- Botão do menu para dispositivos móveis -->
         <div class="m-md-0 m-2 row ">
             <div class="col-12 col-md-2"> <button class=" navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
@@ -19,10 +18,26 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav options d-flex flex-column flex-md-row align-items-center">
                     <li *ngFor="let o of optionsMenu" class="opt-navbar nav-item">
-                        <a id="inicio" [routerLink]="['/' + o.routerLink]" class="optMenu typeOpt" [routerLinkActive]="['linkSelect']" href="#">{{o.option}}</a>
+                        <a id="inicio" (mouseenter)="onMouseEnter($event)" [routerLink]="['/' + o.routerLink]"
+                            class="optMenu typeOpt" [routerLinkActive]="['linkSelect']" href="#">{{o.option}}</a>
                     </li>
                 </ul>
                 <div class=" ml-3 btn-navbar mt-4" [routerLink]="['/home']">Inicio</div>
+                <!-- <div *ngIf="seeMenu" (mouseleave)="onMouseOut()"
+                    class=" mch-color-white retanguloMenu hovered-element">
+                    <div *ngFor="let d of  optionsMenu2 " class="text-center optIn">
+
+                        <ul class="options">
+                            <li class=" opt-navbar">
+                                <div>
+                                    <h6>{{d.title}}</h6>
+                                    <label>{{d.description}}</label>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div> -->
             </div>
         </div>
     </div>

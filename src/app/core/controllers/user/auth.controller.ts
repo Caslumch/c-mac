@@ -32,10 +32,7 @@ export class AuthController {
     }
 
     getCurrentlyPlaying(token: string) {
-        const params = {
-            redirect_uri: `http://localhost:4200/home`
-        };
-        //    const data = {grant_type: "client_credentials"}
+
         const headers = {
             Accept: 'application/json',
             Authorization: `Bearer ${token}`,
@@ -44,13 +41,11 @@ export class AuthController {
         };
 
 
-        axios.get<any>('https://api.spotify.com/v1/me/player/currently-playing', { headers, params })
+        axios.get<any>('https://api.spotify.com/v1/me/player/currently-playing', { headers })
             .then((playingTrackRes) => {
-                // Aqui você pode tratar a resposta da requisição Axios
                 console.log(playingTrackRes);
             })
             .catch((error) => {
-                // Lide com erros, se necessário
                 console.error(error);
             });
     }

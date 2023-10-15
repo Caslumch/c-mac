@@ -115,7 +115,7 @@
 
 .linkSelect {
     transition: none;
-    border-bottom: 3px solid #D4FF5B;
+    border-bottom: 2px solid #D4FF5B;
 }
 
 @media (max-width: 768px) {
@@ -133,4 +133,39 @@
 .optMenu:hover {
     text-decoration: none;
     color: #b6b6b6;
+    transition: none;
+    border-bottom: 2px solid #D4FF5B;
 }
+
+.optMenu::before {
+    text-decoration: none;
+    color: #b6b6b6;
+    transition: none;
+    border-bottom: 2px solid #D4FF5B;
+}
+
+.retanguloMenu {
+    z-index: 1000;
+    border: 1px solid rgba(97, 97, 97, 0.5490196078);
+    border-radius: 3%;
+    width: 284px;
+    height: 290px;
+    position: absolute;
+    top: 117%;
+    right: 57%;
+    background-color: #0c0c0c;
+    transition: 0.2s;
+}
+
+
+
+// .optIn {
+//     z-index: 1;
+//     /* border-radius: 3%; */
+//     width: 257px;
+//     height: 81px;
+//     position: absolute;
+//     top: 4%;
+//     right: 4%;
+//     background-color: #585858;
+// }
