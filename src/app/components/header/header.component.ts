@@ -17,10 +17,12 @@ export class HeaderComponent implements OnInit {
   optionsSubMenu = [
     { title: 'Sobre Mim', subtitle: "Conheça um pouco mais sobre mim e minha trajetória" },
     { title: 'Tecnologias', subtitle: "Todas as tecnologias que eu desenvolvi esta aplicação e mais." },
-    
-  ];
 
+  ];
+  ehMobile: any
   ngOnInit(): void {
+    this.ehMobile = window.screen.width < 933;
+    debugger;
 
   }
 
@@ -41,9 +43,11 @@ export class HeaderComponent implements OnInit {
   seeMenu: boolean = false
 
   onMouseEnter = (e: any, option: any) => {
-    this.seeMenu = false
-    if (option.routerLink === 'about') {
-      this.seeMenu = true
+    if (!this.ehMobile) {
+      this.seeMenu = false
+      if (option.routerLink === 'about') {
+        this.seeMenu = true
+      }
     }
   }
 

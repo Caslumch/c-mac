@@ -15,18 +15,28 @@
                 </button></div>
         </div>
         <div class="col-12 col-md-5 d-flex justify-content-initial justify-content-md-end text-md-end text-center">
-            <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="dp-menu collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav options d-flex flex-column flex-md-row align-items-center">
                     <li *ngFor="let o of optionsMenu" class="opt-navbar nav-item">
-                        <a id="inicio" (mouseenter)="onMouseEnter($event, o)" #rla="routerLinkActive"
-                            [routerLink]="['/' + o.routerLink]"
-                            class="{{ rla.isActive ? 'typeOpt' : ' optMenu typeOpt'}}" routerLinkActive
+                        <a id="inicio" (mouseenter)="onMouseEnter($event, o)" #rla="routerLinkActive" [routerLink]="['/' + o.routerLink]"
+                            class="{{ rla.isActive ? 'typeOpt' : ' optMenu typeOpt z'}}" routerLinkActive
                             [routerLinkActive]="['linkSelect']" href="#">{{o.option}}</a>
+                        <ul *ngIf="seeMenu" class="ehMobile">
+                            <li *ngFor="let s of optionsSubMenu"><a class="text-left x" href="#">
+                                <div  class="panelElementMenu">
+                                    <div class="menu-content">
+                                        <label class="mch-fs-13 titleMenu">{{s.title}}</label>
+                                        <label class="mch-fs-13 subtitleMenu mch-color-secundary">{{s.subtitle}}</label>
+                                    </div>
+                                </div>
+                                </a>
+                            </li>
+                        </ul>
 
                     </li>
                 </ul>
                 <div class="  ml-3 btn-navbar mt-4" [routerLink]="['/home']">Home</div>
-                <div *ngIf="seeMenu" (mouseleave)="onMouseOut()"
+                <!-- <div *ngIf="seeMenu" (mouseleave)="onMouseOut()"
                     class=" row mch-color-white retanguloMenu  flex-column d-flex text-left accompaniment">
                     <div class="col-12 col-md-12">
                         <div *ngFor=" let s of optionsSubMenu" [routerLink]="['/about']" class="panelElementMenu">
@@ -36,7 +46,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>

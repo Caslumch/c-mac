@@ -169,24 +169,7 @@
 }
 
 
-.panelElementMenu {
-    cursor: pointer;
-    border-radius: 9px;
-    max-width: 100%;
-    height: auto; /* Altere a altura para "auto" para acomodar conteúdo variável */
-    padding: 20px; /* Adicione um espaço interno para o conteúdo */
-    // background-color: #232323; /* Defina uma cor de fundo de acordo com sua preferência */
-    color: #fff; /* Defina uma cor de texto apropriada */
-    margin-top: 10px;
-}
 
-.panelElementMenu:hover {
-    cursor: pointer;
-    background-color: #232323;
-}
 
-// /* Adicione um estilo para a segunda label dentro do painel */
-// .panelElementMenu .menu-content label {
-//     display: block;
-//     margin-bottom: 10px; /* Adicione espaço entre as labels */
-// }
+
+
