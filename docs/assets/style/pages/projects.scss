@@ -1,0 +1,6 @@
+.imgProject {
+    max-width: 100%;
+    width: 100%;
+    height: 200px; /* Defina a altura desejada para fazer a imagem retangular */
+    object-fit: cover; /* Esta propriedade irá cortar a imagem para ajustá-la à altura especificada */
+}
