@@ -17,24 +17,37 @@ export class UserController {
 
   constructor(private http: HttpClient) { }
 
-  enviarEmail(destinatario: string, assunto: string, corpo: string) {
-    const headers = new HttpHeaders({
-      'Content-Type': 'application/json',
-      Authorization: `Bearer ${this.sendGridApiKey}`
-    });
+  // enviarEmail(destinatario: string, assunto: string, corpo: string) {
+  //   // const headers = new HttpHeaders({
+  //   //   'Content-Type': 'application/json',
+  //   //   Authorization: `Bearer ${this.sendGridApiKey}`
+  //   // });
 
+  //   // const data = {
+  //   //   personalizations: [
+  //   //     {
+  //   //       to: [{ email: destinatario }],
+  //   //       subject: assunto,
+  //   //     },
+  //   //   ],
+  //   //   from: { email: 'caslumach@gmail.com' }, // Substitua com seu endereço de email
+  //   //   content: [{ type: 'text/plain', value: corpo }],
+  //   // };
+
+  //   // return this.http.post(this.sendGridApiUrl, data, { headers });
+
+  // }
+
+  enviarEmail(destinatario: string, assunto: string, corpo: string): Observable<any> {
+    debugger;
     const data = {
-      personalizations: [
-        {
-          to: [{ email: destinatario }],
-          subject: assunto,
-        },
-      ],
-      from: { email: 'caslumach@gmail.com' }, // Substitua com seu endereço de email
-      content: [{ type: 'text/plain', value: corpo }],
-    };
-
-    return this.http.post(this.sendGridApiUrl, data, { headers });
+      destinatario: destinatario,
+      assunto: assunto,
+      corpo: corpo
+    }
+    debugger
+    return this.http.post<any>(`${this._baseUrl}mail-sendGrid
+    `, data)
   }
 
   _baseUrlWatherMap = "https://api.openweathermap.org/data/2.5/"

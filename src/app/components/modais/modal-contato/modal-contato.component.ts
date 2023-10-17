@@ -42,6 +42,7 @@ export class ModalContatoComponent extends BaseForm implements OnInit {
   }
 
   save = () => {
+  
     this.form.value;
     const body = `De: ${this.form.value.nome} email: ${this.form.value.email}, telefone: ${this.form.value.telefone},
     assunto: ${this.form.value.assunto}, texto: ${this.form.value.text}
@@ -53,8 +54,8 @@ export class ModalContatoComponent extends BaseForm implements OnInit {
       next: () => {
         
       },
-      error: () => {
-        
+      error: (error) => {
+        console.log(error)
       }
     })
 
