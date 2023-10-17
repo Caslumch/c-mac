@@ -24,7 +24,13 @@ export class HomeComponent implements OnInit {
   simbolStyle: string = 'color: #d4ff5b; cursor: pointer'
   simbol: string = `<\\`;
   ehMobile = false
-  
+
+  drops = [
+    { name: 'Projetos', src: './assets/projects.jpg', routerLink: 'projects' },
+    { name: 'Stack', src: './assets/stack.jpg', routerLink: 'stack' },
+    { name: 'Fotografia', src: './assets/startup.jpg', routerLink: 'photos' }
+  ]
+
   async ngOnInit(): Promise<void> {
     this.getLocale()
     this.getAuth();
@@ -73,7 +79,7 @@ export class HomeComponent implements OnInit {
       next: (r) => {
         this.dadosWeather = r
         this.src = this.dadosWeather?.weather[0].icon
-        
+
         this.mWeather.openModal();
       },
       error: () => {
