@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+@import url("https://fonts.googleapis.com/css?family=Aldrich");
+
+.retanguloMenu {
+    z-index: 1000;
+    border: 1px solid rgba(97, 97, 97, 0.5490196078);
+    border-radius: 3%;
+    width: 284px;
+    height: 280px;
+    position: fixed;
+    top: 23%;
+    left: 62%;
+    transform: translate(0, -50%);
+    background-color: #0c0c0c;
+    transition: 0.2s;
+}
+
+.opt-navbar:first-child a::first-letter {
+    margin-right: 5px;
+    /* Ajuste a margem conforme necessário */
+}
+
+.titleMenu {
+    color: white;
+    cursor: pointer;
+    font-family: "Montserrat", sans-serif;
+
+}
+
+.subtitleMenu {
+    cursor: pointer;
+
+}
