@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -8,18 +9,20 @@ export class HeaderComponent implements OnInit {
   up = 'pi-angle-up'
 
   optionsMenu = [
-    { option: 'Sobre', id: 1, routerLink: 'about', },
-    { option: 'Projetos', id: 2, routerLink: 'projects', },
-    { option: 'Contato', id: 3, routerLink: 'contact', }
-  ];
-  
-  optionsMenu2 = [
-    { title: 'Sobre', id: 1, routerLink: 'about', description: "descrição" },
-    { option: 'Projetos', id: 2, routerLink: 'projects', description: "descrição"},
-    { option: 'Contato', id: 3, routerLink: 'contact', description: "descrição"}
+    { option: 'About', id: 1, routerLink: 'about', },
+    { option: 'Projects', id: 2, routerLink: 'projects', },
+    { option: 'Contact', id: 3, routerLink: 'contact', }
   ];
 
+  optionsSubMenu = [
+    { title: 'Sobre Mim', subtitle: "Conheça um pouco mais sobre mim e minha trajetória" },
+    { title: 'Tecnologias', subtitle: "Todas as tecnologias que eu desenvolvi esta aplicação e mais." },
+
+  ];
+  ehMobile: any
   ngOnInit(): void {
+    this.ehMobile = window.screen.width < 933;
+    debugger;
 
   }
 
@@ -39,13 +42,16 @@ export class HeaderComponent implements OnInit {
 
   seeMenu: boolean = false
 
-  onMouseEnter = (e: any) => {
-    this.seeMenu = true
-    // debugger;
+  onMouseEnter = (e: any, option: any) => {
+    if (!this.ehMobile) {
+      this.seeMenu = false
+      if (option.routerLink === 'about') {
+        this.seeMenu = true
+      }
+    }
   }
 
   onMouseOut() {
-    debugger;
     this.seeMenu = false
   }
 

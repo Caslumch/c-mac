@@ -45,9 +45,15 @@ export class UserController {
       assunto: assunto,
       corpo: corpo
     }
+
+    return this.http.post(`${this._baseUrl}send-mail`, data);
+  }
+
+
+  getNada(): Observable<any> {
     debugger
-    return this.http.post<any>(`${this._baseUrl}mail-sendGrid
-    `, data)
+    return this.http.get<any>(`${this._baseUrl}
+    `)
   }
 
   _baseUrlWatherMap = "https://api.openweathermap.org/data/2.5/"

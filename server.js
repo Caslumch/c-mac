@@ -24,51 +24,9 @@ app.post('/weather-app', function (req, res) {
         console.error('Erro na solicitação GET:', error);
     });
 });
-var nodemailer = require('nodemailer');
-var google = require('googleapis').google;
-var expressS = require('express');
-var CLIENT_ID = '352498173136-4ipcsvj43dhf6bk7uraumivvcfl10sci.apps.googleusercontent.com';
-var CLIENT_SECRET = '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';
-var REDIRECT_URI = 'https://developers.google.com/oauthplayground';
-var REFRESH_TOKEN = '1//048lihHhcnEn2CgYIARAAGAQSNgF-L9IrPJSRUosh0yWblA-tJv5f_CaAv30RsxOTQIQwhbncPlZsq4hOaBX4M6xi6SD6IAouOg';
-var oAuth2Client = new google.auth.OAuth2(CLIENT_ID, CLIENT_SECRET, REDIRECT_URI);
-oAuth2Client.setCredentials({ refresh_token: REFRESH_TOKEN });
-app.post('mail-google', function (req, resp, next) {
-    debugger;
-    try {
-        var accessToken = oAuth2Client.getAccessToken();
-        var transport = nodemailer.createTransport({
-            service: 'gmail',
-            auth: {
-                type: 'OAuth2',
-                user: 'yours authorised email address',
-                clientId: CLIENT_ID,
-                clientSecret: CLIENT_SECRET,
-                refreshToken: REFRESH_TOKEN,
-                accessToken: accessToken,
-            },
-        });
-        var mailOptions = {
-            from: 'SENDER NAME <yours authorised email address@gmail.com>',
-            to: 'to email address here',
-            subject: 'Hello from gmail using API',
-            text: 'Hello from gmail email using API',
-            html: '<h1>Hello from gmail email using API</h1>',
-        };
-        var result = transport.sendMail(mailOptions);
-        return result;
-    }
-    catch (error) {
-        return error;
-    }
-});
-app.post('/mail-sendGrid', function (req, res, next) {
-    debugger;
+app.post('/send-mail', function (req, res) {
     var sendGridApiUrl = 'https://api.sendgrid.com/v3/mail/send';
     var sendGridApiKey = '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';
-    var corpo = req.body.corpo;
-    var destinatario = 'caslumach@gmail.com';
-    var assunto = req.body.assunto;
     var headers = {
         'Content-Type': 'application/json',
         Authorization: "Bearer ".concat(sendGridApiKey)
@@ -76,22 +34,19 @@ app.post('/mail-sendGrid', function (req, res, next) {
     var data = {
         personalizations: [
             {
-                to: [{ email: destinatario }],
-                subject: assunto,
+                to: [{ email: req.body.destinatario }],
+                subject: req.body.assunto,
             },
         ],
         from: { email: 'caslumach@gmail.com' },
-        content: [{ type: 'text/plain', value: corpo }],
+        content: [{ type: 'text/plain', value: req.body.corpo }],
     };
     axios_1.default.post(sendGridApiUrl, data, { headers: headers })
         .then(function (response) {
-        // Trate a resposta bem-sucedida aqui, se necessário
-        res.status(response.status).json(response.data);
+        console.log('Resposta do servidor:', response.data);
     })
         .catch(function (error) {
-        // Trate erros aqui
-        console.error('Erro ao enviar e-mail:', error);
-        res.status(500).json({ error: 'Erro ao enviar e-mail' });
+        console.error('Erro ao enviar a solicitação:', error);
     });
 });
 app.listen(port, function () {

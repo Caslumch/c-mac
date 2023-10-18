@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
 @import url("https://fonts.googleapis.com/css?family=Aldrich");
 
 .navbar-header {
@@ -81,7 +82,7 @@
 
 .btn-navbar {
     font-family: "Aldrich", sans-serif;
-    width: 120px;
+    width: 110px;
     height: 40px;
     background-color: #D4FF5B;
     color: #000000;
@@ -124,48 +125,51 @@
     }
 }
 
+
 .optMenu {
     text-decoration: none;
     color: white;
-    // transition: 0.3s;
-}
-
-.optMenu:hover {
-    text-decoration: none;
-    color: #b6b6b6;
-    transition: none;
-    border-bottom: 2px solid #D4FF5B;
+    position: relative;
 }
 
 .optMenu::before {
-    text-decoration: none;
-    color: #b6b6b6;
-    transition: none;
-    border-bottom: 2px solid #D4FF5B;
-}
-
-.retanguloMenu {
-    z-index: 1000;
-    border: 1px solid rgba(97, 97, 97, 0.5490196078);
-    border-radius: 3%;
-    width: 284px;
-    height: 290px;
+    content: "";
     position: absolute;
-    top: 117%;
-    right: 57%;
-    background-color: #0c0c0c;
-    transition: 0.2s;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #d3ff5b;
+    transition: width 0.2s ease-in-out;
+    color: #b6b6b6;
+}
+
+.optMenu:hover::before {
+    width: 100%;
+    color: #b6b6b6;
+}
+
+.optMenu:hover {
+    color: #b6b6b6;
+    text-decoration: none;
+
+}
+
+
+.typeOpt {
+    color: #ffffff;
+
+    text-decoration: none;
+}
+
+.typeOpt:hover {
+    color: #b6b6b6;
+    text-decoration: none;
+
 }
 
 
 
-// .optIn {
-//     z-index: 1;
-//     /* border-radius: 3%; */
-//     width: 257px;
-//     height: 81px;
-//     position: absolute;
-//     top: 4%;
-//     right: 4%;
-//     background-color: #585858;
-// }
+
+
+
