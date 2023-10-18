@@ -7,6 +7,7 @@ const app = express();
 const port = 3000;
 app.use(cors())
 app.use(express.json());
+require('dotenv').config()
 
 
 app.get('/', (req, res) => {
@@ -33,7 +34,7 @@ app.post('/weather-app', (req, res) => {
 
 app.post('/send-mail', (req, res) => {
   const sendGridApiUrl = 'https://api.sendgrid.com/v3/mail/send';
-  const sendGridApiKey = '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';
+  const sendGridApiKey = process.env['SEND_KEY'];
 
   const headers = {
     'Content-Type': 'application/json',
