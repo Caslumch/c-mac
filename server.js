@@ -7,6 +7,7 @@ var app = express();
 var port = 3000;
 app.use(cors());
 app.use(express.json());
+require('dotenv').config();
 app.get('/', function (req, res) {
     var n = 'bateu em';
     return res.json({ data: n });
@@ -26,7 +27,7 @@ app.post('/weather-app', function (req, res) {
 });
 app.post('/send-mail', function (req, res) {
     var sendGridApiUrl = 'https://api.sendgrid.com/v3/mail/send';
-    var sendGridApiKey = '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';
+    var sendGridApiKey = process.env['SEND_KEY'];
     var headers = {
         'Content-Type': 'application/json',
         Authorization: "Bearer ".concat(sendGridApiKey)
