@@ -66,7 +66,7 @@ app.post('/send-mail', (req, res) => {
 
 
 
-app.listen(port, () => { // quando ele abrir a porta ele executa tal coisa
+app.listen(port, '0.0.0.0', () => { // quando ele abrir a porta ele executa tal coisa
   console.log('Server Iniciado!!!')
 })
 

@@ -53,6 +53,6 @@ app.post('/send-mail', function (req, res) {
         return res.status(500).json({ error: 'Erro ao enviar o e-mail' }); // Tratamento de erro adequado
     });
 });
-app.listen(port, function () {
+app.listen(port, '0.0.0.0', function () {
     console.log('Server Iniciado!!!');
 });
