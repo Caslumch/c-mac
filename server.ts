@@ -33,7 +33,7 @@ app.post('/weather-app', (req, res) => {
 
 app.post('/send-mail', (req, res) => {
   const sendGridApiUrl = 'https://api.sendgrid.com/v3/mail/send';
-  const sendGridApiKey = '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'; 
+  const sendGridApiKey = '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';
 
   const headers = {
     'Content-Type': 'application/json',
@@ -47,20 +47,20 @@ app.post('/send-mail', (req, res) => {
         subject: req.body.assunto,
       },
     ],
-    from: { email: 'caslumach@gmail.com' }, // Substitua com seu endereço de email
+    from: { email: 'caslumach@gmail.com' },
     content: [{ type: 'text/plain', value: req.body.corpo }],
   };
 
   axios.post(sendGridApiUrl, data, { headers })
-  .then((response) => {
-    console.log('Resposta do servidor:', response.data);
-  })
-  .catch((error) => {
-    console.error('Erro ao enviar a solicitação:', error);
-  });
-
-
-})
+    .then((response) => {
+      console.log('Resposta do servidor:', response.data);
+      return res.json({ message: 'E-mail enviado com sucesso' }); // Apenas retornando uma mensagem de sucesso
+    })
+    .catch((error) => {
+      console.error('Erro ao enviar a solicitação:', error);
+      return res.status(500).json({ error: 'Erro ao enviar o e-mail' }); // Tratamento de erro adequado
+    });
+});
 
 
 

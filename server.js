@@ -26,7 +26,7 @@ app.post('/weather-app', function (req, res) {
 });
 app.post('/send-mail', function (req, res) {
     var sendGridApiUrl = 'https://api.sendgrid.com/v3/mail/send';
-    var sendGridApiKey = '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';
+    var sendGridApiKey = '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';
     var headers = {
         'Content-Type': 'application/json',
         Authorization: "Bearer ".concat(sendGridApiKey)
@@ -44,9 +44,11 @@ app.post('/send-mail', function (req, res) {
     axios_1.default.post(sendGridApiUrl, data, { headers: headers })
         .then(function (response) {
         console.log('Resposta do servidor:', response.data);
+        return res.json({ message: 'E-mail enviado com sucesso' }); // Apenas retornando uma mensagem de sucesso
     })
         .catch(function (error) {
         console.error('Erro ao enviar a solicitação:', error);
+        return res.status(500).json({ error: 'Erro ao enviar o e-mail' }); // Tratamento de erro adequado
     });
 });
 app.listen(port, function () {

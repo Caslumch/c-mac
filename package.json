@@ -20,6 +20,7 @@
     "@angular/platform-browser-dynamic": "^16.2.8",
     "@angular/router": "^16.2.8",
     "@ng-bootstrap/ng-bootstrap": "^15.1.1",
+    "@sendgrid/mail": "^7.7.0",
     "@spotify/web-api-ts-sdk": "^1.1.2",
     "angular-oauth2-oidc": "^15.0.1",
     "axios": "^1.5.1",
@@ -35,7 +36,7 @@
     "nodemailer": "^6.9.6",
     "nodemon": "^3.0.1",
     "primeicons": "^6.0.1",
-    "primeng": "^16.3.1",
+    "primeng": "^16.5.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.13.0"

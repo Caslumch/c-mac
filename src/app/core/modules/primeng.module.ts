@@ -8,6 +8,8 @@ import { DividerModule } from 'primeng/divider';
 import { DialogModule } from 'primeng/dialog';
 import { InputTextareaModule } from 'primeng/inputtextarea';
 import { OverlayPanelModule } from 'primeng/overlaypanel';
+import { ToastModule } from 'primeng/toast';
+import { ProgressSpinnerModule } from 'primeng/progressspinner';
 
 
 @NgModule({
@@ -20,7 +22,9 @@ import { OverlayPanelModule } from 'primeng/overlaypanel';
     InputTextModule,
     DialogModule,
     InputTextareaModule,
-    OverlayPanelModule
+    OverlayPanelModule,
+    ToastModule,
+    ProgressSpinnerModule
   ],
   exports: [
     DropdownModule,
@@ -30,7 +34,9 @@ import { OverlayPanelModule } from 'primeng/overlaypanel';
     InputTextModule,
     DialogModule,
     InputTextareaModule,
-    OverlayPanelModule
+    OverlayPanelModule,
+    ToastModule,
+    ProgressSpinnerModule
 
   ],
   providers: [],
