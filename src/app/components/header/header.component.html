@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
     <div class="container-fluid">
-        <div class="d-none d-md-block col-md-6 d-flex">
+        <div class="d-none d-md-block text-center col-md-6 d-flex">
             <a class="navbar-brand mr-auto" id="reload" href="#">
                 <img src="./assets/logo-site-c.png" (error)="handleImageError()" alt="Rita RH"
                     class="file-img sidebar-menu-logo" />
@@ -14,8 +14,8 @@
                     <span class="menu-d pi pi-bars"></span>
                 </button></div>
         </div>
-        <div class="col-12 col-md-5 d-flex justify-content-initial justify-content-md-end text-md-end text-center">
-            <div class="dp-menu collapse navbar-collapse" id="navbarNav">
+        <div class="col-12 col-md-5  d-flex justify-content-initial justify-content-md-end text-md-end text-center">
+            <div class="dp-menu collapse text-left align-items-left navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav options d-flex flex-column flex-md-row align-items-center">
                     <li *ngFor="let o of optionsMenu" class="opt-navbar nav-item">
                         <a id="inicio" (mouseenter)="onMouseEnter($event, o)" #rla="routerLinkActive"
