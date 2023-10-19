@@ -38,5 +38,10 @@
 .labelStackTitle {
     font-family: "Montserrat", sans-serif;
     font-size: 15px;
-   
+}
+
+@media (max-width: 768px) {
+    .labelStackTitle {
+        font-size: 13px;
+    }
 }
