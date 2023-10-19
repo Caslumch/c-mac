@@ -4,8 +4,7 @@ var express = require("express");
 var axios_1 = require("axios");
 var cors = require("cors");
 var app = express();
-// const port = 3000;
-var port = 4000;
+var port = 3000;
 app.use(cors());
 app.use(express.json());
 require('dotenv').config();
@@ -53,6 +52,6 @@ app.post('/send-mail', function (req, res) {
         return res.status(500).json({ error: 'Erro ao enviar o e-mail' }); // Tratamento de erro adequado
     });
 });
-app.listen(port, '0.0.0.0', function () {
+app.listen(port, function () {
     console.log('Server Iniciado!!!');
 });
