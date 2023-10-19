@@ -15,8 +15,8 @@ export class HeaderComponent implements OnInit {
   ];
 
   optionsSubMenu = [
-    { title: 'Sobre Mim', subtitle: "Conheça um pouco mais sobre mim e minha trajetória" },
-    { title: 'Tecnologias', subtitle: "Todas as tecnologias que eu desenvolvi esta aplicação e mais." },
+    { title: 'Sobre Mim', subtitle: "Conheça um pouco mais sobre mim e minha trajetória", routerlink: 'about' },
+    { title: 'Tecnologias', subtitle: "Todas as tecnologias que eu desenvolvi esta aplicação e mais.", routerLink: '' },
 
   ];
   ehMobile: any
