@@ -7,7 +7,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ComponentsModule } from './components/components.modules';
 import { DropdownModule } from 'primeng/dropdown';
-import { OtherController } from './core/controllers/user/others.controller';
 // import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({

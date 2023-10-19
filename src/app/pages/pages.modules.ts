@@ -17,6 +17,8 @@ import { ContactComponent } from './modulos/contact/contact.component';
 import { ProjectsComponent } from './modulos/projects/projects.component';
 import { OtherController } from '../core/controllers/user/others.controller';
 import { HttpClientModule } from '@angular/common/http';
+import { TechnologiesComponent } from './modulos/technologies/technologies.component';
+import { StacksComponent } from './modulos/stacks/stacks.component';
 
 const routes: Routes = [
     {
@@ -27,6 +29,8 @@ const routes: Routes = [
             { path: 'about', component: AboutComponent },
             { path: 'projects', component: ProjectsComponent },
             { path: 'contact', component: ContactComponent },
+            { path: 'stacks', component: StacksComponent },
+            { path: 'tech', component: TechnologiesComponent },
         ],
     },
     {
@@ -41,7 +45,9 @@ const routes: Routes = [
 ];
 
 @NgModule({
-    declarations: [HomeComponent, AboutComponent, ProjectsComponent, ContactComponent],
+    declarations: [HomeComponent, AboutComponent, ProjectsComponent,
+        StacksComponent,
+        TechnologiesComponent, ContactComponent],
     providers: [ConfirmationService, MessageService, OtherController],
     imports: [
         DropdownModule, ButtonModule,PanelModule,DividerModule,

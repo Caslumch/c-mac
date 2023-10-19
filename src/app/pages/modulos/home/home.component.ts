@@ -27,8 +27,8 @@ export class HomeComponent implements OnInit {
 
   drops = [
     { name: 'Projetos', src: './assets/projects.jpg', routerLink: 'projects' },
-    { name: 'Stack', src: './assets/stack.jpg', routerLink: 'stack' },
-    { name: 'Fotografia', src: './assets/startup.jpg', routerLink: 'photos' }
+    { name: 'Stack', src: './assets/stack.jpg', routerLink: 'stacks' },
+    { name: 'Fotografia', src: './assets/startup.jpg', routerLink: 'photos', link: "https://caslumachado.46graus.com"}
   ]
 
   async ngOnInit(): Promise<void> {

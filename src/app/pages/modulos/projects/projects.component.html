@@ -1,72 +1,105 @@
 <app-header></app-header>
 <div class="container-found">
     <div class="containerCsite">
-        <div class="row d-flex justify-content-center">
-            <div class="col-12 col-md-12 text-center ">
-                <p class="mt-4 text-hi-title mch-fs-50">Projetos.</p>
-                <img class="imgConfig" src="./assets/config.png" alt="man" />
-                <p class="mt-4">Em manutenção.</p>
-            </div>
-            <div class="mt-4 m-4 col-12 col-md-3">
-                <p-button [routerLink]="['/home']" label="Página Inicial"></p-button>
-            </div>
+        <div class="col-12">
+            <div class="row">
 
+                <div class="col-12 col-md-12 text-center"><label class="mch-fs-30">Meus Projetos</label></div>
+                <div class=" mt-4 mt-md-0 col-12 col-md-12 mch-color-white">
+                    <div class="row">
+
+                        <div class=" mt-4 col-12 col-md-12 d-md-block">
+                            <span class="p-input-icon-right w-full">
+                                <i class="pi pi-search"></i>
+                                <input type="text" class="w-full" pInputText
+                                    placeholder="Pesquise o projeto desejado" />
+                            </span>
+                        </div>
+                        <div class="row mt-5 ">
+                            <div class=" col-12 col-md-6">
+                                <div class="row">
+                                    <div class=" text-center panelProjectDesc mt-4 col-12">
+
+
+                                        <p class="mt-4">
+                                            profile web - Lucas Machado
+                                        </p>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor
+                                            incididunt ut
+                                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                            exercitation
+                                            ullamco
+                                            laboris nisi ut aliquip ex ea commodo
+                                        </p>
+                                    </div>
+                                    <div class="mt-2 col-6">
+                                        <span class="m-2 pi pi-github"></span>
+                                        <span class="m-2 pi pi-prime"></span>
+                                    </div>
+                                    <div class="mt-2 text-right col-12 col-md-6">
+                                        <label class="iconGit"><span class="m-2 pi pi-github"></span>
+                                            Acessar Projeto >
+                                        </label>
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+                            <div class="mb-5 d-flex justify-content-center col-12 col-md-6 mch-color-white imgProject">
+                                <img class="imgProject" src="./assets/mac-project.png" alt="profile">
+                            </div>
+                        </div>
+
+                        <div class="mt-4 col-12 content">
+                            <hr class="divider">
+                          </div>
+
+
+                        <div class="row mt-5 ">
+                            <div class="mb-5 d-flex justify-content-center col-12 col-md-6 mch-color-white imgProject">
+                                <img class="imgProject" src="./assets/mac-project.png" alt="profile">
+                            </div>
+                            <div class=" col-12 col-md-6">
+                                <div class="row">
+                                    <div class=" text-center panelProjectDesc mt-4 col-12">
+
+
+                                        <p class="mt-4">
+                                            Pedro Machado da Silva
+                                        </p>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor
+                                            incididunt ut
+                                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                            exercitation
+                                            ullamco
+                                            laboris nisi ut aliquip ex ea commodo
+                                        </p>
+                                    </div>
+                                    <div class="mt-2 col-6">
+                                        <span class="m-2 pi pi-github"></span>
+                                        <span class="m-2 pi pi-github"></span>
+                                    </div>
+                                    <div class="mt-2 text-right col-12 col-md-6">
+                                        <label class="iconGit"><span class="m-2 pi pi-github"></span>
+                                            Acessar Projeto >
+                                        </label>
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
 
         </div>
-        <!-- <div class="col-12">
-            <div class="col-12 col-md-12 "><label class="mch-fs-80">Projetos</label></div>
-            <div class=" mt-4 mt-md-0 col-12 col-md-12 mch-color-white">
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                    laboris nisi ut aliquip ex ea commodo
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                    laboris nisi ut aliquip ex ea commodo
-                </p>
-            </div>
-            <div class=" col-12 col-md-6 d-md-block">
-                <span class="p-input-icon-right w-full">
-                  <i class="pi pi-search"></i>
-                  <input
-                    type="text"
-                    class="w-full"
-                    pInputText
-                    placeholder="Pesquise o projeto desejado"
-                  />
-                </span>
-              </div>
-            <div class="row mt-3 ">
-                <div class="mb-5 col-12 col-md-4 mch-color-white imgProject">
-                    <img class="imgProject" src="./assets/profile.jpg" alt="profile">
-                    <label>Projeto 1</label>
-                </div>
-                <div class="mb-5  col-12 col-md-4 mch-color-white imgProject">
-                    <img class="imgProject" src="./assets/profile.jpg" alt="profile">
-                    <label>Projeto 2</label>
-                </div>
-                <div class="mb-5 col-12 col-md-4 mch-color-white imgProject">
-                    <img class="imgProject" src="./assets/profile.jpg" alt="profile">
-                    <label>Projeto 3</label>
-                </div>
-                <div class="mb-5 col-12 col-md-4 mch-color-white imgProject">
-                    <img class="imgProject" src="./assets/profile.jpg" alt="profile">
-                    <label>Projeto 1</label>
-                </div>
-                <div class="mb-5 col-12 col-md-4 mch-color-white imgProject">
-                    <img class="imgProject" src="./assets/profile.jpg" alt="profile">
-                    <label>Projeto 2</label>
-                </div>
-                <div class="mb-5 col-12 col-md-4 mch-color-white imgProject">
-                    <img class="imgProject" src="./assets/profile.jpg" alt="profile">
-                    <label>Projeto 3</label>
-                </div>
-
-
-            </div>
-
-        </div> -->
-
         <app-footer></app-footer>
     </div>
-</div>
