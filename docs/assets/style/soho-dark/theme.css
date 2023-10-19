@@ -3196,8 +3196,8 @@ p-treeselect.p-treeselect-clearable .p-treeselect-clear-icon {
   color: #1c1d26;
 }
 .fc.fc-unthemed .fc-view-container .fc-divider {
-  background: #ffffff;
-  border: 1px solid #ffffff;
+  background: #282936;
+  border: 1px solid #3e4053;
 }
 .fc.fc-unthemed .fc-toolbar .fc-button {
   color: #1c1d26;
@@ -4200,14 +4200,14 @@ p-treeselect.p-treeselect-clearable .p-treeselect-clear-icon {
 }
 
 .p-divider .p-divider-content {
-  background-color: #ffffff;
+  background-color: #282936;
 }
 .p-divider.p-divider-horizontal {
   margin: 1.25rem 0;
   padding: 0 1.25rem;
 }
 .p-divider.p-divider-horizontal:before {
-  border-top: 1px #ffffff;
+  border-top: 1px #3e4053;
 }
 .p-divider.p-divider-horizontal .p-divider-content {
   padding: 0 0.5rem;
@@ -4217,7 +4217,7 @@ p-treeselect.p-treeselect-clearable .p-treeselect-clear-icon {
   padding: 1.25rem 0;
 }
 .p-divider.p-divider-vertical:before {
-  border-left: 1px #ffffff;
+  border-left: 1px #3e4053;
 }
 .p-divider.p-divider-vertical .p-divider-content {
   padding: 0.5rem 0;

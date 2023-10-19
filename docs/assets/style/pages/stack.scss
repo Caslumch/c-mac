@@ -1,0 +1,42 @@
+.panelStack {
+    cursor: pointer;
+    border-radius: 9px;
+    max-width: 100%;
+    width: 90%;
+    height: auto;
+    padding: 10px;
+    color: #fff;
+    margin-top: 10px;
+    margin-left: 13px;
+    background-color: #0c0c0c;
+    border: solid 1px rgba(124, 124, 124, 0.35);
+
+}
+
+.panelStack:hover {
+    cursor: pointer;
+    background-color: #232323;
+    border: solid 1px #D4FF5B
+}
+
+.imgStack {
+    width: 100px;
+    height: 100px;
+}
+
+.titleStack {
+    /* left: 67px; */
+    max-width: 100%;
+    /* width: 100px; */
+    position: relative;
+    border-radius: 7px;
+    border: solid 1px rgba(124, 124, 124, 0.35);
+    cursor: pointer;
+}
+
+
+.labelStackTitle {
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+   
+}
