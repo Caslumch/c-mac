@@ -15,7 +15,7 @@
                 </button></div>
         </div>
         <div class="col-12 col-md-5  d-flex justify-content-initial justify-content-md-end text-md-end text-center">
-            <div class="dp-menu collapse text-left align-items-left navbar-collapse" id="navbarNav">
+            <div class="dp-menu collapse text-center text-md-left align-items-left navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav options d-flex flex-column flex-md-row align-items-center">
                     <li *ngFor="let o of optionsMenu" class="opt-navbar nav-item">
                         <a id="inicio" (mouseenter)="onMouseEnter($event, o)" #rla="routerLinkActive" [routerLink]="['/' + o.routerLink]"
@@ -35,7 +35,7 @@
 
                     </li>
                 </ul>
-                <div class="  ml-3 btn-navbar mt-4" [routerLink]="['/home']">Home</div>
+                <div class="  ml-0 ml-md-3 btn-navbar mt-4" [routerLink]="['/home']">Home</div>
                 <!-- <div *ngIf="seeMenu" (mouseleave)="onMouseOut()"
                     class=" row mch-color-white retanguloMenu  flex-column d-flex text-left accompaniment">
                     <div class="col-12 col-md-12">
