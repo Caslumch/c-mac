@@ -1,17 +1,19 @@
 .imgProject {
-    TOP: 13PX;
+    top: 13px;
     position: relative;
     max-width: 100%;
-    height: 213PX;
+    max-height: 100%;
     object-fit: cover;
 }
 
 .panelProjectDesc {
-    transition: 0.1s;    z-index: 999;
+    max-width: 100%;
+    height: 100%;
+    transition: 0.1s;
+    z-index: 999;
     width: 250px;
-    height: 200px;
     border-radius: 3%;
-    background-color: #54545418;
+    background-color: rgba(84, 84, 84, 0.0941176471);
     transition: 0.2s;
     border-top-right-radius: 15px;
     border-top-left-radius: 15px;
