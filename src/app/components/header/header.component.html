@@ -23,22 +23,15 @@
                             class="{{ rla.isActive ? 'typeOpt' : ' optMenu typeOpt z'}}" routerLinkActive
                             [routerLinkActive]="['linkSelect']" href="#">{{o.option}}</a>
                         <ul *ngIf="seeMenu" class="ehMobile">
-                            <li *ngFor="let s of optionsSubMenu"><a class="text-left x" href="#">
-                                <a [routerLink]="['/' + s.routerLink]">
-
-                                    <div  class="panelElementMenu">
+                            <li *ngFor="let s of optionsSubMenu">
+                                <a class="text-left x" [routerLink]="['/' + s.routerLink]">
+                                    <div class="panelElementMenu">
                                         <div class="menu-content">
                                             <label class="mch-fs-13 titleMenu">{{s.title}}</label>
                                             <label
                                                 class="mch-fs-13 subtitleMenu mch-color-secundary">{{s.subtitle}}</label>
                                         </div>
-                            <li *ngFor="let s of optionsSubMenu"><a class="text-left x" [routerLink]="['/' + s.routerLink]">
-                                <div  class="panelElementMenu">
-                                    <div class="menu-content">
-                                        <label class="mch-fs-13 titleMenu">{{s.title}}</label>
-                                        <label class="mch-fs-13 subtitleMenu mch-color-secundary">{{s.subtitle}}</label>
                                     </div>
-                                </a>
                                 </a>
                             </li>
                         </ul>
