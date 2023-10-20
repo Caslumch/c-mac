@@ -1,0 +1,50 @@
+<app-header></app-header>
+<div class="container-found">
+    <div class="containerCsite">
+        <div class="col-12">
+            <div class="row">
+
+                <div class="col-12 col-md-12"><label class="mch-fs-30">Stack</label></div>
+                <div class="  mt-4 mt-md-0 col-12 col-md-12 mch-color-white">
+                    <p>
+
+                        Aqui, listo alguns dos serviços e softwares que integram o meu dia a dia:
+                    </p>
+                </div>
+                <div class=" mt-4 mt-md-0 col-12 col-md-12 mch-color-white">
+                    <div class="row">
+                        <div class=" mt-2 col-12 col-md-12 d-md-block">
+                            <span class="p-input-icon-right w-full">
+                                <i class="pi pi-search"></i>
+                                <input type="text" class="w-full" pInputText
+                                    placeholder="Pesquise o item desejado" />
+                            </span>
+                        </div>
+                        <div class="row mt-0 mt-md-5 ">
+                            <div *ngFor="let s of stacks"class=" mt-5 col-6 col-md-4 d-flex align-items-center justify-content-center">
+                                <div class="text-center panelStack">
+                                    <img class="imgStack" src="{{s.src}}" alt="csl">
+                                    <div><p>{{s.nome}}</p></div>
+                                    <div class="titleStack">
+                                        <label class="mt-2 labelStackTitle">{{s.tipo}}</label>
+                                    </div>
+                                </div>
+                            </div>
+          
+                        </div>
+
+
+
+
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <app-footer></app-footer>
+</div>

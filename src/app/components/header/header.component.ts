@@ -15,14 +15,17 @@ export class HeaderComponent implements OnInit {
   ];
 
   optionsSubMenu = [
+<<<<<<< HEAD
     { title: 'Sobre Mim', subtitle: "Conheça um pouco mais sobre mim e minha trajetória", routerlink: 'about' },
+=======
+    { title: 'Sobre Mim', subtitle: "Conheça um pouco mais sobre mim e minha trajetória", routerLink: 'about' },
+>>>>>>> 2291debe7509ebb7783061ad089eed5d02ef3aa4
     { title: 'Tecnologias', subtitle: "Todas as tecnologias que eu desenvolvi esta aplicação e mais.", routerLink: '' },
 
   ];
   ehMobile: any
   ngOnInit(): void {
     this.ehMobile = window.screen.width < 933;
-    debugger;
 
   }
 
