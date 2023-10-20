@@ -23,7 +23,6 @@
                             class="{{ rla.isActive ? 'typeOpt' : ' optMenu typeOpt z'}}" routerLinkActive
                             [routerLinkActive]="['linkSelect']" href="#">{{o.option}}</a>
                         <ul *ngIf="seeMenu" class="ehMobile">
-<<<<<<< HEAD
                             <li *ngFor="let s of optionsSubMenu"><a class="text-left x" href="#">
                                 <a [routerLink]="['/' + s.routerLink]">
 
@@ -33,13 +32,11 @@
                                             <label
                                                 class="mch-fs-13 subtitleMenu mch-color-secundary">{{s.subtitle}}</label>
                                         </div>
-=======
                             <li *ngFor="let s of optionsSubMenu"><a class="text-left x" [routerLink]="['/' + s.routerLink]">
                                 <div  class="panelElementMenu">
                                     <div class="menu-content">
                                         <label class="mch-fs-13 titleMenu">{{s.title}}</label>
                                         <label class="mch-fs-13 subtitleMenu mch-color-secundary">{{s.subtitle}}</label>
->>>>>>> 2291debe7509ebb7783061ad089eed5d02ef3aa4
                                     </div>
                                 </a>
                                 </a>
@@ -48,9 +45,6 @@
 
                     </li>
                 </ul>
-<<<<<<< HEAD
-                <div class="  ml-3 btn-navbar mt-4" [routerLink]="['/home']">Home</div>
-=======
                 <div class="  ml-0 ml-md-3 btn-navbar mt-4" [routerLink]="['/home']">Home</div>
                 <!-- <div *ngIf="seeMenu" (mouseleave)="onMouseOut()"
                     class=" row mch-color-white retanguloMenu  flex-column d-flex text-left accompaniment">
@@ -63,7 +57,6 @@
                         </div>
                     </div>
                 </div> -->
->>>>>>> 2291debe7509ebb7783061ad089eed5d02ef3aa4
             </div>
         </div>
     </div>
