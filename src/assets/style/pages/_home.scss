@@ -174,3 +174,18 @@
 .titleDrops {
     font-family: "Montserrat", sans-serif;
 }
+
+.typing-animation span {
+    border-right: 2px solid #fff;
+    padding-right: 10px;
+    animation: typing 1s steps(11, end) infinite;
+}
+
+@keyframes typing {
+    0%, 50% {
+        border-right-color: transparent;
+    }
+    51%, 100% {
+        border-right-color: #fff;
+    }
+}

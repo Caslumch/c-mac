@@ -1,10 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-stacks',
   templateUrl: './stacks.component.html',
 })
 export class StacksComponent implements OnInit {
+
+  @ViewChild('mViewer') mViewer?: any;
 
   stacks = [
     { nome: 'csite', tipo: 'Código', src: './assets/stack/csite.png', },
@@ -19,9 +21,24 @@ export class StacksComponent implements OnInit {
     { nome: 'Notion', tipo: 'Produtividade', src: './assets/stack/notion.png', },
   ]
 
+  viewListOrNot: boolean = true
+
+  selectSkill: any
+
   ngOnInit(): void {
     debugger;
 
   }
+
+  getList(e: any) {
+    this.viewListOrNot = !this.viewListOrNot
+    debugger;
+  }
+
+  clicar = (e:any) => {
+    console.log(e)
+    debugger;
+    this.mViewer.openModal();
+  };
 
 }

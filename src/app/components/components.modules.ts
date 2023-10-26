@@ -7,13 +7,15 @@ import { FooterComponent } from './footer/footer.component';
 import { PrimeNGModules } from '../core/modules/primeng.module';
 import { ModalContatoComponent } from './modais/modal-contato/modal-contato.component';
 import { ModalWeatherComponent } from './modais/modal-weather/modal-weather.component';
+import { ModalViewerComponent } from './modais/modal-viewer/modal-viewer.component';
 
 @NgModule({
   declarations: [
     HeaderComponent,
     FooterComponent,
     ModalContatoComponent,
-    ModalWeatherComponent
+    ModalWeatherComponent,
+    ModalViewerComponent
     
 
   ],
@@ -29,6 +31,8 @@ import { ModalWeatherComponent } from './modais/modal-weather/modal-weather.comp
     FooterComponent,
     ModalContatoComponent,
     ModalWeatherComponent,
+    
+    ModalViewerComponent,
     PrimeNGModules
 
   ],

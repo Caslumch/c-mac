@@ -232,8 +232,10 @@ thumb {
   height: 10px;
   background-color: rgb(119, 118, 118);
   border-radius: 50%;
-  display: inline-block; /* Altere para inline-block */
-  margin-right: 5px; /* Adicione um espaçamento à direita, se desejado */
+  display: inline-block;
+  /* Altere para inline-block */
+  margin-right: 5px;
+  /* Adicione um espaçamento à direita, se desejado */
   animation: pulse 1.5s linear infinite;
   position: relative;
   // top: -2px;
@@ -244,6 +246,7 @@ thumb {
   0% {
     box-shadow: 0 0 0 0 rgb(138, 138, 138);
   }
+
   100% {
     box-shadow: 0 0 0 5px rgb(168, 35, 35, 0);
   }
@@ -268,7 +271,8 @@ thumb {
 
 .location {
   display: flex;
-  align-items: center; /* Centraliza verticalmente */
+  align-items: center;
+  /* Centraliza verticalmente */
 }
 
 .iconLocale {
@@ -285,8 +289,10 @@ thumb {
   height: 7px;
   background-color: rgb(119, 118, 118);
   border-radius: 50%;
-  display: inline-block; /* Altere para inline-block */
-  margin-right: 5px; /* Adicione um espaçamento à direita, se desejado */
+  display: inline-block;
+  /* Altere para inline-block */
+  margin-right: 5px;
+  /* Adicione um espaçamento à direita, se desejado */
   animation: pulse 1.5s linear infinite;
   position: relative;
   // top: -2px;
@@ -297,6 +303,7 @@ thumb {
   0% {
     box-shadow: 0 0 0 0 rgb(138, 138, 138);
   }
+
   100% {
     box-shadow: 0 0 0 5px rgb(168, 35, 35, 0);
   }
@@ -313,6 +320,18 @@ thumb {
   transition: opacity 7s ease-in-out;
 }
 
-
-
-
+.circle {
+  cursor: pointer;
+  width: 40px;
+  /* Defina a largura e a altura desejadas para o círculo */
+  height: 40px;
+  background-color: #4141415b;
+  /* Cor de fundo do círculo (você pode alterar isso) */
+  border-radius: 50%;
+  /* Torna o elemento um círculo */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  /* Para posicionar o ícone absolutamente */
+}

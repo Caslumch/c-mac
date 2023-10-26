@@ -28,7 +28,7 @@
                 <div class="col-12 mch-fs-18 titleDrops">ÚTIMOS DROPS</div>
                 <div *ngFor="let d of drops" [routerLink]="d.routerLink ? ['/' + d.routerLink] : null"
                     class="panelElement mt-4 col-12 col-md-4">
-                    <div class="image-container">
+                    <div (click)="changeRouter(d)" class="image-container">
                         <img class="imgStacks" src="{{d.src}}" alt="about">
                         <div class="overlay">
                             <label class="label">{{d.name}}</label>

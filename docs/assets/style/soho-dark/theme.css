@@ -2780,11 +2780,11 @@ p-treeselect.p-treeselect-clearable .p-treeselect-clear-icon {
 .p-datatable .p-datatable-thead > tr > th {
   text-align: left;
   padding: 1rem 1rem;
-  border: 1px solid #3e4053;
+  border: 1px solid #141414;
   border-width: 0 0 1px 0;
   font-weight: 700;
   color: rgba(255, 255, 255, 0.87);
-  background: #282936;
+  background: #757575;
   transition: box-shadow 0.2s;
 }
 .p-datatable .p-datatable-tfoot > tr > td {
@@ -2835,13 +2835,13 @@ p-treeselect.p-treeselect-clearable .p-treeselect-clear-icon {
   outline: 0 none;
 }
 .p-datatable .p-datatable-tbody > tr {
-  background: #282936;
+  background: #0c0c0c;
   color: rgba(255, 255, 255, 0.87);
   transition: box-shadow 0.2s;
 }
 .p-datatable .p-datatable-tbody > tr > td {
   text-align: left;
-  border: 1px solid #3e4053;
+  border: 1px solid #0c0c0c;
   border-width: 0 0 1px 0;
   padding: 1rem 1rem;
 }
@@ -2904,7 +2904,7 @@ p-treeselect.p-treeselect-clearable .p-treeselect-clear-icon {
 .p-datatable.p-datatable-scrollable > .p-datatable-wrapper > .p-datatable-table > .p-datatable-thead,
 .p-datatable.p-datatable-scrollable > .p-datatable-wrapper > .p-datatable-table > .p-datatable-tfoot, .p-datatable.p-datatable-scrollable > .p-datatable-wrapper > .p-scroller-viewport > .p-scroller > .p-datatable-table > .p-datatable-thead,
 .p-datatable.p-datatable-scrollable > .p-datatable-wrapper > .p-scroller-viewport > .p-scroller > .p-datatable-table > .p-datatable-tfoot {
-  background-color: #282936;
+  background-color: #0c0c0c;
 }
 .p-datatable .p-datatable-loading-icon {
   font-size: 2rem;
@@ -2964,7 +2964,7 @@ p-treeselect.p-treeselect-clearable .p-treeselect-clear-icon {
   border-width: 0 1px 0 1px;
 }
 .p-datatable.p-datatable-striped .p-datatable-tbody > tr:nth-child(even) {
-  background: #2b2c38;
+  background: #141414;
 }
 .p-datatable.p-datatable-striped .p-datatable-tbody > tr:nth-child(even).p-highlight {
   background: rgba(177, 157, 247, 0.16);
@@ -4639,23 +4639,24 @@ p-treeselect.p-treeselect-clearable .p-treeselect-clear-icon {
 }
 
 .p-tooltip .p-tooltip-text {
-  background: #3e4053;
+  background: #4c4c4c5c;
+  border: solid 1px #d3ff5b7b;
   color: rgba(255, 255, 255, 0.87);
   padding: 0.75rem 0.75rem;
   box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
   border-radius: 6px;
 }
 .p-tooltip.p-tooltip-right .p-tooltip-arrow {
-  border-right-color: #3e4053;
+  /* border-right-color: #3e4053; */
 }
 .p-tooltip.p-tooltip-left .p-tooltip-arrow {
-  border-left-color: #3e4053;
+  /* border-left-color: #3e4053; */
 }
 .p-tooltip.p-tooltip-top .p-tooltip-arrow {
-  border-top-color: #3e4053;
+  /* border-top-color: #3e4053; */
 }
 .p-tooltip.p-tooltip-bottom .p-tooltip-arrow {
-  border-bottom-color: #3e4053;
+  /* border-bottom-color: #3e4053; */
 }
 
 .p-fileupload .p-fileupload-buttonbar {

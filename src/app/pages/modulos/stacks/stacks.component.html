@@ -3,51 +3,86 @@
     <div class="containerCsite">
         <div class="col-12">
             <div class="row">
-                <div class="col-12 col-md-12"><label class="mch-fs-30">Stack</label></div>
-                <div class="  mt-4 mt-md-0 col-12 col-md-12 mch-color-white">
+                <div class="col-12 col-md-12">
+                    <label class="mch-fs-30">Stack</label>
+                </div>
+                <div class="mt-4 mt-md-0 col-12 col-md-12 mch-color-white">
                     <p>
-
                         Aqui, listo alguns dos serviços e softwares que integram o meu dia a dia:
                     </p>
                 </div>
-                <div class=" mt-4 mt-md-0 col-12 col-md-12 mch-color-white">
+                <div class="mt-4 mt-md-0 col-12 col-md-12 mch-color-white">
                     <div class="row">
-                        <div class=" mt-2 col-12 col-md-12 d-md-block">
+                        <div class="col-12 col-md-8 d-md-block">
                             <span class="p-input-icon-right w-full">
                                 <i class="pi pi-search"></i>
                                 <input type="text" class="w-full" pInputText placeholder="Pesquise o item desejado" />
                             </span>
                         </div>
-                        <div class="row mt-0 mt-md-5 ">
-                            <div *ngFor="let s of stacks"
-                                class=" mt-5 col-6 col-md-4 d-flex align-items-center justify-content-center">
-                                <div class="text-center panelStack">
-                                    <img class="imgStack" src="{{s.src}}" alt="csl">
-                                    <div>
-                                        <p>{{s.nome}}</p>
-                                    </div>
-                                    <div class="titleStack">
-                                        <label class="mt-2 labelStackTitle">{{s.tipo}}</label>
-                                    </div>
+                        <div class="col-4">
+                            <span class=" mt-1 d-none d-md-flex p-input-icon-left d-flex justify-content-initial">
+                                <div class="circle">
+                                    <i class="{{viewListOrNot ? 'pi pi-list icon' : 'pi pi-th-large'}}" pTooltip="{{viewListOrNot ? 'Exbir lista' : 'Exibir ícones Grandes '}}" tooltipPosition="top" (click)="getList($event)"></i>
+                                </div>
+                            </span>
+                        </div>
+                    </div>
+                    <div (click)="clicar('foi')" *ngIf="viewListOrNot" class="row mt-0 mt-md-2 justify-content-center">
+                        <!-- Adicione a classe "justify-content-center" para centralizar -->
+                        <div  *ngFor="let s of stacks"
+                            class="mt-5 col-6 col-md-3 d-flex align-items-center justify-content-center">
+                            <div  class="text-center panelStack">
+                                <img class="imgStack img-fluid" [src]="s.src" alt="Imagem">
+                                <div>
+                                    <p>{{ s.nome }}</p>
+                                </div>
+                                <div class="titleStack">
+                                    <label class="mt-2 labelStackTitle">{{ s.tipo }}</label>
                                 </div>
                             </div>
-
                         </div>
+                    </div>
 
+                    <div *ngIf="!viewListOrNot" class="row mt-0 mt-md-4 justify-content-center">
+                        <!-- Adicione a classe "justify-content-center" para centralizar -->
+                        <p-table #table [value]="stacks" styleClass="p-datatable-striped" responsiveLayout="scroll"
+                            [rowHover]="true">
+                            <ng-template pTemplate="header">
+                                <tr>
 
+                                    <th>
+                                        <p>Stack</p>
+                                    </th>
+                                    <th>
+                                        <p>Tipo </p>
+                                    </th>
+                                    <th >
+                                        <p>Visualizar</p>
+                                    </th>
+                                </tr>
+                            </ng-template>
 
+                            <ng-template pTemplate="body" let-stacks>
+                                <tr>
 
-
-
-
-
+                                    <td>{{ stacks.nome }}</td>
+                                    <td>{{ stacks.tipo }}</td>
+                                    <td>
+                                        <div class="col-12 d-flex flex-row align-items-center">
+                                            <i class="pi pi-eye rth-color-secundary"></i>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </ng-template>
+                        </p-table>
                     </div>
                 </div>
             </div>
         </div>
-
         <div class="mt-4">
             <app-footer></app-footer>
         </div>
     </div>
 </div>
+
+<app-modal-viewer #mViewer></app-modal-viewer>
