@@ -31,10 +31,7 @@ export class HomeComponent implements OnInit {
     { name: 'Fotografia', src: './assets/fotografia.jpg', link: "https://caslumachado.46graus.com" }
   ]
 
-  typedText: string = ''; // Texto digitado
-  textToType: string = 'Dando vida à web com código e design.'; // Texto que será digitado
-  typingSpeed: number = 50; // Velocidade da digitação em milissegundos por caractere
-  index: number = 0;
+
 
   async ngOnInit(): Promise<void> {
     this.getLocale()
@@ -106,6 +103,11 @@ export class HomeComponent implements OnInit {
     }
   }
 
+
+  typedText: string = ''; // Texto digitado
+  textToType: string = 'Dando vida à web com código e design.'; // Texto que será digitado
+  typingSpeed: number = 50; // Velocidade da digitação em milissegundos por caractere
+  index: number = 0;
  
 
   typeText() {

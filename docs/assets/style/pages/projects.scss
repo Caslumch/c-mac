@@ -37,10 +37,16 @@
 }
 
 .iconGit:hover {
+    cursor: pointer;
     color: #666666;
     text-decoration: none;
     cursor: pointer;
     font-size: 15px;
+}
+
+.text-access {
+    cursor: pointer;
+    margin-left: 5px;
 }
 
 .divider {
