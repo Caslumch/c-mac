@@ -17,7 +17,7 @@
     border-top-left-radius: 15px;
     border-bottom-right-radius: 15px;
     border-bottom-left-radius: 15px;
-    
+
 }
 
 .panelProjectDesc:hover {
@@ -45,6 +45,22 @@
 
 .divider {
     border: none;
-    border-top: 2px solid #333; /* Cor e largura da linha */
-    margin: 20px 0; /* Espaçamento superior e inferior */
-  }
+    border-top: 2px solid #333;
+    /* Cor e largura da linha */
+    margin: 20px 0;
+    /* Espaçamento superior e inferior */
+}
+
+.fade-in-projects {
+    animation: fadeIn 3s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

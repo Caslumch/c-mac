@@ -21,20 +21,26 @@ export class HomeComponent implements OnInit {
   latitude: number = 0;
   longitude: number = 0;
 
-  simbolStyle: string = 'color: #d4ff5b; cursor: pointer'
+  simbolStyle: string = 'color: #d4ff5b; cursor: pointer; fade-in'
   simbol: string = `<\/`;
   ehMobile = false
 
   drops = [
     { name: 'Projetos', src: './assets/projects.jpg', routerLink: 'projects' },
     { name: 'Stack', src: './assets/stack.jpg', routerLink: 'stacks' },
-    { name: 'Fotografia', src: './assets/startup.jpg', link: "https://caslumachado.46graus.com" }
+    { name: 'Fotografia', src: './assets/fotografia.jpg', link: "https://caslumachado.46graus.com" }
   ]
+
+  typedText: string = ''; // Texto digitado
+  textToType: string = 'Dando vida à web com código e design.'; // Texto que será digitado
+  typingSpeed: number = 50; // Velocidade da digitação em milissegundos por caractere
+  index: number = 0;
 
   async ngOnInit(): Promise<void> {
     this.getLocale()
     this.getAuth();
     setInterval(this.close, 11000);
+    this.typeText();
 
   }
 
@@ -97,6 +103,16 @@ export class HomeComponent implements OnInit {
     debugger;
     if (e.name === "Fotografia") {
       window.open("https://caslumachado.46graus.com", "_blank");
+    }
+  }
+
+ 
+
+  typeText() {
+    if (this.index < this.textToType.length) {
+      this.typedText += this.textToType.charAt(this.index);
+      this.index++;
+      setTimeout(() => this.typeText(), this.typingSpeed);
     }
   }
 
