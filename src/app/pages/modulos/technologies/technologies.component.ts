@@ -1,10 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-technologies',
   templateUrl: './technologies.component.html',
 })
 export class TechnologiesComponent implements OnInit {
+
+  @ViewChild('mViewer') mViewer?: any;
 
   viewListOrNot: boolean = false
 
@@ -34,5 +36,11 @@ export class TechnologiesComponent implements OnInit {
     this.viewListOrNot = !this.viewListOrNot
     debugger;
   }
+  
+
+  viewSkill = (e: any) => {
+    this.selectSkill = e
+    this.mViewer.openModal();
+  };
 
 }

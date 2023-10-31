@@ -5,6 +5,8 @@ import { Component, Input, OnInit } from '@angular/core';
   templateUrl: './modal-weather.component.html',
 })
 export class ModalWeatherComponent implements OnInit {
+  
+
   constructor() {
 
   }

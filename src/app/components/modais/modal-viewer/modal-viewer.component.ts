@@ -1,10 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-modal-viewer',
   templateUrl: './modal-viewer.component.html',
 })
 export class ModalViewerComponent {
+
+  @Input() selectItem?: any;
   constructor(
 
   ) {

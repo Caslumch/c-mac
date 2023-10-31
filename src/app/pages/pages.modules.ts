@@ -19,6 +19,7 @@ import { OtherController } from '../core/controllers/user/others.controller';
 import { HttpClientModule } from '@angular/common/http';
 import { TechnologiesComponent } from './modulos/technologies/technologies.component';
 import { StacksComponent } from './modulos/stacks/stacks.component';
+import { OverviewComponent } from './modulos/overview/overview.component';
 
 const routes: Routes = [
     {
@@ -31,6 +32,7 @@ const routes: Routes = [
             { path: 'contact', component: ContactComponent },
             { path: 'stacks', component: StacksComponent },
             { path: 'tech', component: TechnologiesComponent },
+            { path: 'overview', component: OverviewComponent },
         ],
     },
     {
@@ -46,6 +48,7 @@ const routes: Routes = [
 
 @NgModule({
     declarations: [HomeComponent, AboutComponent, ProjectsComponent,
+        OverviewComponent,
         StacksComponent,
         TechnologiesComponent, ContactComponent],
     providers: [ConfirmationService, MessageService, OtherController],

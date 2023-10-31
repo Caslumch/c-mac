@@ -22,16 +22,18 @@
                         <div class="col-4">
                             <span class=" mt-1 d-none d-md-flex p-input-icon-left d-flex justify-content-initial">
                                 <div class="circle">
-                                    <i class="{{viewListOrNot ? 'pi pi-list icon' : 'pi pi-th-large'}}" pTooltip="{{viewListOrNot ? 'Exbir lista' : 'Exibir ícones Grandes '}}" tooltipPosition="top" (click)="getList($event)"></i>
+                                    <i class="{{viewListOrNot ? 'pi pi-list icon' : 'pi pi-th-large'}}"
+                                        pTooltip="{{viewListOrNot ? 'Exbir lista' : 'Exibir ícones Grandes '}}"
+                                        tooltipPosition="top" (click)="getList($event)"></i>
                                 </div>
                             </span>
                         </div>
                     </div>
-                    <div (click)="clicar('foi')" *ngIf="viewListOrNot" class="row mt-0 mt-md-2 justify-content-center">
+                    <div *ngIf="viewListOrNot" class="row mt-0 mt-md-2 justify-content-center">
                         <!-- Adicione a classe "justify-content-center" para centralizar -->
-                        <div  *ngFor="let s of stacks"
+                        <div *ngFor="let s of stacks"
                             class="mt-5 col-6 col-md-3 d-flex align-items-center justify-content-center">
-                            <div  class="fade-in text-center panelStack">
+                            <div (click)="viewStack(s)" class="fade-in text-center panelStack">
                                 <img class=" imgStack img-fluid" [src]="s.src" alt="Imagem">
                                 <div>
                                     <p>{{ s.nome }}</p>
@@ -56,7 +58,7 @@
                                     <th>
                                         <p>Tipo </p>
                                     </th>
-                                    <th >
+                                    <th>
                                         <p>Visualizar</p>
                                     </th>
                                 </tr>
@@ -69,7 +71,8 @@
                                     <td>{{ stacks.tipo }}</td>
                                     <td>
                                         <div class="col-12 d-flex flex-row align-items-center">
-                                            <i class="pi pi-eye rth-color-secundary"></i>
+                                            <i class="iconView pi pi-eye rth-color-secundary" pTooltip="Visualizar"
+                                                tooltipPosition="right" (click)="viewStack(stacks)"></i>
                                         </div>
                                     </td>
                                 </tr>
