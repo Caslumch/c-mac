@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Map, marker, tileLayer, } from 'leaflet'
+import { Map, divIcon, marker, tileLayer, } from 'leaflet'
 
 @Component({
   selector: 'app-contact',
@@ -49,9 +49,9 @@ export class ContactComponent implements OnInit {
     //   maxZoom: 20
     // }).addTo(this.map); //funciona 
 
-    
 
-    tileLayer('https://{s}.tile.jawg.io/jawg-matrix/{z}/{x}/{y}{r}.png?access-token=2j0fNjzrZ6xMbZmjIW7FhMLDCixa8A65hquyivkjVRIcviMF8DgRSKkrNYKBxzgu', {
+
+    tileLayer('https://{s}.tile.jawg.io/jawg-matrix/{z}/{x}/{y}{r}.png?access-token={accessToken}', {
       attribution: '<a href="http://jawg.io" title="Tiles Courtesy of Jawg Maps" target="_blank">&copy; <b>Jawg</b>Maps</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
       minZoom: 0,
       maxZoom: 22,
@@ -60,8 +60,12 @@ export class ContactComponent implements OnInit {
     }).addTo(this.map); //funciona 
 
 
+    const customIcon = divIcon({
+      className: 'pulseMap', // Classe CSS personalizada para o ícone
+      html: '', // Seu ícone personalizado usando PrimeNG icons
+    });
 
-    marker([-23.511224828565467, -46.87626884189107]).addTo(this.map)
+    marker([-23.511224828565467, -46.87626884189107], { icon: customIcon }).addTo(this.map)
       .bindPopup('Eu estou aqui')
       .openPopup();
   }

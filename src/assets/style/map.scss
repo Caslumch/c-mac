@@ -1,5 +1,6 @@
 @import url("https://unpkg.com/leaflet@1.9.4/dist/leaflet.css");
 
+
 #map {
     position: relative;
     background-color: #000000;
@@ -11,11 +12,11 @@
 
 @media (max-width: 768px) {
     #map {
-      width: 90%;
-      height: 380px;
-      max-width: none;
+        width: 90%;
+        height: 380px;
+        max-width: none;
     }
-  }
+}
 
 .leaflet-container .leaflet-control-attribution {
     background: none;
@@ -86,6 +87,34 @@
 
 
 // .leaflet-default-icon-path {
-//     /* used only in path-guessing heuristic, see L.Icon.Default */
-//     background-image: url('../../assets/mark.png');
+//     background-color: aqua;
+//     // /* used only in path-guessing heuristic, see L.Icon.Default */
+//     // background-image: url('../../assets/mark.png');
 // }
+
+.pulseMap {
+    max-width: 100%;
+    max-height: 100%;
+    width: 20px;
+    height: 20px;
+    background-color: #a3e6ccd0;
+    border-radius: 50%;
+    display: inline-block;
+    /* Altere para inline-block */
+    margin-right: 5px;
+    /* Adicione um espaçamento à direita, se desejado */
+    animation: pulse 1.2s linear infinite;
+    position: relative;
+    // top: -2px;
+}
+
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 #10b075
+    }
+
+    100% {
+        box-shadow: 0 0 0 16px rgba(11, 60, 42, 0);
+    }
+}
