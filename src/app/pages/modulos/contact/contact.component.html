@@ -1,18 +1,80 @@
 <app-header></app-header>
 <div class="container-found">
     <div class="containerCsite">
-<div class="row d-flex justify-content-center">
-    <div class="col-12 col-md-12 text-center ">
-        <p class="mt-4 text-hi-title mch-fs-50" >Contato.</p>
-        <img class="imgConfig" src="./assets/config.png" alt="man" />
-        <p class="mt-4" >Em manutenção.</p>
-    </div>
-    <div class="mt-4 m-4 col-12 col-md-3">
-        <p-button [routerLink]="['/home']" label="Página Inicial"></p-button>
-    </div>
-    
-    
-</div>
+
+        <div class="row">
+
+
+            <div class="col-12 col-md-12 d-flex justify-content-center justify-content-md-start">
+                <div class="circle-container ">
+                    <img class="car img-responsive" src="./assets/avatar.png" alt="Carro elétrico">
+                </div>
+                <div
+                    class="m-1 m-md-3 ml-2 ml-md-0 text-center d-flex flex-column justify-content-center btn-desc-contact mch-color-black">
+                    <p class="titleBtnContact">
+                        <!-- <span class="pulse"></span> -->
+                        <label class="mt-1 subTitleBtnContact">Me envie uma DM <span
+                                class="ml-3 mch-fs-20 pi pi-send"></span></label>
+                    </p>
+
+
+                </div>
+            </div>
+
+
+
+            <div class="col-12 d-flex justify-content-center ">
+
+
+                <div class="mt-4 row contentContact ">
+
+
+                    <!-- <div *ngFor="let c of social" class="col-12 col-md-6 btnContact "></div> -->
+
+                    <div class="col-12 col-md-6">
+                        <p class="mt-4 mch-fs-15 text-center mch-color-black">
+                            <span class="mch-fs-25 pulse"></span>
+                            Aqui estão minhas redes!
+                        </p>
+                        <div *ngFor="let c of social" class="mt-2 btnContact ">
+                            <!-- <label class="mch-fs-16 mch-color-black">
+                                <span class="pi pi-instagram"></span> Instagram<span
+                                    [style]="simbolStyle">{{simbol}}</span> asdasd
+                            </label> -->
+                            <div class="row d-flex justify-content-start">
+                                <div class="mt-4 col-3">
+                                    <span class="mch-fs-25 iconSocial {{c.icon}}"></span>
+                                </div>
+
+
+                                <div class="col-6 text-center d-flex flex-column justify-content-center">
+                                    <p class="mch-fs-17">{{c.nome}}</p>
+                                    <label class="mch-fs-13 mch-color-black">
+                                        --
+                                        <span [style]="simbolStyle">{{simbol}}</span> --
+                                    </label>
+                                </div>
+                                <div class="col-3 text-center">
+                                    <a class=" iconSocialContact  pi pi-external-link"
+                                    href="https://www.linkedin.com/in/lucas-machado-16a42422b/" target="_blank"
+                                    ></a>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div id="map" class="w-full mt-4 contentMap p-2 bd-highlight"></div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- <div id="map">
+        </div> -->
+
         <app-footer></app-footer>
     </div>
 </div>

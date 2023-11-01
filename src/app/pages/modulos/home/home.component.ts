@@ -17,9 +17,12 @@ export class HomeComponent implements OnInit {
   ) { }
 
   @ViewChild('mWeather') mWeather?: any;
+  @ViewChild('contact') contact?: any;
 
   latitude: number = 0;
   longitude: number = 0;
+
+  locale: any // variavel que recebe a longitude e
 
   simbolStyle: string = 'color: #d4ff5b; cursor: pointer; fade-in'
   simbol: string = `<\/`;
@@ -62,6 +65,11 @@ export class HomeComponent implements OnInit {
           navigator.geolocation.getCurrentPosition((position) => {
             this.latitude = position.coords.latitude;
             this.longitude = position.coords.longitude;
+            this.locale = {
+              latitude: this.latitude,
+              longitude: this.longitude
+            }
+            debugger;
             this.getWatherMap();
           });
         } else {
@@ -108,7 +116,7 @@ export class HomeComponent implements OnInit {
   textToType: string = 'Dando vida à web com código e design.'; // Texto que será digitado
   typingSpeed: number = 50; // Velocidade da digitação em milissegundos por caractere
   index: number = 0;
- 
+
 
   typeText() {
     if (this.index < this.textToType.length) {
@@ -122,3 +130,6 @@ export class HomeComponent implements OnInit {
 
 
 }
+
+
+

@@ -341,3 +341,130 @@ thumb {
   cursor: pointer;
   color: #d3ff5b81;
 }
+
+
+//contact 
+
+.contentContact {
+  position: relative;
+  background-color: #D9D9D9;
+  max-width: 100%;
+  width: 750px;
+  height: 420px;
+  border-radius: 20px;
+
+  max-width: 1000px;
+  // margin: 10px auto;
+  // padding: 20px;
+  // border-radius: 5px;
+  // background-color: #8f8f8f;
+}
+
+@media (max-width: 768px) {
+  .contentContact {
+    width: 90%;
+    height: 800px;
+    max-width: none;
+  }
+}
+
+.btnContact {
+  max-width: 100%;
+  height: 71px;
+  background-color: #CFCFCF;
+  color: #000000;
+  // padding: 10px 20px;
+  border-radius: 60px;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+
+}
+
+
+.circle-container {
+  width: 10vh;
+  height: 10vh;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #ced4da;
+  margin-left: 100px;
+}
+
+.circle-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 767px) {
+  .circle-container {
+    width: 75px;
+    height: 65px;
+    margin-left: 0px;
+  }
+
+  .circle-container img {
+    max-width: 100%;
+  }
+}
+
+.btn-desc-contact {
+  font-family: "Montserrat", sans-serif;
+  // font-size: 16px;
+  margin-top: 23px;
+  // z-index: 9999;
+  width: 250px;
+  height: 60px;
+  background-color: #D4FF5B;
+  /* Cor de fundo */
+  border-radius: 50px;
+  margin-right: 5px;
+}
+
+.titleBtnContact {
+  font-weight: bold;
+  margin-top: 15px;
+
+}
+
+.subTitleBtnContact {
+  // font-weight: bold;
+  font-size: 14px;
+  color: #717171
+}
+
+@media (max-width: 768px) {
+  .btn-desc-contact {
+    width: 70%;
+    max-width: none;
+  }
+
+  .titleBtnContact {
+
+    font-size: 15px;
+  }
+}
+
+.iconSocialContact {
+  margin-top: 23px;
+  // margin-left: 80px;
+  color: #646464;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.iconSocialContact:hover {
+ margin-top: 19px;
+  margin-left: 80px;
+  color: #6c1818;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 30px;
+}
+
+.iconSocial {
+  font-size: 21px;
+  color: #646464;
+}
