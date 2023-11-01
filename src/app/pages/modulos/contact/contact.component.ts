@@ -16,7 +16,7 @@ export class ContactComponent implements OnInit {
     { nome: 'instagram', link: '', icon: 'pi pi-instagram', },
     { nome: 'Linkedin', link: '', icon: 'pi pi-linkedin', },
     { nome: 'GitHub', link: '', icon: 'pi pi-github', },
-    { nome: 'instagram', link: '', icon: 'pi pi-phone', },
+    { nome: 'Telefone', link: '', icon: 'pi pi-phone', },
 
   ]
   ehMobile: any 
