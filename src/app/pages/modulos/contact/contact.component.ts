@@ -54,7 +54,7 @@ export class ContactComponent implements OnInit {
       minZoom: 0,
       maxZoom: 22,
       subdomains: 'abcd',
-      accessToken: 'PyTJUlEU1OPJwCJlW1k0NC8JIt2CALpyuj7uc066O7XbdZCjWEL3WYJIk6dnXtps'
+      accessToken: '2j0fNjzrZ6xMbZmjIW7FhMLDCixa8A65hquyivkjVRIcviMF8DgRSKkrNYKBxzgu'
     }).addTo(this.map); //funciona 
 
 
