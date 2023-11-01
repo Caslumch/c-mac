@@ -71,7 +71,7 @@ export class HeaderComponent implements OnInit {
 
   onMouseOut() {
     debugger;
-    this.seeMenu = false
+    // this.seeMenu = false
   }
 
   onMouseLeave() {

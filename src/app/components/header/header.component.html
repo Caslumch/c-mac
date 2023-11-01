@@ -15,10 +15,10 @@
                 </button></div>
         </div>
         <div class="col-12 col-md-5  d-flex justify-content-initial justify-content-md-end text-md-end text-center">
-            <div class="dp-menu collapse text-center text-md-left align-items-left navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav options d-flex flex-column flex-md-row align-items-center">
+            <div  class="dp-menu collapse text-center text-md-left align-items-left navbar-collapse" id="navbarNav">
+                <ul  (mouseleave)="onMouseLeave()" class="navbar-nav options d-flex flex-column flex-md-row align-items-center">
                     <li *ngFor="let o of optionsMenu" class="opt-navbar nav-item">
-                        <a id="inicio" (mouseenter)="onMouseEnter($event, o)" (mouseleave)="onMouseLeave()"  #rla="routerLinkActive"
+                        <a id="inicio" (mouseenter)="onMouseEnter($event, o)"  #rla="routerLinkActive"
                             [routerLink]="['/' + o.routerLink]"
                             class="{{ rla.isActive ? 'typeOpt' : ' optMenu typeOpt z'}}" routerLinkActive
                             [routerLinkActive]="['linkSelect']" href="#">{{o.option}}<span *ngIf="!ehMobile" class="ml-2 mch-color-grey2 {{o.icon ? ifIcon : ''}}"></span></a>
@@ -38,17 +38,6 @@
                     </li>
                 </ul>
                 <div class="  ml-0 ml-md-3 btn-navbar mt-4" [routerLink]="['/home']">Home</div>
-                <!-- <div *ngIf="seeMenu" (mouseleave)="onMouseOut()"
-                    class=" row mch-color-white retanguloMenu  flex-column d-flex text-left accompaniment">
-                    <div class="col-12 col-md-12">
-                        <div *ngFor=" let s of optionsSubMenu" [routerLink]="['/about']" class="panelElementMenu">
-                            <div class="menu-content">
-                                <label class="mch-fs-15 titleMenu">{{s.title}}</label>
-                                <label class="mch-fs-14 subtitleMenu mch-color-secundary">{{s.subtitle}}</label>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
             </div>
         </div>
     </div>
