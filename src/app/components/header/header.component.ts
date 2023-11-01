@@ -8,8 +8,10 @@ import { RouterModule } from '@angular/router';
 export class HeaderComponent implements OnInit {
   up = 'pi-angle-up'
 
+  ifIcon: string = 'pi pi-angle-down'
+
   optionsMenu = [
-    { option: 'About', id: 1, routerLink: 'about', },
+    { option: 'About', id: 1, routerLink: 'about', icon: true },
     { option: 'Projects', id: 2, routerLink: 'projects', },
     { option: 'Contact', id: 3, routerLink: 'contact', }
   ];
@@ -47,13 +49,17 @@ export class HeaderComponent implements OnInit {
 
   seeMenu: boolean = false
 
+  upMenu: boolean = false
+
   onMouseEnter = (e: any, option: any) => {
+    debugger;
     this.optionsSubMenu = []
     if (!this.ehMobile) {
       this.seeMenu = false
       if (option.routerLink === 'about') {
         this.optionsSubMenu = this.menuAbout
         this.seeMenu = true
+        this.ifIcon = 'pi pi-angle-up'
       }
       // else if (option.routerLink === 'projects') {
 
@@ -64,19 +70,25 @@ export class HeaderComponent implements OnInit {
   }
 
   onMouseOut() {
+    debugger;
     this.seeMenu = false
   }
 
   onMouseLeave() {
+    debugger;
     // Verifica se o mouse saiu do componente pai e fecha o componente interno
     this.seeMenu = false;
+    this.ifIcon = 'pi pi-angle-down'
 
   }
 
   changeRouter = (e: any) => {
-    debugger;
     if (e.title === "Fotografia") {
       window.open("https://caslumachado.46graus.com", "_blank");
     }
+  }
+
+  selectMenu = (e: any) => {
+    debugger;
   }
 }
