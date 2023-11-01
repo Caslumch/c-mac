@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
     <div class="container-fluid">
-        <div class="d-none d-md-block text-center col-md-6 d-flex">
+        <div class="d-none d-md-block text-center col-md-5 d-flex">
             <a class="navbar-brand mr-auto" id="reload" href="#">
                 <img src="./assets/logo-site-c.png" (error)="handleImageError()" alt="Rita RH"
                     class="file-img sidebar-menu-logo" />
@@ -14,7 +14,8 @@
                     <span class="menu-d pi pi-bars"></span>
                 </button></div>
         </div>
-        <div class="col-12 col-md-5  d-flex justify-content-initial justify-content-md-end text-md-end text-center">
+        
+        <div class="col-12 col-md-6  d-flex justify-content-initial justify-content-md-end text-md-end text-center">
             <div class="dp-menu collapse text-center text-md-left align-items-left navbar-collapse" id="navbarNav">
                 <ul (mouseleave)="onMouseLeave()"
                     class="navbar-nav options d-flex flex-column flex-md-row align-items-center">
@@ -24,7 +25,7 @@
                             <a id="inicio" #rla="routerLinkActive" (mouseenter)="onMouseEnter($event, o)" [routerLink]="['/' + o.routerLink]"
                                 class="{{ rla.isActive ? 'typeOpt' : ' optMenu typeOpt z'}}" routerLinkActive
                                 [routerLinkActive]="['linkSelect']" href="#">{{o.option}}</a>
-                            <i *ngIf="!ehMobile" class="ml-2 mch-color-grey2 {{o.icon ? ifIcon : ''}}"></i>
+                            <i class="d-none d-md-inline ml-2 mch-color-grey2 {{o.icon ? ifIcon : ''}}"></i>
                         </div>
                         <ul *ngIf="seeMenu" class="ehMobile">
                             <li *ngFor="let s of optionsSubMenu">

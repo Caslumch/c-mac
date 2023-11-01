@@ -3,11 +3,11 @@
 
 #map {
     position: relative;
-    background-color: #000000;
     max-width: 100%;
     height: 380px;
     border-radius: 20px;
     border: solid 4px #5d5d5d;
+    opacity: 85%;
 }
 
 @media (max-width: 768px) {

@@ -10,10 +10,11 @@ export class HeaderComponent implements OnInit {
 
   ifIcon: string = 'pi pi-angle-down'
 
-  optionsMenu = [
+  optionsMenu: any = [
     { option: 'About', id: 1, routerLink: 'about', icon: true },
     { option: 'Projects', id: 2, routerLink: 'projects', },
-    { option: 'Contact', id: 3, routerLink: 'contact', }
+    { option: 'Skills', id: 3, routerLink: 'tech', },
+    { option: 'Contact', id: 4, routerLink: 'contact', }
   ];
 
   optionsSubMenu: any
@@ -32,6 +33,7 @@ export class HeaderComponent implements OnInit {
   ehMobile: any
   ngOnInit(): void {
     this.ehMobile = window.screen.width < 933;
+    this.verifyWidth()
   }
 
   navbarVisible: boolean = false;
@@ -60,7 +62,7 @@ export class HeaderComponent implements OnInit {
         this.seeMenu = true
         this.ifIcon = 'pi pi-angle-up'
 
-      }else {
+      } else {
         this.ifIcon = 'pi pi-angle-down'
       }
       // else if (option.routerLink === 'projects') {
@@ -71,14 +73,11 @@ export class HeaderComponent implements OnInit {
     }
   }
 
-  onMouseOut() {
-    debugger;
-    // this.seeMenu = false
+  verifyWidth = () => {
+    if (!this.ehMobile)
+      this.optionsMenu = this.optionsMenu.filter((t: any) => t.option != 'Skills')
   }
-
-  onMouseLeave() {
-    debugger;
-    // Verifica se o mouse saiu do componente pai e fecha o componente interno
+  onMouseLeave() { // Verifica se o mouse saiu do componente pai e fecha o componente interno
     this.seeMenu = false;
     this.ifIcon = 'pi pi-angle-down'
 
