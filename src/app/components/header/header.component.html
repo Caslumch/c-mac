@@ -15,23 +15,28 @@
                 </button></div>
         </div>
         <div class="col-12 col-md-5  d-flex justify-content-initial justify-content-md-end text-md-end text-center">
-            <div  class="dp-menu collapse text-center text-md-left align-items-left navbar-collapse" id="navbarNav">
-                <ul  (mouseleave)="onMouseLeave()" class="navbar-nav options d-flex flex-column flex-md-row align-items-center">
+            <div class="dp-menu collapse text-center text-md-left align-items-left navbar-collapse" id="navbarNav">
+                <ul (mouseleave)="onMouseLeave()"
+                    class="navbar-nav options d-flex flex-column flex-md-row align-items-center">
                     <li *ngFor="let o of optionsMenu" class="opt-navbar nav-item">
-                        <a id="inicio" (mouseenter)="onMouseEnter($event, o)"  #rla="routerLinkActive"
-                            [routerLink]="['/' + o.routerLink]"
-                            class="{{ rla.isActive ? 'typeOpt' : ' optMenu typeOpt z'}}" routerLinkActive
-                            [routerLinkActive]="['linkSelect']" href="#">{{o.option}}<span *ngIf="!ehMobile" class="ml-2 mch-color-grey2 {{o.icon ? ifIcon : ''}}"></span></a>
+                        <div (mouseenter)="onMouseEnter($event, o)">
+
+                            <a id="inicio" #rla="routerLinkActive" (mouseenter)="onMouseEnter($event, o)" [routerLink]="['/' + o.routerLink]"
+                                class="{{ rla.isActive ? 'typeOpt' : ' optMenu typeOpt z'}}" routerLinkActive
+                                [routerLinkActive]="['linkSelect']" href="#">{{o.option}}</a>
+                            <i *ngIf="!ehMobile" class="ml-2 mch-color-grey2 {{o.icon ? ifIcon : ''}}"></i>
+                        </div>
                         <ul *ngIf="seeMenu" class="ehMobile">
                             <li *ngFor="let s of optionsSubMenu">
-                                <a class="text-left x" (click)="changeRouter(s)"  [routerLink]="['/' + s.routerLink]" >
+                                <a class="text-left x" (click)="changeRouter(s)" [routerLink]="['/' + s.routerLink]">
                                     <div class="panelElementMenu">
                                         <div class="menu-content">
                                             <label class="mch-fs-13 titleMenu">{{s.title}}</label>
-                                            <label class="mch-fs-13 subtitleMenu mch-color-secundary">{{s.subtitle}}</label>
+                                            <label
+                                                class="mch-fs-13 subtitleMenu mch-color-secundary">{{s.subtitle}}</label>
                                         </div>
                                     </div>
-                                </a>                                
+                                </a>
                             </li>
                         </ul>
 

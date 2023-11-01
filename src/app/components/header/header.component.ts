@@ -52,7 +52,6 @@ export class HeaderComponent implements OnInit {
   upMenu: boolean = false
 
   onMouseEnter = (e: any, option: any) => {
-    debugger;
     this.optionsSubMenu = []
     if (!this.ehMobile) {
       this.seeMenu = false
@@ -60,6 +59,9 @@ export class HeaderComponent implements OnInit {
         this.optionsSubMenu = this.menuAbout
         this.seeMenu = true
         this.ifIcon = 'pi pi-angle-up'
+
+      }else {
+        this.ifIcon = 'pi pi-angle-down'
       }
       // else if (option.routerLink === 'projects') {
 
