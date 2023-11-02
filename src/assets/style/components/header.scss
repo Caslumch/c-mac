@@ -2,7 +2,6 @@
 @import url("https://fonts.googleapis.com/css?family=Aldrich");
 
 .navbar-header {
-
     width: 100%;
     float: left;
     position: fixed;
@@ -76,7 +75,15 @@
 
 .sidebar-menu-logo {
     max-width: 120px;
-    margin-left: 66px;
+    margin-left: 240px;
+}
+
+@media (max-width: 1340px) {
+    .sidebar-menu-logo {
+        margin-left: 0px
+    }
+
+
 }
 
 
