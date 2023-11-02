@@ -410,6 +410,7 @@ thumb {
 }
 
 .btn-desc-contact {
+  cursor: pointer;
   font-family: "Montserrat", sans-serif;
   // font-size: 16px;
   margin-top: 23px;
@@ -420,6 +421,15 @@ thumb {
   /* Cor de fundo */
   border-radius: 50px;
   margin-right: 5px;
+  transition: 0.2s;
+}
+
+.btn-desc-contact:hover {
+  color: #fff;
+  transform: scale(1.05);
+  /* Aumenta o tamanho em 20% ao passar o mouse */
+  cursor: pointer;
+  background-color: #3d3d3d;
 }
 
 .titleBtnContact {
@@ -429,6 +439,7 @@ thumb {
 }
 
 .subTitleBtnContact {
+  cursor: pointer;
   // font-weight: bold;
   font-size: 14px;
   color: #717171

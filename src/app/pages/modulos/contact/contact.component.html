@@ -9,7 +9,7 @@
                 <div class="circle-container ">
                     <img class="car img-responsive" src="./assets/avatar.png" alt="Carro elétrico">
                 </div>
-                <div
+                <div (click)="sendDm()"
                     class="m-1 m-md-3 ml-2 ml-md-0 text-center d-flex flex-column justify-content-center btn-desc-contact mch-color-black">
                     <p class="titleBtnContact">
                         <!-- <span class="pulse"></span> -->
@@ -49,7 +49,11 @@
 
                                 <div class="col-6 text-center d-flex flex-column justify-content-center">
                                     <p class="mch-fs-17">{{c.nome}}</p>
-                                    <label class="mch-fs-13 mch-color-black">
+                                    <label *ngIf="c.desc" class="mch-fs-15 mch-color-secundary">
+                                        {{c.desc}}
+                                        <!-- <span [style]="simbolStyle">{{simbol}}</span> -- -->
+                                    </label>
+                                    <label *ngIf="!c.desc" class="mch-fs-13 mch-color-black">
                                         --
                                         <span [style]="simbolStyle">{{simbol}}</span> --
                                     </label>

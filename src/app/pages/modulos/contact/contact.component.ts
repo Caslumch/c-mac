@@ -16,7 +16,7 @@ export class ContactComponent implements OnInit {
     { nome: 'instagram', link: 'https://www.instagram.com/caslumch/?hl=pt-br', icon: 'pi pi-instagram', },
     { nome: 'Linkedin', link: 'https://www.linkedin.com/in/lucas-machado-16a42422b/', icon: 'pi pi-linkedin', },
     { nome: 'GitHub', link: 'https://github.com/Caslumch', icon: 'pi pi-github', },
-    { nome: 'Telefone', link: 'tel:+11963034276', icon: 'pi pi-phone' },
+    { nome: 'Telefone', link: 'tel:+11963034276', icon: 'pi pi-phone', desc: '+055 (11) 96303-4276' },
 
   ]
   ehMobile: any
@@ -70,8 +70,8 @@ export class ContactComponent implements OnInit {
       .openPopup();
   }
 
-  ngAfterViewInit(): void {
-
+  sendDm = () => {
+    window.open("https://www.instagram.com/caslumch/?hl=pt-br", "_blank");
   }
 
 }
