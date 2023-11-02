@@ -189,3 +189,19 @@
         border-right-color: #fff;
     }
 }
+
+.modalInitial {
+    width: 17vw;
+    height: 8vw;
+    border: 2px solid #D4FF5B;
+    opacity: 0.9;
+    animation: fadeIn 3s;
+}
+
+.messageInit {
+    font-family: "Aldrich", sans-serif;
+    color:#dedede;
+    animation: fadeIn 2s;
+
+}
+

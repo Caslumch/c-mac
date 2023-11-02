@@ -465,3 +465,16 @@ thumb {
   font-size: 21px;
   color: #646464;
 }
+
+// overlay de bem vindo 
+
+.overlayWellcome {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(201, 201, 201, 0.5); /* Cor de fundo com 50% de opacidade */
+  z-index: 1000; /* Um valor alto para garantir que a camada esteja acima de outros elementos */
+  backdrop-filter: blur(5px); 
+}

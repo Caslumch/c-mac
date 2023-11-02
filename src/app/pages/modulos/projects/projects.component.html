@@ -2,28 +2,79 @@
 <div class="container-found">
     <div class="containerCsite">
         <div class="col-12">
-            <div class="row">
+            <form novalidate [formGroup]="form">
 
-                <div class="col-12 col-md-12 text-center"><label class="mch-fs-30">Meus Projetos</label></div>
-                <div class=" mt-4 mt-md-0 col-12 col-md-12 mch-color-white">
-                    <div class="row">
+                <div class="row">
 
-                        <div class=" mt-4 col-12 col-md-12 d-md-block">
-                            <span class="p-input-icon-right w-full">
-                                <i class="pi pi-search"></i>
-                                <input type="text" class="w-full" pInputText
-                                    placeholder="Pesquise o projeto desejado" />
-                            </span>
-                        </div>
-                        <div class="col-12">
-                            <div class="row mt-5 ">
+
+                    <div class="col-12 col-md-12 ">
+                        <label class="mch-fs-30">Meus Projetos</label>
+                        <p class="mch-color-grey2 mch-fs-18">Essa página lista os {{logsProjects.length}} principais projetos que venho desenvolvendo durante a minha jornada como programador. Confira outros projetos em meu Github</p>
+                    </div>
+                    <div class=" mt-4 mt-md-0 col-12 col-md-12 mch-color-white">
+                        <div class="row">
+
+                            <div class=" mt-4 col-12 col-md-12 d-md-block">
+                                <span class="p-input-icon-right w-full">
+                                    <i class="pi pi-search"></i>
+                                    <input type="text" formControlName="project" (keyup)="filterProjects()" class="w-full" pInputText
+                                        placeholder="Pesquise o projeto desejado" />
+                                </span>
+                            </div>
+                            <div class="col-12">
+                                <div *ngFor="let p of logsProjects" class="row mt-5 ">
+                                    <div class=" col-12 col-md-6">
+                                        <div class="row">
+                                            <div class=" text-center panelProjectDesc mt-4 col-12">
+
+
+                                                <p class="mt-4">
+                                                    {{p.nome}}
+                                                </p>
+                                                <p>
+                                                    {{p.descricao}}
+                                                </p>
+                                            </div>
+                                            <div class="mt-2 col-6">
+                                                <!-- <span class="m-2 pi pi-github"></span>
+                                                <span class="m-2 pi pi-prime"></span> -->
+                                            </div>
+                                            <div class="  mt-2 text-right col-12 col-md-6">
+                                                <a class=" iconGit m-2 pi pi-github"
+                                                    href="https://github.com/Caslumch/c-mac" target="_blank"><label
+                                                        class="text-access">Acessar Projeto ></label></a>
+
+
+                                            </div>
+                                        </div>
+
+
+
+                                    </div>
+                                    <div (click)="viewProject(p)" 
+                                        class="mb-5 text-center d-flex justify-content-center col-12 col-md-6 mch-color-white ">
+                                        <img class="fade-in-projects imgProject" src="{{p.img}}" alt="profile">
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="mt-4 col-12 content">
+                                <hr class="divider">
+                            </div>
+
+
+                            <!-- <div class="row mt-5 ">
+                                <div class="mb-5 d-flex justify-content-center col-12 col-md-6 mch-color-white imgProject">
+                                    <img class="imgProject" src="./assets/mac-project.png" alt="profile">
+                                </div>
                                 <div class=" col-12 col-md-6">
                                     <div class="row">
                                         <div class=" text-center panelProjectDesc mt-4 col-12">
-
-
+    
+    
                                             <p class="mt-4">
-                                                profile web - Lucas Machado
+                                                Pedro Machado da Silva
                                             </p>
                                             <p>
                                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -37,75 +88,24 @@
                                         </div>
                                         <div class="mt-2 col-6">
                                             <span class="m-2 pi pi-github"></span>
-                                            <span class="m-2 pi pi-prime"></span>
+                                            <span class="m-2 pi pi-github"></span>
                                         </div>
-                                        <div class="  mt-2 text-right col-12 col-md-6">
-                                            <a class=" iconGit m-2 pi pi-github"
-                                                href="https://github.com/Caslumch/c-mac" target="_blank"><label
-                                                    class="text-access">Acessar Projeto ></label></a>
-
-
+                                        <div class="mt-2 text-right col-12 col-md-6">
+                                            <label class="iconGit"><span class="m-2 pi pi-github"></span>
+                                                Acessar Projeto >
+                                            </label>
                                         </div>
                                     </div>
-
-
-
+    
+    
+    
                                 </div>
-                                <div
-                                    class="mb-5 text-center d-flex justify-content-center col-12 col-md-6 mch-color-white imgProject">
-                                    <img class="fade-in-projects imgProject" src="./assets/mac-project.png"
-                                        alt="profile">
-                                </div>
-                            </div>
+    
+                            </div> -->
                         </div>
-
-
-                        <div class="mt-4 col-12 content">
-                            <hr class="divider">
-                        </div>
-
-
-                        <!-- <div class="row mt-5 ">
-                            <div class="mb-5 d-flex justify-content-center col-12 col-md-6 mch-color-white imgProject">
-                                <img class="imgProject" src="./assets/mac-project.png" alt="profile">
-                            </div>
-                            <div class=" col-12 col-md-6">
-                                <div class="row">
-                                    <div class=" text-center panelProjectDesc mt-4 col-12">
-
-
-                                        <p class="mt-4">
-                                            Pedro Machado da Silva
-                                        </p>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                            tempor
-                                            incididunt ut
-                                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                            exercitation
-                                            ullamco
-                                            laboris nisi ut aliquip ex ea commodo
-                                        </p>
-                                    </div>
-                                    <div class="mt-2 col-6">
-                                        <span class="m-2 pi pi-github"></span>
-                                        <span class="m-2 pi pi-github"></span>
-                                    </div>
-                                    <div class="mt-2 text-right col-12 col-md-6">
-                                        <label class="iconGit"><span class="m-2 pi pi-github"></span>
-                                            Acessar Projeto >
-                                        </label>
-                                    </div>
-                                </div>
-
-
-
-                            </div>
-
-                        </div> -->
                     </div>
                 </div>
-            </div>
+            </form>
 
         </div>
         <div class="mt-4">

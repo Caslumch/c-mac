@@ -1,10 +1,22 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, Input, OnInit, ViewChild, ViewChildren } from '@angular/core';
+import { UntypedFormBuilder, Validators } from '@angular/forms';
+import { BaseForm } from 'src/app/components/base-form/base-form.component';
+import { UserController } from 'src/app/core/controllers/user/user.controller';
+// import { FormArray, FormControlName, FormGroup, UntypedFormGroup } from '@angular/forms';
+
 
 @Component({
   selector: 'app-stacks',
   templateUrl: './stacks.component.html',
 })
-export class StacksComponent implements OnInit {
+export class stacksComponent extends BaseForm implements OnInit {
+
+  constructor(
+    private fb: UntypedFormBuilder,
+    private userController: UserController
+  ) {
+    super();
+  }
 
   @ViewChild('mViewer') mViewer?: any;
 
@@ -19,29 +31,44 @@ export class StacksComponent implements OnInit {
     { nome: 'Figma', tipo: 'Design', src: './assets/stack/figma.png', link: 'https://www.figma.com' },
     { nome: 'Spotify', tipo: 'Música', src: './assets/stack/spotify.png', link: 'https://www.spotify.com/br-pt/premium/?utm_source=br-pt_brand_contextual-desktop_text&utm_medium=paidsearch&utm_campaign=alwayson_latam_br_premiumbusiness_core_brand+contextual-desktop+text+exact+br-pt+google&gad_source=1&gclid=Cj0KCQjwqP2pBhDMARIsAJQ0CzrTE65v6kOBaIJgkvcg66cZ1qotQfJT7Rf2kbIu63HgoYzZbam1rAAaAsrbEALw_wcB&gclsrc=aw.ds' },
     { nome: 'Notion', tipo: 'Produtividade', src: './assets/stack/notion.png', link: 'https://www.notion.so/signup?utm_source=affl&utm_medium=nguyenthibinh8753&pscd=affiliate.notion.so&ps_partner_key=bmd1eWVudGhpYmluaDg3NTM&gclid=Cj0KCQjwqP2pBhDMARIsAJQ0Czru5QQnH5ctYojHTaeHmwxMNbner9pM7a-VJmGB87P2iDNjIKCQ4Q0aAsa7EALw_wcB&ps_xid=82D49naU0lFkBo&gsxid=82D49naU0lFkBo&gspk=bmd1eWVudGhpYmluaDg3NTM' },
-  ]
+  ];
 
-  viewListOrNot: boolean = true
+  viewListOrNot: boolean = true;
 
-  selectStack: any
+  selectStack: any;
 
   ngOnInit(): void {
-    debugger;
-
+    this.logsStack = this.stacks;
+    this.createForm();
   }
 
+  createForm = () => {
+    this.form = this.form = this.fb.group({
+      stack: ['', [Validators.required]],
+
+    });
+  };
+
   getList(e: any) {
-    this.viewListOrNot = !this.viewListOrNot
+    this.viewListOrNot = !this.viewListOrNot;
     debugger;
   }
 
   viewStack = (e: any) => {
     window.open(e.link, "_blank");
     debugger;
-    // console.log(e)
-    // debugger;
-    // this.mViewer.openModal();
   };
 
-
+  logsStack: any;
+  filterStacks = () => {
+    this.logsStack = this.stacks;
+    if (this.form.value.stack) {
+      debugger;
+      this.logsStack = this.logsStack.filter(
+        (s: any) => s.nome
+          .toLowerCase()
+          .indexOf(this.form.value.stack.toLowerCase()) >= 0
+      );
+    }
+  };
 }

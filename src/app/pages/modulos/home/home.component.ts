@@ -28,21 +28,41 @@ export class HomeComponent implements OnInit {
   simbol: string = `<\/`;
   ehMobile = false
 
+  typedText: string = ''; // Texto digitado
+  textToType: string = 'Dando vida à web com código e design.'; // Texto que será digitado
+  typingSpeed: number = 50; // Velocidade da digitação em milissegundos por caractere
+  index: number = 0;
+
+
   drops = [
     { name: 'Projetos', src: './assets/projects.jpg', routerLink: 'projects' },
     { name: 'Stack', src: './assets/stack.jpg', routerLink: 'stacks' },
     { name: 'Fotografia', src: './assets/fotografia.jpg', link: "https://caslumachado.46graus.com" }
   ]
 
-
+  initialLoading = false;
+  modalInitial = true
 
   async ngOnInit(): Promise<void> {
+    // this.verifyDataUser()
     this.getLocale()
     this.getAuth();
     setInterval(this.close, 11000);
     this.typeText();
 
   }
+
+  // verifyDataUser = () => {
+  //   const visitouSite = localStorage.getItem('visitouSite'); //realiza a verificação de visitouSite em localstorage, se não tiver ele adiociona um item lá e deixa salvo como true
+  //   if (!visitouSite) {
+  //     this.initialLoading = true;
+  //     localStorage.setItem('visitouSite', 'true');
+  //   }
+
+  //   setTimeout(() => {
+  //     this.initialLoading = false
+  //   }, 7000);
+  // }
 
   getAuth = () => {
     this.authController.getToken().subscribe({
@@ -52,10 +72,6 @@ export class HomeComponent implements OnInit {
     })
   }
 
-  position: string = 'bottomright';
-  modalInvlidCpf = () => {
-
-  };
 
   getLocale = async () => {
     this.ehMobile = window.screen.width < 992;
@@ -69,7 +85,6 @@ export class HomeComponent implements OnInit {
               latitude: this.latitude,
               longitude: this.longitude
             }
-            debugger;
             this.getWatherMap();
           });
         } else {
@@ -105,17 +120,13 @@ export class HomeComponent implements OnInit {
 
 
   changeRouter = (e: any) => {
-    debugger;
     if (e.name === "Fotografia") {
       window.open("https://caslumachado.46graus.com", "_blank");
     }
   }
 
 
-  typedText: string = ''; // Texto digitado
-  textToType: string = 'Dando vida à web com código e design.'; // Texto que será digitado
-  typingSpeed: number = 50; // Velocidade da digitação em milissegundos por caractere
-  index: number = 0;
+
 
 
   typeText() {

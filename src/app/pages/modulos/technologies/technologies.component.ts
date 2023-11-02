@@ -1,10 +1,20 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { UntypedFormBuilder, Validators } from '@angular/forms';
+import { BaseForm } from 'src/app/components/base-form/base-form.component';
+import { UserController } from 'src/app/core/controllers/user/user.controller';
 
 @Component({
   selector: 'app-technologies',
   templateUrl: './technologies.component.html',
 })
-export class TechnologiesComponent implements OnInit {
+export class TechnologiesComponent  extends BaseForm implements OnInit {
+
+  constructor(
+    private fb: UntypedFormBuilder,
+    private userController: UserController
+  ) {
+    super();
+  }
 
   @ViewChild('mViewer') mViewer?: any;
 
@@ -28,9 +38,17 @@ export class TechnologiesComponent implements OnInit {
   ]
 
   ngOnInit(): void {
+    this.logsSkill = this.skills;
     this.viewListOrNot = true
-
+    this.createForm()
   }
+
+  createForm = () => {
+    this.form = this.form = this.fb.group({
+      skill: ['', [Validators.required]],
+
+    });
+  };
 
   getList(e: any) {
     this.viewListOrNot = !this.viewListOrNot
@@ -41,6 +59,20 @@ export class TechnologiesComponent implements OnInit {
   viewSkill = (e: any) => {
     this.selectSkill = e
     this.mViewer.openModal();
+  };
+
+
+  logsSkill: any;
+  filterSkills = () => {
+    this.logsSkill = this.skills;
+    if (this.form.value.skill) {
+      debugger;
+      this.logsSkill = this.logsSkill.filter(
+        (s: any) => s.nome
+          .toLowerCase()
+          .indexOf(this.form.value.skill.toLowerCase()) >= 0
+      );
+    }
   };
 
 }
