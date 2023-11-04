@@ -71,6 +71,7 @@ const routes: Routes = [
         ComponentsModule,
         HttpClientModule,
         TranslateModule.forRoot({
+            defaultLanguage: 'en-US',
             loader: {
                 provide: TranslateLoader,
                 useFactory: HttpLoaderFactory,
