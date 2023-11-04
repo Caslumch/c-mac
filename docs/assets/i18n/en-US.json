@@ -1,0 +1,64 @@
+{
+    "SBh": "About",
+    "PTh": "Projects",
+    "SKh": "Skills",
+    "CTh": "Contact",
+    "HOME": "Home",
+    "SUBabout": "About me",
+    "Subskills": "Skills",
+    "SBhs": "Learn more about me and my journey",
+    "SKhs": "All the technologies I developed this application and more.",
+    "HELLO": "Hi, I’m Lucas Machado - Front-end developer.",
+    "SUB": "Bringing the web to life with code and design.",
+    "SOC": "Follow me on the networks",
+    "UT": "Recents Drops",
+    "PJ": "Projects",
+    "ST": "Stack's",
+    "FT": "Photography",
+    "VIAJ": "Let's Start Something Together?",
+    "SUBFOOT": "If you have a project in mind or just want to chat, feel free to send me a message.",
+    "FC": "Contact Me",
+    "ABOUT": "About me",
+    "CAREER": "Career",
+    "DEV-DESC": "Fullstack Developer",
+    "DATECAREER": "Jan 2022 – Sep 2023 • 1 year 7 months",
+    "STACK-DESC": "Here, I list some of the services and software that are part of my daily life:",
+    "TYPE-STACK1": "Code",
+    "TYPE-STACK2": "News",
+    "TYPE-STACK3": "Services",
+    "TYPE-STACK4": "Design",
+    "TYPE-STACK5": "Photography",
+    "TYPE-STACK6": "Video",
+    "TYPE-STACK7": "Music",
+    "TYPE-STACK8": "Productivity",
+    "PLACEHOLDER": "Search for the item you want",
+    "TOOLTIPVIEW": "To View",
+    "SKILL-DESC": "Here, I list some of the services and software that are part of my daily life:",
+    "TYPE-SKILL1": "Framework",
+    "TYPE-SKILL2": "Language",
+    "TYPE-SKILL3": "Style Language",
+    "TYPE-SKILL4": "Markup Language",
+    "TYPE-SKILL5": "Library",
+    "TYPE-SKILL6": "Server Platform",
+    "TYPE-SKILL7": "Database",
+    "TYPE-SKILL8": "Protocol",
+    "projects": {
+        "title": "My Projects",
+        "desc": "This page lists the main projects I have been developing during my journey as a programmer. Check out other projects on my Github.",
+        "placeholder": "Search for the desired project",
+        "acessProject": "Access Project"
+    },
+    "contact": {
+        "sendDm": "Send me a DM",
+        "title": "Here are my socials!",
+        "popUpMap": "I'm here"
+    },
+    "modalWeather": {
+        "title": "the weather now in",
+        "humidity": "Humidity:"
+    },
+    
+    "modalLang": {
+        "title" : "Language"
+    }
+}

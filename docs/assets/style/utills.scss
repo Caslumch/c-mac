@@ -1,0 +1,491 @@
+@import url("https://fonts.googleapis.com/css?family=Aldrich");
+
+.cursor {
+  cursor: pointer;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.w-full {
+  width: 100% !important;
+}
+
+.max-h-full {
+  max-height: 100%;
+}
+
+.max-w-full {
+  max-width: 100% !important;
+}
+
+.w-side-responsive {
+  width: 85% !important;
+
+  @media only screen and (min-width: 999px) and (max-width: 1480px) {
+    width: 80% !important;
+  }
+
+  @media only screen and (max-width: 999px) {
+    width: 100% !important;
+  }
+}
+
+.titulo {
+  color: $secundary;
+  font-size: 30px;
+}
+
+.titulo-page {
+  color: $secundary;
+  font-size: 23px;
+  font-weight: normal;
+  padding: 11px 0px;
+  margin-left: 15px;
+}
+
+
+h6.titulo-page {
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.mobile-titulo-page {
+  color: $secundary;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 11px 0px;
+  text-align: left;
+}
+
+.titulo-sign {
+  margin-left: 10% !important;
+  color: $secundary;
+}
+
+
+.field {
+  margin-bottom: 0.2rem;
+}
+
+.field-textarea {
+  height: 105px;
+  width: 100%;
+  overflow: hidden;
+  outline: none !important;
+  resize: none;
+  border: 1px solid #ced4da;
+  border-radius: 1rem;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+}
+
+
+.img-w-full {
+  width: 100%;
+}
+
+.img-h-full {
+  height: 100vh;
+}
+
+
+.text-decoration-underline {
+  text-decoration: underline;
+}
+
+.text-decoration-line-through {
+  text-decoration: line-through;
+}
+
+.tooltip {
+  max-width: 400px;
+}
+
+.border-right-divider {
+  border-right: 11px solid $grey;
+}
+
+.position-fixed-w-full {
+  position: fixed;
+  width: 100%;
+  z-index: 99;
+}
+
+.sub-text-color {
+  color: $secundary;
+  font-size: 15px;
+  font-weight: normal;
+}
+
+.text-default-color {
+  color: $secundary;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.imgCursor:hover {
+  background: #2f2f2f;
+  transition: 0.5s;
+  opacity: 0.2;
+}
+
+.center-vertical {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.break-word {
+  word-wrap: break-word;
+}
+
+.color-warning-icon {
+  color: $primary;
+}
+
+
+.overlays {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  display: none;
+}
+
+.titleModal {
+  font-size: 30px;
+}
+
+.title {
+  font-size: 30px;
+}
+
+.text-hi-title {
+  font-family: "Aldrich", sans-serif;
+  font-size: 40px
+}
+
+@media (max-width: 768px) {
+  .text-hi-title {
+    font-family: "Aldrich", sans-serif;
+    font-size: 30px
+  }
+}
+
+.bline {
+  white-space: pre-line;
+}
+
+.imgConfig {
+  margin-top: 80px;
+  align-items: center;
+  width: 200px;
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  .imgConfig {
+    width: 100px;
+  }
+}
+
+// estilização do scrollbar geraal
+
+// /* Para navegadores WebKit (Chrome, Safari, etc.) 
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #2f2f2f;
+  border-radius: 5px;
+  width: 3px;
+}
+
+/* Para navegadores Firefox */
+scrollbar {
+  width: 5px;
+}
+
+thumb {
+  background-color: #2f2f2f;
+  border-radius: 5px;
+  width: 3px;
+}
+
+.iconWhatsapp {
+
+  font-family: "Aldrich", sans-serif;
+}
+
+.pulse {
+  max-width: 100%;
+  max-height: 100%;
+  width: 10px;
+  height: 10px;
+  background-color: rgb(119, 118, 118);
+  border-radius: 50%;
+  display: inline-block;
+  /* Altere para inline-block */
+  margin-right: 5px;
+  /* Adicione um espaçamento à direita, se desejado */
+  animation: pulse 1.5s linear infinite;
+  position: relative;
+  // top: -2px;
+}
+
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgb(138, 138, 138);
+  }
+
+  100% {
+    box-shadow: 0 0 0 5px rgb(168, 35, 35, 0);
+  }
+}
+
+
+.custom-p-dialog {
+  width: 17vw;
+  height: 8vw;
+  border: 2px solid #D4FF5B;
+  opacity: 0.9;
+}
+
+@media (max-width: 1370px) {
+  .custom-p-dialog {
+    width: 20vw;
+    height: 11vw;
+    border: 2px solid #D4FF5B;
+    opacity: 0.9;
+  }
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  /* Centraliza verticalmente */
+}
+
+.iconLocale {
+  color: #D4FF5B;
+  margin-top: 10px;
+  margin-right: 5px;
+}
+
+
+.pulse-weather {
+  max-width: 100%;
+  max-height: 100%;
+  width: 7px;
+  height: 7px;
+  background-color: rgb(119, 118, 118);
+  border-radius: 50%;
+  display: inline-block;
+  /* Altere para inline-block */
+  margin-right: 5px;
+  /* Adicione um espaçamento à direita, se desejado */
+  animation: pulse 1.5s linear infinite;
+  position: relative;
+  // top: -2px;
+}
+
+
+@keyframes pulse-weather {
+  0% {
+    box-shadow: 0 0 0 0 rgb(138, 138, 138);
+  }
+
+  100% {
+    box-shadow: 0 0 0 5px rgb(168, 35, 35, 0);
+  }
+}
+
+// .title-weather {
+//   font-family: "Aldrich", sans-serif;
+// }
+
+.cloud-weather {
+  /* Defina a opacidade inicial para 0 (imagem invisível) */
+  opacity: 1;
+  /* Adicione uma transição suave para a propriedade opacity */
+  transition: opacity 7s ease-in-out;
+}
+
+.circle {
+  cursor: pointer;
+  width: 40px;
+  /* Defina a largura e a altura desejadas para o círculo */
+  height: 40px;
+  background-color: #4141415b;
+  /* Cor de fundo do círculo (você pode alterar isso) */
+  border-radius: 50%;
+  /* Torna o elemento um círculo */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  /* Para posicionar o ícone absolutamente */
+}
+
+
+.iconView {
+  cursor: pointer;
+  color: #d3ff5b81;
+}
+
+
+//contact 
+
+.contentContact {
+  position: relative;
+  background-color: #D9D9D9;
+  max-width: 100%;
+  width: 750px;
+  height: 420px;
+  border-radius: 20px;
+
+  max-width: 1000px;
+  // margin: 10px auto;
+  // padding: 20px;
+  // border-radius: 5px;
+  // background-color: #8f8f8f;
+}
+
+@media (max-width: 768px) {
+  .contentContact {
+    width: 90%;
+    height: 800px;
+    max-width: none;
+  }
+}
+
+.btnContact {
+  max-width: 100%;
+  height: 71px;
+  background-color: #CFCFCF;
+  color: #000000;
+  // padding: 10px 20px;
+  border-radius: 60px;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+
+}
+
+
+.circle-container {
+  width: 10vh;
+  height: 10vh;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #ced4da;
+  margin-left: 100px;
+}
+
+.circle-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 767px) {
+  .circle-container {
+    width: 65px;
+    height: 65px;
+    margin-left: 0px;
+  }
+
+  .circle-container img {
+    max-width: 100%;
+  }
+}
+
+.btn-desc-contact {
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  // font-size: 16px;
+  margin-top: 23px;
+  // z-index: 9999;
+  width: 250px;
+  height: 60px;
+  background-color: #D4FF5B;
+  /* Cor de fundo */
+  border-radius: 50px;
+  margin-right: 5px;
+  transition: 0.2s;
+}
+
+.btn-desc-contact:hover {
+  color: #fff;
+  transform: scale(1.05);
+  /* Aumenta o tamanho em 20% ao passar o mouse */
+  cursor: pointer;
+  background-color: #3d3d3d;
+}
+
+.titleBtnContact {
+  font-weight: bold;
+  margin-top: 15px;
+
+}
+
+.subTitleBtnContact {
+  cursor: pointer;
+  // font-weight: bold;
+  font-size: 14px;
+  color: #717171
+}
+
+@media (max-width: 768px) {
+  .btn-desc-contact {
+    width: 70%;
+    max-width: none;
+  }
+
+  .titleBtnContact {
+
+    font-size: 15px;
+  }
+}
+
+.iconSocialContact {
+  margin-top: 23px;
+  // margin-left: 80px;
+  color: #646464;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.iconSocialContact:hover {
+  color: #3b3b3b;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.iconSocialC {
+  font-size: 21px;
+  color: #646464;
+}
+
+// overlay de bem vindo 
+
+.overlayWellcome {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(201, 201, 201, 0.5); /* Cor de fundo com 50% de opacidade */
+  z-index: 1000; /* Um valor alto para garantir que a camada esteja acima de outros elementos */
+  backdrop-filter: blur(5px); 
+}

@@ -1,0 +1,120 @@
+@import url("https://unpkg.com/leaflet@1.9.4/dist/leaflet.css");
+
+
+#map {
+    position: relative;
+    max-width: 100%;
+    height: 380px;
+    border-radius: 20px;
+    border: solid 4px #5d5d5d;
+    // opacity: 85%;
+}
+
+@media (max-width: 768px) {
+    #map {
+        width: 90%;
+        height: 380px;
+        max-width: none;
+    }
+}
+
+.leaflet-container .leaflet-control-attribution {
+    background: none;
+    background: none;
+    margin: 0;
+    display: none;
+}
+
+.leaflet-popup-content-wrapper,
+.leaflet-popup-tip {
+    background: #4c4c4c5c;
+    border: solid 1px #d3ff5b7b;
+    color: rgba(255, 255, 255, 0.87);
+    padding: 0.75rem 0.75rem;
+    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
+    border-radius: 6px;
+}
+
+.leaflet-touch .leaflet-control-zoom-in,
+.leaflet-touch .leaflet-control-zoom-out {
+    font-size: 22px;
+    color: rgba(255, 255, 255, 0.87);
+    background: rgba(122, 122, 122, 0.548);
+    border: solid 1px #d3ff5b7b;
+
+
+}
+
+.leaflet-touch .leaflet-bar a:last-child {
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    text-decoration: none;
+    background: rgba(122, 122, 122, 0.548);
+    border: solid 1px #d3ff5b7b;
+}
+
+.leaflet-touch .leaflet-bar a:first-child {
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    background: rgba(122, 122, 122, 0.548);
+    border: solid 1px #d3ff5b7b;
+
+}
+
+.leaflet-popup-content-wrapper,
+.leaflet-popup-tip {
+    // seta de baixo do popup
+    background: rgba(122, 122, 122, 0.548);
+    border: solid 1px rgba(211, 255, 91, 0.4823529412);
+    color: rgba(255, 255, 255, 0.87);
+    padding: 0.75rem 0.75rem;
+    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
+    border-radius: 6px;
+}
+
+
+
+.leaflet-popup-tip-container {
+    width: 40px;
+    height: 0;
+    position: absolute;
+    left: 50%;
+    /* margin-top: -1px; */
+    margin-left: -20px;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+
+// .leaflet-default-icon-path {
+//     background-color: aqua;
+//     // /* used only in path-guessing heuristic, see L.Icon.Default */
+//     // background-image: url('../../assets/mark.png');
+// }
+
+.pulseMap {
+    // max-width: 100%;
+    // max-height: 100%;
+    width: 10px;
+    height: 10px;
+    background-color: #21de96d1;
+    border-radius: 50%;
+    display: inline-block;
+    /* Altere para inline-block */
+    margin-right: 5px;
+    /* Adicione um espaçamento à direita, se desejado */
+    animation: pulseMap 1.2s linear infinite;
+    position: relative;
+    // top: -2px;
+}
+
+
+@keyframes pulseMap {
+    0% {
+        box-shadow: 0 0 0 0 rgb(105, 180, 151);
+      }
+    
+      100% {
+        box-shadow: 0 0 0 15px rgba(35, 168, 95, 0);
+      }
+}

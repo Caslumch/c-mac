@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+@import url("https://fonts.googleapis.com/css?family=Aldrich");
+
+.mobile {
+    display: block;
+    /* Oculta o elemento com essa classe em dispositivos móveis */
+}
+
+@media (max-width: 768px) {
+    .mobile {
+        display: none;
+        /* Exibe o elemento com essa classe quando a largura da tela for menor ou igual a 768px (ajuste o valor conforme necessário) */
+    }
+}
+
+
+.dp-menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+
+.dp-menu ul a.languageIcon {
+    cursor: pointer;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.dp-menu ul a.languageIcon:hover {
+    cursor: pointer;
+    color: darkgray
+}
+
+
+
+.dp-menu ul li {
+    display: inline;
+    position: relative;
+}
+
+.dp-menu ul li a x {
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px;
+    transition: background .3s;
+}
+
+
+/* Submenu */
+.dp-menu ul ul {
+    z-index: 9999;
+    width: 290px;
+    height: 235px;
+    top: 4vh;
+    left: 0px;
+    border: 1px solid rgba(97, 97, 97, 0.5490196078);
+    border-radius: 3%;
+    background-color: #000000;
+    transition: 0.2s;
+    display: none;
+    position: absolute;
+
+}
+
+.dp-menu ul ul:before {
+    content: "";
+    display: block;
+    height: 20px;
+    position: absolute;
+    top: -20px;
+    width: 100%;
+}
+
+.dp-menu ul li:hover>ul {
+    display: block;
+}
+
+
+.dp-menu ul ul li a {
+    display: block;
+}
+
+// painel de dentro do menu 
+
+.panelElementMenu {
+    cursor: pointer;
+    border-radius: 9px;
+    max-width: 100%;
+    width: 90%;
+    height: auto;
+    padding: 10px;
+    color: #fff;
+    margin-top: 10px;
+    margin-left: 13px;
+}
+
+.panelElementMenu:hover {
+    cursor: pointer;
+    background-color: #232323;
+}
+
+
+.titleMenu {
+    color: white;
+    cursor: pointer;
+    font-family: "Montserrat", sans-serif;
+
+}
+
+.subtitleMenu {
+    cursor: pointer;
+
+}
+
+.posiSubMenu {
+    position: absolute;
+}
+
+// menu language 
+
+// .p-menu.p-menu-overlay {
+//     // background: #333544;
+//     // border: 1px solid #3e4053;
+//     box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
+
+//     // width: 17vw;
+//     // height: 8vw;
+//     border: 2px solid #D4FF5B;
+//     opacity: 0.9;
+// }
