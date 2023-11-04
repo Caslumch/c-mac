@@ -37,6 +37,9 @@ export function HttpLoaderFactory(http: HttpClient) {
     })
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  exports: [
+    TranslateModule
+]
 })
 export class AppModule { }
