@@ -5,12 +5,12 @@ import { Subject } from 'rxjs';
     providedIn: 'root'
 })
 export class TraductionService {
-    private userLanguage: any = localStorage.getItem('languageUser');
+    private userLanguage: any = localStorage.getItem('languageUser') || 'en-US';
 
     // Método para emitir um evento
 
     getLang() {
-        const languageUser = navigator.language || 'en'
+        const languageUser = navigator.language || 'en-US'
         const verifyStorage = localStorage.getItem('languageUser');
         if (!verifyStorage) {
             this.userLanguage = languageUser
