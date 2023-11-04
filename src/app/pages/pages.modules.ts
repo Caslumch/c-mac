@@ -16,10 +16,17 @@ import { AboutComponent } from './modulos/about/about.component';
 import { ContactComponent } from './modulos/contact/contact.component';
 import { ProjectsComponent } from './modulos/projects/projects.component';
 import { OtherController } from '../core/controllers/user/others.controller';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TechnologiesComponent } from './modulos/technologies/technologies.component';
 import { OverviewComponent } from './modulos/overview/overview.component';
 import { stacksComponent } from './modulos/stacks/stacks.component';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { TranslationModule } from '../core/modules/translation.module';
+
+// export function HttpLoaderFactory(http: HttpClient) {
+//     return new TranslateHttpLoader(http);
+// }
 
 const routes: Routes = [
     {
@@ -53,15 +60,23 @@ const routes: Routes = [
         TechnologiesComponent, ContactComponent],
     providers: [ConfirmationService, MessageService, OtherController],
     imports: [
-        DropdownModule, ButtonModule,PanelModule,DividerModule,
+        DropdownModule, ButtonModule, PanelModule, DividerModule,
         InputTextModule,
         PrimeNGModules,
+        TranslationModule,
         CommonModule,
         FormsModule,
         ReactiveFormsModule,
         RouterModule.forChild(routes),
         ComponentsModule,
-        HttpClientModule
+        HttpClientModule,
+        // TranslateModule.forRoot({
+        //     loader: {
+        //         provide: TranslateLoader,
+        //         useFactory: HttpLoaderFactory,
+        //         deps: [HttpClient]
+        //     }
+        // })
     ]
 })
 export class PagesModule { }

@@ -1,0 +1,67 @@
+{
+    "SBh": "Sobre mim",
+    "PTh": "Projetos",
+    "SKh": "Skills",
+    "CTh": "Contato",
+    "HOME": "Ínicio",
+    "SUBabout": "Sobre Mim",
+    "Subskills": "Skills",
+    "SBhs": "Conheça um pouco mais sobre mim e minha trajetória",
+    "SKhs": "Todas as tecnologias que eu desenvolvi esta aplicação e mais.",
+    "HELLO": "Olá, Eu sou Lucas Machado - front-end developer.",
+    "SUB": "Dando vida à web com código e design.",
+    "SOC": "Me Acompanhe nas Redes",
+    "UT": "ÚTIMOS DROPS",
+    "PJ": "Projetos",
+    "ST": "Stack's",
+    "FT": "Fotografia",
+    "VIAJ": "Vamos iniciar algo juntos?",
+    "SUBFOOT": "Se você tem algum projeto em mente, ou apenas quer bater um papo, sinta-se à vontade para me enviar uma mensagem.",
+    "FC": "Fale Comigo",
+    "ABOUT": "Sobre Mim",
+    "CAREER": "Carreira",
+    "DEV-DESC": "Desenvolvedor Fullstack",
+    "DATECAREER": "jan 2022 – set 2023 • 1 ano 7 meses",
+    "SKILL-DESC": "Aqui, listo alguns dos serviços e programas que fazem parte do meu dia a dia:",
+    "PLACEHOLDER": "Pesquise pelo item desejado",
+    "TYPE-SKILL1": "Estrutura",
+    "TYPE-SKILL2": "Linguagem",
+    "TYPE-SKILL3": "Linguagem de Estilo",
+    "TYPE-SKILL4": "Linguagem de Marcação",
+    "TYPE-SKILL5": "Biblioteca",
+    "TYPE-SKILL6": "Plataforma de Servidor",
+    "TYPE-SKILL7": "Banco de Dados",
+    "TYPE-SKILL8": "Protocolo",
+    "TOOLTIPVIEW": "Visualizar",
+    "STACK-DESC": "Aqui, listo alguns dos serviços e programas que fazem parte do meu dia a dia:",
+    "TYPE-STACK1": "Código",
+    "TYPE-STACK2": "Notícias",
+    "TYPE-STACK3": "Serviços",
+    "TYPE-STACK4": "Design",
+    "TYPE-STACK5": "Fotografia",
+    "TYPE-STACK6": "Vídeo",
+    "TYPE-STACK7": "Música",
+    "TYPE-STACK8": "Produtividade",
+    "projects": {
+        "title": "Meus Projetos",
+        "desc": "Essa página lista os 1 principais projetos que venho desenvolvendo durante a minha jornada como programador. Confira outros projetos em meu Github",
+        "placeholder": "Pesquise o projeto desejado",
+        "acessProject": "Acessar Projeto"
+    },
+    "contact": {
+        "sendDm": "Me envie uma DM",
+        "title": "Aqui estão minhas redes!",
+        "popUpMap": "Eu estou aqui"
+
+    },
+    
+    "modalWeather" : {
+        "title": "O Tempo agora em",
+        "humidity" : "Umidade:"
+
+    },
+
+    "modalLang": {
+        "title" : "ídioma"
+    }
+}

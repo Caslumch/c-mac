@@ -1,7 +1,9 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 import { AuthController } from 'src/app/core/controllers/user/auth.controller';
 import { OtherController } from 'src/app/core/controllers/user/others.controller';
 import { UserController } from 'src/app/core/controllers/user/user.controller';
+import { TraductionService } from 'src/app/core/services/translate.service';
 
 
 @Component({
@@ -10,11 +12,17 @@ import { UserController } from 'src/app/core/controllers/user/user.controller';
 
 })
 export class HomeComponent implements OnInit {
+  // param = { value: 'world' };
   constructor(
+    private traductionService: TraductionService,
+    private translate: TranslateService,
     private userController: UserController,
     private authController: AuthController,
     private otherController: OtherController,
-  ) { }
+  ) {
+
+
+  }
 
   @ViewChild('mWeather') mWeather?: any;
   @ViewChild('contact') contact?: any;
@@ -35,16 +43,16 @@ export class HomeComponent implements OnInit {
 
 
   drops = [
-    { name: 'Projetos', src: './assets/projects.jpg', routerLink: 'projects' },
-    { name: 'Stack', src: './assets/stack.jpg', routerLink: 'stacks' },
-    { name: 'Fotografia', src: './assets/fotografia.jpg', link: "https://caslumachado.46graus.com" }
+    { name: 'Projetos', src: './assets/projects.jpg', routerLink: 'projects', lang: 'PJ' },
+    { name: 'Stack', src: './assets/stack.jpg', routerLink: 'stacks', lang: 'ST' },
+    { name: 'Fotografia', src: './assets/fotografia.jpg', link: "https://caslumachado.46graus.com", lang: 'FT' }
   ]
 
   initialLoading = false;
   modalInitial = true
-
+  userLanguage: any
   async ngOnInit(): Promise<void> {
-    // this.verifyDataUser()
+    this.languageUser()
     this.getLocale()
     this.getAuth();
     setInterval(this.close, 11000);
@@ -52,17 +60,21 @@ export class HomeComponent implements OnInit {
 
   }
 
-  // verifyDataUser = () => {
-  //   const visitouSite = localStorage.getItem('visitouSite'); //realiza a verificação de visitouSite em localstorage, se não tiver ele adiociona um item lá e deixa salvo como true
-  //   if (!visitouSite) {
-  //     this.initialLoading = true;
-  //     localStorage.setItem('visitouSite', 'true');
-  //   }
+  languageUser = () => {
+    this.userLanguage = this.traductionService.getUserLanguage();
+    this.translate.setDefaultLang(this.userLanguage);
+    debugger;
+  }
 
-  //   setTimeout(() => {
-  //     this.initialLoading = false
-  //   }, 7000);
-  // }
+  getLabel(e: any): string {
+    return this.translate.instant(e);
+  }
+
+  switchLanguage(language: string) {
+    this.translate.use(language)
+  }
+
+
 
   getAuth = () => {
     this.authController.getToken().subscribe({
@@ -101,7 +113,7 @@ export class HomeComponent implements OnInit {
   src: any
   dados: any = []
   getWatherMap = () => {
-    this.userController.getWatherMap(this.latitude, this.longitude).subscribe({
+    this.userController.getWatherMap(this.latitude, this.longitude, this.userLanguage).subscribe({
       next: (r) => {
         this.dadosWeather = r
         this.src = this.dadosWeather?.weather[0].icon

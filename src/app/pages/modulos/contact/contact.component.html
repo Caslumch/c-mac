@@ -13,7 +13,7 @@
                     class="m-1 m-md-3 ml-2 ml-md-0 text-center d-flex flex-column justify-content-center btn-desc-contact mch-color-black">
                     <p class="titleBtnContact">
                         <!-- <span class="pulse"></span> -->
-                        <label class="mt-1 subTitleBtnContact">Me envie uma DM <span
+                        <label class="mt-1 subTitleBtnContact">{{"contact.sendDm" | translate}}<span
                                 class="ml-3 mch-fs-20 pi pi-send"></span></label>
                     </p>
 
@@ -34,13 +34,9 @@
                     <div class="col-12 col-md-6">
                         <p class="mt-4 mch-fs-15 text-center mch-color-black">
                             <span class="mch-fs-25 pulse"></span>
-                            Aqui estão minhas redes!
+                            {{"contact.title" | translate}}
                         </p>
                         <div *ngFor="let c of social" class="mt-2 btnContact ">
-                            <!-- <label class="mch-fs-16 mch-color-black">
-                                <span class="pi pi-instagram"></span> Instagram<span
-                                    [style]="simbolStyle">{{simbol}}</span> asdasd
-                            </label> -->
                             <div class="row d-flex justify-content-start">
                                 <div class="mt-4 col-3">
                                     <span class="mch-fs-25 iconSocialC {{c.icon}}"></span>
@@ -51,7 +47,6 @@
                                     <p class="mch-fs-17">{{c.nome}}</p>
                                     <label *ngIf="c.desc" class="mch-fs-15 mch-color-secundary">
                                         {{c.desc}}
-                                        <!-- <span [style]="simbolStyle">{{simbol}}</span> -- -->
                                     </label>
                                     <label *ngIf="!c.desc" class="mch-fs-13 mch-color-black">
                                         --

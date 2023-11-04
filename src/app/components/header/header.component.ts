@@ -1,27 +1,38 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
+import { TraductionService } from 'src/app/core/services/translate.service';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
 })
 export class HeaderComponent implements OnInit {
+  constructor(
+    private traductionService: TraductionService,
+    private translate: TranslateService,
+  ) {
+  }
+
+  @ViewChild('op') op?: any;
+  @ViewChild('menu') menu?: any;
+
   up = 'pi-angle-up'
 
   ifIcon: string = 'pi pi-angle-down'
 
   optionsMenu: any = [
-    { option: 'About', id: 1, routerLink: 'about', icon: true },
-    { option: 'Projects', id: 2, routerLink: 'projects', },
-    { option: 'Skills', id: 3, routerLink: 'tech', },
-    { option: 'Contact', id: 4, routerLink: 'contact', }
+    { option: 'About', id: 1, routerLink: 'about', icon: true, langT: 'SBh' }, //SBh de sobre header
+    { option: 'Projects', id: 2, routerLink: 'projects', langT: 'PTh' },
+    { option: 'Skills', id: 3, routerLink: 'tech', langT: 'SKh' },
+    { option: 'Contact', id: 4, routerLink: 'contact', langT: 'CTh' }
   ];
 
   optionsSubMenu: any
 
   menuAbout: any[] = [
-    { title: 'Sobre Mim', subtitle: "Conheça um pouco mais sobre mim e minha trajetória", routerLink: 'about' },
-    { title: 'Skills', subtitle: "Todas as tecnologias que eu desenvolvi esta aplicação e mais.", routerLink: 'tech' },
+    { title: 'Sobre Mim', subtitle: "Conheça um pouco mais sobre mim e minha trajetória", routerLink: 'about', langT: 'SUBabout', langS: 'SBhs' },
+    { title: 'Skills', subtitle: "Todas as tecnologias que eu desenvolvi esta aplicação e mais.", routerLink: 'tech', langT: 'Subskills', langS: 'SKhs' },
 
   ];
   menuProjects: any[] = [
@@ -30,10 +41,52 @@ export class HeaderComponent implements OnInit {
 
   ];
 
+  items = [
+    {
+      label: 'Language',
+      items: [
+        {
+          label: 'English',
+          // icon: 'pi pi-refresh',
+          command: () => {
+            this.getLang('en-US');
+          }
+        },
+        {
+          label: 'Portugues',
+          // icon: 'pi pi-times',
+          command: () => {
+            this.getLang('pt-BR');
+          }
+        }
+      ]
+    },
+  ];
+
+
+
   ehMobile: any
   ngOnInit(): void {
     this.ehMobile = window.screen.width < 933;
-    this.verifyWidth()
+    this.verifyWidth();
+    this.languageUser()
+  }
+
+  getLang = (lang: any) => {
+    this.traductionService.changeLanguage(lang)
+    this.languageUser();
+    //  location.reload();
+  }
+
+  userLanguage: any
+  languageUser = () => {
+    this.userLanguage = this.traductionService.getUserLanguage();
+    this.translate.setDefaultLang(this.userLanguage);
+    debugger;
+  }
+
+  getLabel(e: any): string {
+    return this.translate.instant(e);
   }
 
   navbarVisible: boolean = false;
@@ -47,6 +100,14 @@ export class HeaderComponent implements OnInit {
   }
 
   handleImageError() {
+  }
+
+  changeLanguage = (e: any) => {
+    this.op.show(e);
+  }
+
+  closeChangeLanguage = () => {
+    this.menu.hide();
   }
 
   seeMenu: boolean = false
@@ -90,6 +151,5 @@ export class HeaderComponent implements OnInit {
   }
 
   selectMenu = (e: any) => {
-    debugger;
   }
 }

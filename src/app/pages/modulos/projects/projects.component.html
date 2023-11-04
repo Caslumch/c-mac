@@ -8,8 +8,8 @@
 
 
                     <div class="col-12 col-md-12 ">
-                        <label class="mch-fs-30">Meus Projetos</label>
-                        <p class="mch-color-grey2 mch-fs-18">Essa página lista os {{logsProjects.length}} principais projetos que venho desenvolvendo durante a minha jornada como programador. Confira outros projetos em meu Github</p>
+                        <label class="mch-fs-30">{{"projects.title" | translate}}</label>
+                        <p class="mch-color-grey2 mch-fs-18">{{"projects.desc" | translate}}</p>
                     </div>
                     <div class=" mt-4 mt-md-0 col-12 col-md-12 mch-color-white">
                         <div class="row">
@@ -18,7 +18,7 @@
                                 <span class="p-input-icon-right w-full">
                                     <i class="pi pi-search"></i>
                                     <input type="text" formControlName="project" (keyup)="filterProjects()" class="w-full" pInputText
-                                        placeholder="Pesquise o projeto desejado" />
+                                        [placeholder]="getLabel('projects.placeholder')" />
                                 </span>
                             </div>
                             <div class="col-12">
@@ -42,7 +42,7 @@
                                             <div class="  mt-2 text-right col-12 col-md-6">
                                                 <a class=" iconGit m-2 pi pi-github"
                                                     href="https://github.com/Caslumch/c-mac" target="_blank"><label
-                                                        class="text-access">Acessar Projeto ></label></a>
+                                                        class="text-access">{{"projects.acessProject" | translate}} ></label></a>
 
 
                                             </div>

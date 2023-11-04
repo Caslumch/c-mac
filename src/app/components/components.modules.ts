@@ -8,6 +8,7 @@ import { PrimeNGModules } from '../core/modules/primeng.module';
 import { ModalContatoComponent } from './modais/modal-contato/modal-contato.component';
 import { ModalWeatherComponent } from './modais/modal-weather/modal-weather.component';
 import { ModalViewerComponent } from './modais/modal-viewer/modal-viewer.component';
+import { TranslationModule } from '../core/modules/translation.module';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ModalViewerComponent } from './modais/modal-viewer/modal-viewer.compone
     FormsModule,
     ReactiveFormsModule,
     RouterModule,
-    PrimeNGModules
+    PrimeNGModules,
+    TranslationModule
   ],
   exports: [ 
     HeaderComponent,

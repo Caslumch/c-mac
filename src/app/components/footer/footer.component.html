@@ -3,13 +3,12 @@
         <div class="insights" style="position: initial;">
             <div class="row">
                 <div class="col-12">
-                    <label class="titleInsights mch-fs-30">Vamos iniciar algo juntos?</label>
-                    <p class="subTitleInsights mch-fs-">Se você tem algum projeto em mente, ou apenas quer
-                        bater um papo, sinta-se à vontade para me enviar uma mensagem.</p>
+                    <label class="titleInsights mch-fs-30">{{"VIAJ" | translate}}</label>
+                    <p class="subTitleInsights mch-fs-">{{"SUBFOOT" | translate}}</p>
                 </div>
                 <div
                     class="m-0 m-md-3 col-12 col-md-3 d-flex d-md-block justify-content-center justify-content-md-initial">
-                    <p-button (click)="modalInvlidCpf()" icon="pi pi-external-link" label="Fale Comigo"
+                    <p-button (click)="modalInvlidCpf()" icon="pi pi-external-link" [label]="getLabel('FC')"
                         styleClass="p-button-outlined"></p-button>
 
                 </div>
@@ -17,8 +16,8 @@
             </div>
             <div class="row justify-content-center">
                 <div class="col-2 col-md-1">
-                    <a class="mt-5 mt-md-0 iconSocial  pi pi-github" href="https://github.com/Caslumch" target="_blank"
-                        ></a>
+                    <a class="mt-5 mt-md-0 iconSocial  pi pi-github" href="https://github.com/Caslumch"
+                        target="_blank"></a>
                 </div>
                 <div class="col-2 col-md-1">
                     <a class="mt-5 mt-md-0 iconSocial  pi pi-instagram"
@@ -26,8 +25,7 @@
                 </div>
                 <div class="col-2 col-md-1">
                     <a class="mt-5 mt-md-0 iconSocial  pi pi-linkedin"
-                        href="https://www.linkedin.com/in/lucas-machado-16a42422b/" target="_blank"
-                        ></a>
+                        href="https://www.linkedin.com/in/lucas-machado-16a42422b/" target="_blank"></a>
                 </div>
             </div>
 

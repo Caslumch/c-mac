@@ -20,6 +20,18 @@
 }
 
 
+.dp-menu ul a.languageIcon {
+    cursor: pointer;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.dp-menu ul a.languageIcon:hover {
+    cursor: pointer;
+    color: darkgray
+}
+
+
 
 .dp-menu ul li {
     display: inline;
@@ -104,3 +116,16 @@
 .posiSubMenu {
     position: absolute;
 }
+
+// menu language 
+
+// .p-menu.p-menu-overlay {
+//     // background: #333544;
+//     // border: 1px solid #3e4053;
+//     box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
+
+//     // width: 17vw;
+//     // height: 8vw;
+//     border: 2px solid #D4FF5B;
+//     opacity: 0.9;
+// }

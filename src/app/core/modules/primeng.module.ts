@@ -10,6 +10,7 @@ import { InputTextareaModule } from 'primeng/inputtextarea';
 import { OverlayPanelModule } from 'primeng/overlaypanel';
 import { TableModule } from 'primeng/table';
 import { TooltipModule } from 'primeng/tooltip';
+import { MenuModule } from 'primeng/menu';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { TooltipModule } from 'primeng/tooltip';
     InputTextareaModule,
     OverlayPanelModule,
     TableModule,
-    TooltipModule
+    TooltipModule,
+    MenuModule
   ],
   exports: [
     DropdownModule,
@@ -36,7 +38,8 @@ import { TooltipModule } from 'primeng/tooltip';
     InputTextareaModule,
     OverlayPanelModule,
     TableModule,
-    TooltipModule
+    TooltipModule,
+    MenuModule
 
   ],
   providers: [],

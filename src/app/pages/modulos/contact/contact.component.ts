@@ -1,11 +1,19 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 import { Map, divIcon, marker, tileLayer, } from 'leaflet'
+import { TraductionService } from 'src/app/core/services/translate.service';
 
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
 })
 export class ContactComponent implements OnInit {
+  constructor(
+    private traductionService: TraductionService,
+    private translate: TranslateService,
+  ) {
+
+  }
   @Input() locale?: any[];
   map: any
 
@@ -21,8 +29,14 @@ export class ContactComponent implements OnInit {
   ]
   ehMobile: any
   ngOnInit(): void {
+    this.languageUser()
     this.ehMobile = window.screen.width < 992;
-    console.log(this.locale);
+    this.maps()
+
+
+  }
+
+  maps = () => {
     this.locale;
     if (this.map === undefined) {
       this.map = new Map('map').setView([-23.511224828565467, -46.87626884189107], 13);
@@ -30,6 +44,8 @@ export class ContactComponent implements OnInit {
       this.map = ''
       this.map = new Map('map').setView([-23.511224828565467, -46.87626884189107], 13);
     }
+
+
 
     // tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     //   maxZoom: 20,
@@ -62,12 +78,30 @@ export class ContactComponent implements OnInit {
 
     const customIcon = divIcon({
       className: 'pulseMap', // Classe CSS personalizada para o ícone
-      html: '', // Seu ícone personalizado usando PrimeNG icons
+      html: '', // ícone personalizado usando PrimeNG icons
+    });
+    
+    this.translate.get('contact.popUpMap',).subscribe((translatedText) => {
+      marker([-23.511224828565467, -46.87626884189107], { icon: customIcon }).addTo(this.map)
+        .bindPopup(translatedText)
+        .openPopup();
     });
 
-    marker([-23.511224828565467, -46.87626884189107], { icon: customIcon }).addTo(this.map)
-      .bindPopup('Eu estou aqui')
-      .openPopup();
+  }
+
+
+
+  userLanguage: any
+  languageUser = () => {
+    
+    this.userLanguage = this.traductionService.getUserLanguage();
+    this.translate.setDefaultLang(this.userLanguage);
+    
+    debugger;
+  }
+
+  getLabel(e: any): string {
+    return this.translate.instant(e);
   }
 
   sendDm = () => {

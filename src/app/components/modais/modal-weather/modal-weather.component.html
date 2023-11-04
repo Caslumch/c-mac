@@ -5,7 +5,7 @@
             <div class="location d-flex justify-content-center">
                 <label class="mr-2 mch-fs-12 mch-color-grey2">
                     <span class="iconLocale pi pi-map-marker"></span>
-                </label><span class="title-weather mr-2 mch-fs-15 w-full">{{'O Tempo agora em ' + dadosWeather?.name}}.</span>
+                </label><span class="title-weather mr-2 mch-fs-15 w-full">{{"modalWeather.title" | translate }} {{dadosWeather?.name}}.</span>
             </div>
         </div>
         <div class="col-12 d-flex justify-content-center">
@@ -18,7 +18,7 @@
         <div class="col-12 text-center">
             <label class="mch-fs-16 mch-color-grey2">
                 <span class="pulse-weather"></span> {{dadosWeather?.weather[0].description}}.<span
-                    [style]="simbolStyle">{{simbol}}</span> {{'Umidade: ' + dadosWeather?.main.humidity + '%'}}
+                    [style]="simbolStyle">{{simbol}}</span> {{"modalWeather.humidity" | translate}} {{ dadosWeather?.main.humidity + '%'}}
             </label>
             <!-- <p class="umidade">{{'Umidade: ' + dadosWeather?.main.humidity + '%'}}</p> -->
 

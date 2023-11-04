@@ -3,37 +3,36 @@
     <div class="containerCsite">
         <div class="col-12">
             <div class="row ">
-                <div class="col-12 col-md-8 mch-color-white text-hi">
-                    <label><span [style]="simbolStyle" class="fade-in">{{ simbol }}</span> Hi, I’m Lucas Machado -
-                        Front-end
-                        developer.</label>
-                    <p class="mch-fs-17 mch-color-grey2">
+                <div class="text-center text-md-start col-12 col-md-8 mch-color-white text-hi">
+                    <label><span [style]="simbolStyle" class="fade-in">{{ simbol }}</span> {{"HELLO" | translate}}</label>
+                    <p class="mt-2 mch-fs-17 mch-color-grey2">
                         <span class="pulse"></span>
-                        {{ typedText }}
+                        <!-- {{ typedText }} -->
+                        {{"SUB" | translate}}
                     </p>
+                    
                 </div>
 
 
             </div>
-            <div class="row">
+            <div class="mt-4 row ">
 
                 <div class="col-md-4 col-12 ">
-                    <p-button [routerLink]="['/contact']" icon="pi pi-send" label="Me Acompanhe nas Redes" iconPos="right"></p-button>
+                    <p-button styleClass="custom-btn" [routerLink]="['/contact']" icon="pi pi-send" [label]="getLabel('SOC')" iconPos="right"></p-button>
+                    <!-- <div class=" ml-0 ml-md-3 btn-navbar-soc mt-4" [routerLink]="['/home']">{{"SOC" | translate}}</div> -->
                 </div>
-                <!-- <div class="mt-4 mt-md-0 col-md-0 col-md-2 col-12">
-                    <p-button label="Fotografia" styleClass="p-button-outlined"></p-button>
-                </div> -->
+
             </div>
 
 
             <div class="mt-4 row">
-                <div class="col-12 mch-fs-18 titleDrops">ÚTIMOS DROPS</div>
+                <div class="mt-4 col-12 mch-fs-18 titleDrops">{{"UT" | translate}}</div>
                 <div *ngFor="let d of drops" [routerLink]="d.routerLink ? ['/' + d.routerLink] : null"
                     class="panelElement mt-4 col-12 col-md-4">
                     <div (click)="changeRouter(d)" class="image-container">
                         <img class="imgStacks" src="{{d.src}}" alt="about">
                         <div class="overlay">
-                            <label class="label">{{d.name}}</label>
+                            <label class="label">{{d.lang | translate}}</label>
                         </div>
                     </div>
                 </div>
@@ -45,12 +44,8 @@
     </div>
 </div>
 <app-modal-weather [dadosWeather]="dadosWeather" [src]="src" #mWeather></app-modal-weather>
-<!-- <div *ngIf="initialLoading !== false" class="overlayWellcome text-center d-flex justify-content-center align-items-center">
-    <div class="col-12">
-        <div class="row">
-            <div class="col-12">
-                <p class="messageInit mch-fs-25 text-center">Olá, bem-vindo. Espero que você tenha uma boa experiência, aproveite</p>
-            </div>
-        </div>
-    </div>
-</div> -->
+
+
+<!-- <div>{{"HELLO" | translate}}</div>
+<p-button (click)="switchLanguage('en')" icon="pi pi-send" label="translate" iconPos="right"></p-button>
+<p-button (click)="switchLanguage('pt')" icon="pi pi-send" label="translate" iconPos="right"></p-button> -->

@@ -9,7 +9,7 @@
                     </div>
                     <div class="mt-4 mt-md-0 col-12 col-md-12 mch-color-white">
                         <p>
-                            Aqui, listo alguns dos serviços e softwares que integram o meu dia a dia:
+                            {{"STACK-DESC" | translate}}
                         </p>
                     </div>
                     <div class="mt-4 mt-md-0 col-12 col-md-12 mch-color-white">
@@ -17,7 +17,7 @@
                             <div class="col-12 col-md-8 d-md-block">
                                 <span class="p-input-icon-right w-full">
                                     <i class="pi pi-search"></i>
-                                    <input type="text" formControlName="stack" (keyup)="filterStacks()" class="w-full" pInputText placeholder="Pesquise o item desejado" />
+                                    <input type="text" formControlName="stack" (keyup)="filterStacks()" class="w-full" pInputText [placeholder]="getLabel('PLACEHOLDER')" />
                                 </span>
                             </div>
                             <div class="col-4">
@@ -40,7 +40,7 @@
                                         <p>{{ s.nome }}</p>
                                     </div>
                                     <div class="titleStack">
-                                        <label class="mt-2 labelStackTitle">{{ s.tipo }}</label>
+                                        <label class="mt-2 labelStackTitle">{{ s.lang | translate }}</label>
                                     </div>
                                 </div>
                             </div>
