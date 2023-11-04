@@ -24,9 +24,9 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { TranslationModule } from '../core/modules/translation.module';
 
-// export function HttpLoaderFactory(http: HttpClient) {
-//     return new TranslateHttpLoader(http);
-// }
+export function HttpLoaderFactory(http: HttpClient) {
+    return new TranslateHttpLoader(http);
+}
 
 const routes: Routes = [
     {
@@ -70,13 +70,13 @@ const routes: Routes = [
         RouterModule.forChild(routes),
         ComponentsModule,
         HttpClientModule,
-        // TranslateModule.forRoot({
-        //     loader: {
-        //         provide: TranslateLoader,
-        //         useFactory: HttpLoaderFactory,
-        //         deps: [HttpClient]
-        //     }
-        // })
+        TranslateModule.forRoot({
+            loader: {
+                provide: TranslateLoader,
+                useFactory: HttpLoaderFactory,
+                deps: [HttpClient]
+            }
+        })
     ]
 })
 export class PagesModule { }
