@@ -78,7 +78,8 @@ const routes: Routes = [
             defaultLanguage: 'en-US',
             loader: {
                 provide: TranslateLoader,
-                useFactory: HttpLoaderFactory,
+                // useFactory: HttpLoaderFactory,
+                useFactory: (createTranslateLoader),
                 deps: [HttpClient]
             }
         })
