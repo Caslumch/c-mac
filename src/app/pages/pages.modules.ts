@@ -29,7 +29,7 @@ export function HttpLoaderFactory(http: HttpClient) {
 }
 
 export function createTranslateLoader(http: HttpClient) {
-    return new TranslateHttpLoader(http, 'c-mac/assets/i18n/', '.json');
+    return new TranslateHttpLoader(http, 'assets/i18n/', '.json');
 }
 
 const routes: Routes = [
