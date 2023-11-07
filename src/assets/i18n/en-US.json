@@ -6,7 +6,7 @@
     "HOME": "Home",
     "SUBabout": "About me",
     "Subskills": "Skills",
-    "CV" : "Download CV",
+    "CV": "Download CV",
     "SBhs": "Learn more about me and my journey",
     "SKhs": "All the technologies I developed this application and more.",
     "HELLO": "Hi, I’m Lucas Machado - Front-end developer.",
@@ -58,8 +58,49 @@
         "title": "the weather now in",
         "humidity": "Humidity:"
     },
-    
     "modalLang": {
-        "title" : "Language"
+        "title": "Language"
+    },
+    "modalViewer": {
+        "angular": {
+            "desc": "Angular is a web development framework developed by Google. It is used to build robust and scalable web and mobile applications. Angular uses TypeScript as the programming language and provides a framework for creating dynamic and responsive user interfaces."
+        },
+        "bootstrap": {
+            "desc": "Bootstrap is an open-source front-end design library. It provides pre-defined components and styles to help create elegant and responsive web interfaces. Bootstrap is widely used to accelerate the development of websites and applications."
+        },
+        "typescript": {
+            "desc": "TypeScript is a programming language developed by Microsoft that is an extension of JavaScript. It adds static typing features, making it easier to develop more robust and scalable code."
+        },
+        "css": {
+            "desc": "CSS (Cascading Style Sheets) is a style language used to define the appearance and layout of HTML elements on a web page. It is essential for web page design and formatting."
+        },
+        "html": {
+            "desc": "HTML (Hypertext Markup Language) is the markup language used to create the structure of a web page. It defines the elements and organization of content on a page."
+        },
+        "primeng": {
+            "desc": "PrimeNG is a user interface component library for Angular. It provides a wide variety of ready-to-use components, such as buttons, tables, and charts, to facilitate the development of professional-looking web applications."
+        },
+        "rxjs": {
+            "desc": "RxJS is a library for reactive programming in JavaScript. It allows efficient handling of asynchronous data streams and events, making it easier to manipulate observables like event streams."
+        },
+        "nodejs": {
+            "desc": "Node.js is an open-source runtime environment based on JavaScript that allows code execution on the server side. It is widely used for building scalable and real-time web applications."
+        },
+        "express": {
+            "desc": "Express is a framework for Node.js that simplifies web application development. It provides an abstraction layer over Node.js, making it easy to create APIs and HTTP routes."
+        },
+        "sql": {
+            "desc": "SQL (Structured Query Language) is a query language used to interact with relational databases. It is widely used to retrieve, insert, update, and delete data in databases."
+        },
+        "mysql": {
+            "desc": "MySQL is an open-source relational database management system. It is widely used for storing and managing data in web and enterprise applications."
+        },
+        "http": {
+            "desc": "HTTP (Hypertext Transfer Protocol) is the communication protocol used to transfer information on the World Wide Web. It defines how requests and responses should be formatted and transmitted between web clients and servers."
+        }
+    },
+    "ABOUTa": {
+        "textUs": "<p class=\" d-block\">Meu nome é Lucas, também conhecido como <b>caslu</b>, e tenho <b>26</b> anos.</p><p class=\"\">Sou um <b>desenvolvedor frontend</b> apaixonado por tecnologia. Tenho um ano e sete meses de experiência desempenhando funções de desenvolvedor, e apesar de meu conhecimento amplo em frontend, também trabalho no lado do backend. Minhas experiências incluem o uso das seguintes tecnologias: Angular, Node.js, HTML, CSS, JavaScript, TypeScript, Bootstrap, Express, React.js e PrimeNG. <label style=\"cursor: pointer; color: white;\"  [routerLink]=\"['/stacks']\">(ver stacks)</label></p><p class=\"mt-0\">Atualmente, estou no 2º semestre do curso de <b>Análise e Desenvolvimento de Sistemas</b> na <b>FIAP</b>. Além de toda essa bagagem, quando não estou trabalhando, estou sempre codando em projetos pessoais.</p>",
+        "textPt": ""
     }
 }

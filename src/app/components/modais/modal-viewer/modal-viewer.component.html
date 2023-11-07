@@ -1,6 +1,8 @@
 <div class="custom-dialog" >
     <p-dialog  [(visible)]="displayModal" [style]="ehMobile ? { width: '90vw', height: '70vw' } : {width: '20vw', height: '20vw'} ">
-        <div class="titleModal text-center col-12">{{selectItem.nome}}</div>
-        <label>{{selectItem.desc}}</label>
+        <div class="row d-flex justify-content-center text-center">
+            <div class="titleModal text-center col-12">{{selectItem?.nome}}</div>
+            <label class="col-12 mt-4 justify-content-center">{{getTranslationKey() | translate}}</label>
+        </div>
     </p-dialog>
 </div>
