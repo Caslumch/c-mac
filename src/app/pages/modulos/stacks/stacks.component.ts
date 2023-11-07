@@ -51,7 +51,7 @@ export class stacksComponent extends BaseForm implements OnInit {
   languageUser = () => {
     this.userLanguage = this.traductionService.getUserLanguage();
     this.translate.setDefaultLang(this.userLanguage);
-    debugger;
+    
   }
 
   getLabel(e: any): string {
@@ -67,19 +67,19 @@ export class stacksComponent extends BaseForm implements OnInit {
 
   getList(e: any) {
     this.viewListOrNot = !this.viewListOrNot;
-    debugger;
+    
   }
 
   viewStack = (e: any) => {
     window.open(e.link, "_blank");
-    debugger;
+    
   };
 
   logsStack: any;
   filterStacks = () => {
     this.logsStack = this.stacks;
     if (this.form.value.stack) {
-      debugger;
+      
       this.logsStack = this.logsStack.filter(
         (s: any) => s.nome
           .toLowerCase()

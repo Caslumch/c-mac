@@ -17,12 +17,12 @@
         
         <div  class="col-12 col-md-6  d-flex justify-content-initial justify-content-md-end text-md-end text-center">
             <div class="dp-menu collapse text-center text-md-left align-items-left navbar-collapse" id="navbarNav">
-                <ul (mouseleave)="onMouseLeave() " 
+                <ul   
                     class="navbar-nav options d-flex flex-column flex-md-row align-items-center">
                     <li *ngFor="let o of optionsMenu" class="opt-navbar nav-item">
                         <div (mouseenter)="onMouseEnter($event, o)">
 
-                            <a id="inicio" #rla="routerLinkActive" (mouseenter)="onMouseEnter($event, o)" [routerLink]="['/' + o.routerLink]"
+                            <a (click)="changeRouter(o)"  id="inicio" #rla="routerLinkActive" (mouseenter)="onMouseEnter($event, o)" (mouseenter)="langMenuLeave() " [routerLink]="['/' + o.routerLink]"
                                 class="{{ rla.isActive ? 'typeOpt' : ' optMenu typeOpt z'}}" routerLinkActive
                                 [routerLinkActive]="['linkSelect']" href="#">{{o.langT | translate}}</a>
                             <i class="d-none d-md-inline ml-2 mch-color-grey2 {{o.icon ? ifIcon : ''}}"></i>
@@ -35,6 +35,8 @@
                                             <label class="mch-fs-13 titleMenu">{{s.langT | translate}}</label>
                                             <label
                                                 class="mch-fs-13 subtitleMenu mch-color-secundary">{{s.langS | translate}}</label>
+                                                
+                                                
                                         </div>
                                     </div>
                                 </a>
@@ -42,7 +44,13 @@
                         </ul>
 
                     </li>
-                    <a (mouseenter)="menu.toggle($event)" class="  languageIcon  mt-4 pi pi-language"></a>
+                    <a (mouseenter)="langMenuLeave() " [routerLinkActive]="['linkSelect']" href="/assets/CV.LUCAS MACHADO.pdf" download  class="  headerIconCV "   [pTooltip]="getLabel('tipCv')"
+                    tooltipPosition="top">
+                    Cv
+                        <span class="mch-fs-10 pi pi-download"></span>
+                        <!-- {{ typedText }} -->
+                    </a>
+                    <a (mouseenter)="menu.toggle($event)" class="ml-0 ml-md-4  headerIcon  mt-4 pi pi-language"></a>
                 </ul>
                 
                 <div class="  ml-0 ml-md-3 btn-navbar mt-4" [routerLink]="['/home']">{{"HOME" | translate}}</div>

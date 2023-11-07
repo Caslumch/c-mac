@@ -53,7 +53,7 @@ export class TechnologiesComponent extends BaseForm implements OnInit {
   languageUser = () => {
     this.userLanguage = this.traductionService.getUserLanguage();
     this.translate.setDefaultLang(this.userLanguage);
-    debugger;
+    
   }
 
   getLabel(e: any): string {
@@ -69,7 +69,7 @@ export class TechnologiesComponent extends BaseForm implements OnInit {
 
   getList(e: any) {
     this.viewListOrNot = !this.viewListOrNot
-    debugger;
+    
   }
 
 
@@ -83,7 +83,7 @@ export class TechnologiesComponent extends BaseForm implements OnInit {
   filterSkills = () => {
     this.logsSkill = this.skills;
     if (this.form.value.skill) {
-      debugger;
+      
       this.logsSkill = this.logsSkill.filter(
         (s: any) => s.nome
           .toLowerCase()

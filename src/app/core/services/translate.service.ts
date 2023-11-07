@@ -16,7 +16,7 @@ export class TraductionService {
             this.userLanguage = languageUser
             localStorage.setItem('languageUser', this.userLanguage)
         }
-        debugger;
+        
     }
 
     getUserLanguage() {
@@ -27,7 +27,7 @@ export class TraductionService {
         localStorage.setItem('languageUser', language)
         this.userLanguage = localStorage.getItem('languageUser');
          location.reload();
-        debugger;
+        
        
         // aqui ele vai alterar o language o local storage e recarregar a pagina 
     }

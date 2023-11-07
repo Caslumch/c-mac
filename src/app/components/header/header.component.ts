@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { TraductionService } from 'src/app/core/services/translate.service';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-header',
@@ -9,6 +10,7 @@ import { TraductionService } from 'src/app/core/services/translate.service';
 })
 export class HeaderComponent implements OnInit {
   constructor(
+    private http: HttpClient,
     private traductionService: TraductionService,
     private translate: TranslateService,
   ) {
@@ -26,6 +28,8 @@ export class HeaderComponent implements OnInit {
     { option: 'Projects', id: 2, routerLink: 'projects', langT: 'PTh' },
     { option: 'Skills', id: 3, routerLink: 'tech', langT: 'SKh' },
     { option: 'Contact', id: 4, routerLink: 'contact', langT: 'CTh' }
+    // { option: 'Cv', id: 5,  iconS: 'pi pi-download mch-fs-10', langT: 'CV' }
+
   ];
 
   optionsSubMenu: any
@@ -82,7 +86,7 @@ export class HeaderComponent implements OnInit {
   languageUser = () => {
     this.userLanguage = this.traductionService.getUserLanguage();
     this.translate.setDefaultLang(this.userLanguage);
-    debugger;
+    
   }
 
   getLabel(e: any): string {
@@ -106,13 +110,15 @@ export class HeaderComponent implements OnInit {
     this.op.show(e);
   }
 
-  closeChangeLanguage = () => {
+  langMenuLeave = () => {
     this.menu.hide();
   }
 
   seeMenu: boolean = false
 
   upMenu: boolean = false
+
+  otherIcon = '';
 
   onMouseEnter = (e: any, option: any) => {
     this.optionsSubMenu = []
@@ -126,11 +132,7 @@ export class HeaderComponent implements OnInit {
       } else {
         this.ifIcon = 'pi pi-angle-down'
       }
-      // else if (option.routerLink === 'projects') {
 
-      //   this.optionsSubMenu = this.menuProjects
-      //   this.seeMenu = true
-      // }
     }
   }
 
@@ -144,12 +146,22 @@ export class HeaderComponent implements OnInit {
 
   }
 
-  changeRouter = (e: any) => {
-    if (e.title === "Fotografia") {
-      window.open("https://caslumachado.46graus.com", "_blank");
-    }
-  }
+  // changeRouter = (e: any) => {
+  //   
+  //   if (e.option === "Cv") {
+  //     const assetPath = '/assets/CV.LUCAS MACHADO.pdf';
+    
+  //     this.http.get(assetPath, { responseType: 'blob' }).subscribe((fileBlob) => {
+  //       const url = window.URL.createObjectURL(fileBlob);
+  //       const link = document.createElement('a');
+  //       link.href = url;
+  //       link.download = '/assets/CV.LUCAS MACHADO.pdf'; // Nome do arquivo de download
+  //       document.body.appendChild(link);
+  //       link.click();
+  //       window.URL.revokeObjectURL(url);
+  //     });
+  //   }
+  // }
 
-  selectMenu = (e: any) => {
-  }
+
 }

@@ -21,7 +21,7 @@ export class AboutComponent implements OnInit {
     languageUser = () => {
       this.userLanguage = this.traductionService.getUserLanguage();
       this.translate.setDefaultLang(this.userLanguage);
-      debugger;
+      
     }
 
 }

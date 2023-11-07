@@ -63,7 +63,7 @@ export class HomeComponent implements OnInit {
   languageUser = () => {
     this.userLanguage = this.traductionService.getUserLanguage();
     this.translate.setDefaultLang(this.userLanguage);
-    debugger;
+    
   }
 
   getLabel(e: any): string {

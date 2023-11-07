@@ -54,7 +54,7 @@ getLabel(e: any): string {
   filterProjects = () => {
     this.logsProjects = this.projects;
     if (this.form.value.project) {
-      debugger;
+      
       this.logsProjects = this.logsProjects.filter(
         (s: any) => s.nome
           .toLowerCase()

@@ -39,7 +39,7 @@ export class UserController {
 
 
   getWatherMap(latitude: number, longitude: number, country: string): Observable<any> {
-    debugger;
+    
     if(country === "pt-BR") {
       country = 'pt'
     }

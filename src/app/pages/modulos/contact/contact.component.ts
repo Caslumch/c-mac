@@ -97,7 +97,7 @@ export class ContactComponent implements OnInit {
     this.userLanguage = this.traductionService.getUserLanguage();
     this.translate.setDefaultLang(this.userLanguage);
     
-    debugger;
+    
   }
 
   getLabel(e: any): string {
