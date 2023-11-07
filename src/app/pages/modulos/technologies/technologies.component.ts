@@ -46,7 +46,7 @@ export class TechnologiesComponent extends BaseForm implements OnInit {
   ngOnInit(): void {
     this.languageUser()
     this.logsSkill = this.skills;
-    // this.viewListOrNot = true
+    this.viewListOrNot = true
     this.createForm()
   }
 
