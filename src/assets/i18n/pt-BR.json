@@ -98,5 +98,12 @@
         "http": {
             "desc": "HTTP (Hypertext Transfer Protocol) é o protocolo de comunicação usado para transferir informações na World Wide Web. Ele define como as solicitações e respostas devem ser formatadas e transmitidas entre clientes da web e servidores."
         }
+    },
+
+    "TB": {
+        "skill": "Skills",
+        "stack": "Stacks",
+        "type": "Tipo",
+        "toView": "Visualizar"
     }
 }

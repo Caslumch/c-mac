@@ -54,13 +54,13 @@
                                     <tr>
     
                                         <th>
-                                            <p>Stack</p>
+                                            <p>{{"TB.stack" | translate}}</p>
                                         </th>
                                         <th>
-                                            <p>Tipo </p>
+                                            <p>{{"TB.type" | translate}} </p>
                                         </th>
                                         <th>
-                                            <p>Visualizar</p>
+                                            <p>{{"TB.toView" | translate}}</p>
                                         </th>
                                     </tr>
                                 </ng-template>
@@ -72,7 +72,7 @@
                                         <td>{{ stacks.tipo }}</td>
                                         <td>
                                             <div class="col-12 d-flex flex-row align-items-center">
-                                                <i class="iconView pi pi-eye rth-color-secundary" pTooltip="Visualizar"
+                                                <i class="iconView pi pi-eye rth-color-secundary" [pTooltip]="getLabel('TOOLTIPVIEW')"
                                                     tooltipPosition="right" (click)="viewStack(stacks)"></i>
                                             </div>
                                         </td>
