@@ -28,18 +28,18 @@ export function HttpLoaderFactory(http: HttpClient) {
     InputTextModule,
     ComponentsModule,
     HttpClientModule,
-    TranslateModule.forRoot({
-      loader: {
-        provide: TranslateLoader,
-        useFactory: HttpLoaderFactory,
-        deps: [HttpClient]
-      }
-    })
+    // TranslateModule.forRoot({
+    //   loader: {
+    //     provide: TranslateLoader,
+    //     useFactory: HttpLoaderFactory,
+    //     deps: [HttpClient]
+    //   }
+    // })
   ],
   providers: [],
   bootstrap: [AppComponent],
   exports: [
-    TranslateModule
+    // TranslateModule
 ]
 })
 export class AppModule { }

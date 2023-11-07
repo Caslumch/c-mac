@@ -10,7 +10,7 @@ export class FooterComponent implements OnInit {
   constructor(
     private translate: TranslateService,
   ) {
-    this.translate.setDefaultLang('en');
+    // this.translate.setDefaultLang('en');
   }
 
   @ViewChild('mContato') mContato?: any;
