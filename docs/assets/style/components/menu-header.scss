@@ -20,13 +20,31 @@
 }
 
 
-.dp-menu ul a.languageIcon {
+.dp-menu ul a.headerIcon {
+    text-decoration: none;
     cursor: pointer;
     color: #fff;
     transition: 0.3s;
 }
 
-.dp-menu ul a.languageIcon:hover {
+.dp-menu ul a.headerIcon:hover {
+    text-decoration: none;
+    cursor: pointer;
+    color: darkgray
+}
+
+.dp-menu ul a.headerIconCV {
+    margin-top: 29px;
+    font-family: "Aldrich", sans-serif;
+    text-decoration: none;
+    cursor: pointer;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.dp-menu ul a.headerIconCV:hover {
+    margin-top: 29px;
+    text-decoration: none;
     cursor: pointer;
     color: darkgray
 }

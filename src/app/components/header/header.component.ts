@@ -28,7 +28,6 @@ export class HeaderComponent implements OnInit {
     { option: 'Projects', id: 2, routerLink: 'projects', langT: 'PTh' },
     { option: 'Skills', id: 3, routerLink: 'tech', langT: 'SKh' },
     { option: 'Contact', id: 4, routerLink: 'contact', langT: 'CTh' }
-    // { option: 'Cv', id: 5,  iconS: 'pi pi-download mch-fs-10', langT: 'CV' }
 
   ];
 

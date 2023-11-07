@@ -11,6 +11,7 @@ import { OverlayPanelModule } from 'primeng/overlaypanel';
 import { TableModule } from 'primeng/table';
 import { TooltipModule } from 'primeng/tooltip';
 import { MenuModule } from 'primeng/menu';
+import { RatingModule } from 'primeng/rating';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { MenuModule } from 'primeng/menu';
     OverlayPanelModule,
     TableModule,
     TooltipModule,
-    MenuModule
+    MenuModule,
+    RatingModule
   ],
   exports: [
     DropdownModule,
@@ -39,7 +41,8 @@ import { MenuModule } from 'primeng/menu';
     OverlayPanelModule,
     TableModule,
     TooltipModule,
-    MenuModule
+    MenuModule,
+    RatingModule
 
   ],
   providers: [],

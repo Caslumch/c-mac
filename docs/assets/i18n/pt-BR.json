@@ -1,10 +1,12 @@
 {
-    "SBh": "Sobre mim",
+    "SBh": "Sobre",
     "PTh": "Projetos",
     "SKh": "Skills",
     "CTh": "Contato",
+    "CV": "Cv",
     "HOME": "Ínicio",
     "SUBabout": "Sobre Mim",
+    "tipCv" : "Baixar CV",
     "Subskills": "Skills",
     "SBhs": "Conheça um pouco mais sobre mim e minha trajetória",
     "SKhs": "Todas as tecnologias que eu desenvolvi esta aplicação e mais.",
