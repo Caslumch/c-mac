@@ -489,3 +489,13 @@ thumb {
   z-index: 1000; /* Um valor alto para garantir que a camada esteja acima de outros elementos */
   backdrop-filter: blur(5px); 
 }
+
+.descContact {
+  
+}
+
+@media (max-width: 768px) {
+  .descContact {
+    font-size: 14px;
+  }
+}
