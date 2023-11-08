@@ -15,7 +15,7 @@ $sides: (
 );
 
 @each $sizename, $sizevalue in $sizes {
-    @each $name, $value in bs-color.$rita-colors {
+    @each $name, $value in bs-color.$mch-colors {
         .mch-color#{"" + $sizename}#{"-" + $name} {
             @media (min-width: $sizevalue) {
                 color: $value !important;

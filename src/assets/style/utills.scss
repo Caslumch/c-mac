@@ -260,13 +260,13 @@ thumb {
   opacity: 0.9;
 }
 
-@media (max-width: 1370px) {
+@media (max-width: 850px) {
   .custom-p-dialog {
-    width: 20vw;
-    height: 11vw;
+    width: 95vw;
+    height: 40vw;
     border: 2px solid #D4FF5B;
     opacity: 0.9;
-  }
+}
 }
 
 .location {

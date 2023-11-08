@@ -139,8 +139,6 @@ export class HomeComponent implements OnInit {
 
 
 
-
-
   typeText() {
     if (this.index < this.textToType.length) {
       this.typedText += this.textToType.charAt(this.index);
