@@ -12,7 +12,10 @@ import { TableModule } from 'primeng/table';
 import { TooltipModule } from 'primeng/tooltip';
 import { MenuModule } from 'primeng/menu';
 import { RatingModule } from 'primeng/rating';
-
+import { ProgressSpinnerModule } from 'primeng/progressspinner';
+import { ProgressBarModule } from 'primeng/progressbar';
+// For dynamic progressbar demo
+import { ToastModule } from 'primeng/toast';
 
 @NgModule({
   declarations: [],
@@ -28,7 +31,10 @@ import { RatingModule } from 'primeng/rating';
     TableModule,
     TooltipModule,
     MenuModule,
-    RatingModule
+    RatingModule,
+    ProgressSpinnerModule,
+    ProgressBarModule,
+ToastModule
   ],
   exports: [
     DropdownModule,
@@ -42,7 +48,10 @@ import { RatingModule } from 'primeng/rating';
     TableModule,
     TooltipModule,
     MenuModule,
-    RatingModule
+    RatingModule,
+    ProgressSpinnerModule,
+    ProgressBarModule,
+ToastModule
 
   ],
   providers: [],

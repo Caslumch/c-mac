@@ -89,7 +89,6 @@ export class HeaderComponent implements OnInit {
   }
 
   getLabel(e: any): string {
-    debugger;
     return this.translate.instant(e);
   }
 

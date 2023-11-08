@@ -1,12 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { TraductionService } from './core/services/translate.service';
+import { LoaderService } from './core/services/loader.service';
 
 @Component({
   selector: 'app-root',
-  template: '<router-outlet></router-outlet>',
+  template: `
+
+  <router-outlet></router-outlet>`,
 })
 export class AppComponent implements OnInit {
   constructor(
+    // public loaderService: LoaderService,
     private traductionService: TraductionService
   ) {
 
