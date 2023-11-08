@@ -2,18 +2,18 @@
 <div class="container-found">
     <div class="containerCsite">
         <div class="col-12">
-            <form novalidate [formGroup]="form">
 
-                <div class="row">
-                    <div class="col-12 col-md-12">
-                        <label class="mch-fs-30">Skills</label>
-                    </div>
-                    <div class="mt-4 mt-md-0 col-12 col-md-12 mch-color-white">
-                        <p>
-                            {{"SKILL-DESC" | translate}}
-                        </p>
-                    </div>
-                    <div class="mt-4 mt-md-0 col-12 col-md-12 mch-color-white">
+            <div class="row">
+                <div class="col-12 col-md-12">
+                    <label class="mch-fs-30">Skills</label>
+                </div>
+                <div class="mt-4 mt-md-0 col-12 col-md-12 mch-color-white">
+                    <p>
+                        {{"SKILL-DESC" | translate}}
+                    </p>
+                </div>
+                <div class="mt-4 mt-md-0 col-12 col-md-12 mch-color-white">
+                    <form novalidate [formGroup]="form">
                         <div class="row">
                             <div class="col-12 col-md-8 d-md-block">
                                 <span class="p-input-icon-right w-full">
@@ -32,58 +32,64 @@
                                 </span>
                             </div>
                         </div>
-                        <div *ngIf="viewListOrNot" class="row mt-0 mt-md-2 justify-content-center">
-                            <div *ngFor="let s of logsSkill" (click)="viewSkill(s)"
-                                class=" fade-in mt-5 col-6 col-md-3 d-flex align-items-center justify-content-center">
-                                <div class="text-center panelStack">
-                                    <img class="imgStack img-fluid" [src]="s.src" alt="Imagem">
+                    </form>
+                    <div *ngIf="viewListOrNot" class="row mt-0 mt-md-2 justify-content-center">
+                        <div *ngFor="let s of logsSkill" (click)="viewSkill(s)"
+                            class=" fade-in mt-5 col-6 col-md-3 d-flex align-items-center justify-content-center">
+                            <div class="text-center panelStack">
+                                <img class="imgStack img-fluid" [src]="s.src" alt="Imagem">
+                                <div>
+                                    <p>{{ s.nome }}</p>
+                                </div>
+                                <div class="titleStack">
+                                    <label class="mt-2 labelStackTitle">{{ s.lang | translate}}</label>
+                                    
                                     <div>
-                                        <p>{{ s.nome }}</p>
-                                    </div>
-                                    <div class="titleStack">
-                                        <label class="mt-2 labelStackTitle">{{ s.lang | translate}}</label>
+                                        <p-rating [readonly]="true" [cancel]="false"
+                                            [(ngModel)]="s.value"></p-rating>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                    </div>
 
-                        <div *ngIf="!viewListOrNot" class="row mt-0 mt-md-4 justify-content-center">
-                            <p-table #table [value]="logsSkill" styleClass="p-datatable-striped"
-                                responsiveLayout="scroll" [rowHover]="true">
-                                <ng-template pTemplate="header">
-                                    <tr>
+                    <div *ngIf="!viewListOrNot" class="row mt-0 mt-md-4 justify-content-center">
+                        <p-table #table [value]="logsSkill" styleClass="p-datatable-striped" responsiveLayout="scroll"
+                            [rowHover]="true">
+                            <ng-template pTemplate="header">
+                                <tr>
 
-                                        <th>
-                                            <p>{{"TB.skill" | translate}}</p>
-                                        </th>
-                                        <th>
-                                            <p>{{"TB.type" | translate}} </p>
-                                        </th>
-                                        <th>
-                                            <p>{{"TB.toView" | translate}}</p>
-                                        </th>
-                                    </tr>
-                                </ng-template>
+                                    <th>
+                                        <p>{{"TB.skill" | translate}}</p>
+                                    </th>
+                                    <th>
+                                        <p>{{"TB.type" | translate}} </p>
+                                    </th>
+                                    <th>
+                                        <p>{{"TB.toView" | translate}}</p>
+                                    </th>
+                                </tr>
+                            </ng-template>
 
-                                <ng-template pTemplate="body" let-skill>
-                                    <tr>
+                            <ng-template pTemplate="body" let-skill>
+                                <tr>
 
-                                        <td>{{ skill.nome }}</td>
-                                        <td>{{ skill.tipo }}</td>
-                                        <td>
-                                            <div class="col-12 d-flex flex-row align-items-center">
-                                                <i [pTooltip]="getLabel('TOOLTIPVIEW')" tooltipPosition="right"
-                                                    class="iconView pi pi-eye rth-color-secundary"
-                                                    (click)="viewSkill(skill)"></i>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                </ng-template>
-                            </p-table>
-                        </div>
+                                    <td>{{ skill.nome }}</td>
+                                    <td>{{ skill.tipo }}</td>
+                                    <td>
+                                        <div class="col-12 d-flex flex-row align-items-center">
+                                            <i [pTooltip]="getLabel('TOOLTIPVIEW')" tooltipPosition="right"
+                                                class="iconView pi pi-eye rth-color-secundary"
+                                                (click)="viewSkill(skill)"></i>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </ng-template>
+                        </p-table>
                     </div>
                 </div>
-            </form>
+            </div>
+
         </div>
         <div class="mt-4">
             <app-footer></app-footer>

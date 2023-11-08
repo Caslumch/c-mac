@@ -1628,6 +1628,21 @@ p-radiobutton.ng-dirty.ng-invalid > .p-radiobutton > .p-radiobutton-box {
   width: 1.143rem;
   height: 1.143rem;
 }
+
+@media (max-width: 670px) {
+  .p-rating .p-rating-icon.p-icon {
+    width: 0.9rem;
+    height: 0.9rem;
+  }
+}
+
+@media (max-width: 668px) {
+  .p-rating .p-rating-icon.p-icon {
+    width: 0.8rem;
+    height: 0.8rem;
+  }
+}
+
 .p-rating .p-rating-icon.p-rating-cancel {
   color: #F48FB1;
 }
