@@ -45,7 +45,7 @@
     "TYPE-STACK8": "Produtividade",
     "projects": {
         "title": "Meus Projetos",
-        "desc": "Essa página lista os 1 principais projetos que venho desenvolvendo durante a minha jornada como programador. Confira outros projetos em meu Github",
+        "desc": "Essa página lista os principais projetos que venho desenvolvendo durante a minha jornada como programador. Confira outros projetos em meu Github",
         "placeholder": "Pesquise o projeto desejado",
         "acessProject": "Acessar Projeto"
     },

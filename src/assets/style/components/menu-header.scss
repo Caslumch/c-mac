@@ -21,11 +21,18 @@
 
 
 .dp-menu ul a.headerIcon {
+    font-size: 18px;
     text-decoration: none;
     cursor: pointer;
     color: #fff;
     transition: 0.3s;
 }
+
+@media (max-width: 670px) {
+    .dp-menu ul a.headerIcon {
+        font-size: 22px;
+    }
+  }
 
 .dp-menu ul a.headerIcon:hover {
     text-decoration: none;
