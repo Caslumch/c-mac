@@ -3,6 +3,8 @@ import { BaseForm } from '../../base-form/base-form.component';
 import { UntypedFormBuilder, Validators } from '@angular/forms';
 import { UserController } from 'src/app/core/controllers/user/user.controller';
 // import { FormArray, FormControlName, FormGroup, UntypedFormGroup } from '@angular/forms';
+import * as emailjs from 'emailjs-com';
+import { MessageService } from 'primeng/api';
 
 @Component({
   selector: 'app-modal-contato',
@@ -11,6 +13,7 @@ import { UserController } from 'src/app/core/controllers/user/user.controller';
 export class ModalContatoComponent extends BaseForm implements OnInit {
 
   constructor(
+    private messageService: MessageService,
     private fb: UntypedFormBuilder,
     private userController: UserController
   ) {
@@ -20,6 +23,7 @@ export class ModalContatoComponent extends BaseForm implements OnInit {
 
   displayModal = false;
   ehMobile: boolean = false;
+  saveLoad: boolean = false
 
   destinatario = 'caslumach@gmail.com'
 
@@ -27,8 +31,6 @@ export class ModalContatoComponent extends BaseForm implements OnInit {
   ngOnInit(): void {
     this.createForm()
     this.ehMobile = window.screen.width < 992;
-    
-
   }
 
   createForm = () => {
@@ -42,27 +44,51 @@ export class ModalContatoComponent extends BaseForm implements OnInit {
   }
 
   save = () => {
+
     this.form.value;
-    const body = `De: ${this.form.value.nome} email: ${this.form.value.email}, telefone: ${this.form.value.telefone},
-    assunto: ${this.form.value.assunto}, texto: ${this.form.value.text}
+    const body = `
+    De: ${this.form.value.nome},
+    email: ${this.form.value.email},
+    telefone: ${this.form.value.telefone},
+    assunto: ${this.form.value.assunto},
+    texto: ${this.form.value.text}
     `
-    this.form.value
-    
+    this.closeModal();
+    this.saveLoad = true
+    emailjs.init('f2J6XmohA9QKj10T7');
 
-    this.userController.enviarEmail(this.destinatario, this.form.value.assunto, body).subscribe({
-      next: () => {
-        
-      },
-      error: () => {
-        
-      }
+    emailjs.send('service_xgv1psc', 'template_2cuonkn', {
+      to_name: this.destinatario,
+      message: body,
     })
+      .then((response) => {
+        this.saveLoad = false
+        this.messageService.add({
+          severity: 'success',
+          summary: 'Sucesso',
+          detail: 'Email enviado',
+          life: 3000,
+        });
 
-
+        this.clear()
+      })
+      .catch((error) => {
+        console.error('Erro ao enviar e-mail', error);
+      });
   }
 
 
-  openModal = () => (this.displayModal = true);
 
+  clear = () => {
+    this.form.controls['nome'].setValue('');
+    this.form.controls['email'].setValue('');
+    this.form.controls['telefone'].setValue('');
+    this.form.controls['assunto'].setValue('');
+    this.form.controls['text'].setValue('');
+  }
+
+  openModal = () => (this.displayModal = true);
   closeModal = () => (this.displayModal = false);
+
+
 }

@@ -6,7 +6,8 @@ import { LoaderService } from './core/services/loader.service';
   selector: 'app-root',
   template: `
 
-  <router-outlet></router-outlet>`,
+  <router-outlet></router-outlet>
+  `,
 })
 export class AppComponent implements OnInit {
   constructor(
@@ -36,8 +37,10 @@ export class AppComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.userLanguage = this.traductionService.getLang()
+    this.userLanguage = this.traductionService.getLang();
   }
+
+
 
   // getLangStorage = () => {
   //   const verifyStorage = localStorage.getItem('languageUser'); //realiza a verificação de verifyStorage em localstorage, se não tiver ele adiociona um item lá e deixa salvo como true

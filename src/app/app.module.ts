@@ -9,11 +9,15 @@ import { ComponentsModule } from './components/components.modules';
 import { DropdownModule } from 'primeng/dropdown';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { IConfig, NgxMaskModule } from 'ngx-mask';
 // import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
 }
+
+
+const options: Partial<IConfig> = {};
 
 @NgModule({
   declarations: [
@@ -28,6 +32,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     InputTextModule,
     ComponentsModule,
     HttpClientModule,
+    NgxMaskModule.forRoot(options),
     // TranslateModule.forRoot({
     //   loader: {
     //     provide: TranslateLoader,

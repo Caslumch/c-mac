@@ -14,7 +14,6 @@ import { MenuModule } from 'primeng/menu';
 import { RatingModule } from 'primeng/rating';
 import { ProgressSpinnerModule } from 'primeng/progressspinner';
 import { ProgressBarModule } from 'primeng/progressbar';
-// For dynamic progressbar demo
 import { ToastModule } from 'primeng/toast';
 
 @NgModule({

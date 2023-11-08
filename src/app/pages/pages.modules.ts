@@ -23,6 +23,7 @@ import { stacksComponent } from './modulos/stacks/stacks.component';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { TranslationModule } from '../core/modules/translation.module';
+import { NgxMaskModule } from 'ngx-mask';
 
 export function HttpLoaderFactory(http: HttpClient) {
     return new TranslateHttpLoader(http);
@@ -31,6 +32,7 @@ export function HttpLoaderFactory(http: HttpClient) {
 export function createTranslateLoader(http: HttpClient) {
     return new TranslateHttpLoader(http, 'assets/i18n/', '.json');
 }
+
 
 const routes: Routes = [
     {
@@ -74,6 +76,7 @@ const routes: Routes = [
         RouterModule.forChild(routes),
         ComponentsModule,
         HttpClientModule,
+        NgxMaskModule,
         TranslateModule.forRoot({
             defaultLanguage: 'en-US',
             loader: {
