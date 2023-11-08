@@ -9,42 +9,42 @@
 <div class="custom-dialog">
     <p-dialog [(visible)]="displayModal"
         [style]="ehMobile ? { width: '90vw', height: '200vw' } : {width: '20vw', height: '50vw'} ">
-        <div class="titleModal text-center col-12">Mande um email.</div>
+        <div class="titleModal text-center col-12">{{"modalContact.title" | translate}}</div>
         <form novalidate [formGroup]="form">
             <div class="row">
 
                 <div class="mt-4 col-12 col-md-12">
                     <div class="field">
-                        <input placeholder="Digite seu Nome" type="text" formControlName="nome" class="w-full"
+                        <input [placeholder]="getLabel('modalContact.name')" type="text" formControlName="nome" class="w-full"
                             pInputText />
                     </div>
                 </div>
                 <div class="mt-4 col-12 col-md-12">
                     <div class="field">
-                        <input placeholder="Email" type="text" formControlName="email" class="w-full" pInputText />
+                        <input [placeholder]="getLabel('modalContact.email')" type="text" formControlName="email" class="w-full" pInputText />
 
                     </div>
                 </div>
                 <div class="mt-4 col-12 col-md-12 form-group">
                     <div class="field">
-                        <input placeholder="Telefone" type="text" formControlName="telefone" name="celular" class="w-full"
+                        <input [placeholder]="getLabel('modalContact.phone')" type="text" formControlName="telefone" name="celular" class="w-full"
                             mask="(00) 00000-0000" pInputText />
                         <!-- <input placeholder="Digite seu Telefone"  mask="(00) 00000-0000" formControlName="telefone" type="text"  class="w-full" pInputText /> -->
                     </div>
                 </div>
                 <div class="mt-4 col-12 col-md-12">
                     <div class="field">
-                        <input placeholder="Assunto" type="text" formControlName="assunto" class="w-full" pInputText />
+                        <input [placeholder]="getLabel('modalContact.subject')" type="text" formControlName="assunto" class="w-full" pInputText />
 
                     </div>
                 </div>
                 <div class="mt-4 col-12">
-                    <textarea class="w-full" placeholder="Escreva em detalhes o que tem pensado" formControlName="text"
+                    <textarea class="w-full" [placeholder]="getLabel('modalContact.text')" formControlName="text"
                         rows="5" cols="30" pInputTextarea></textarea>
                 </div>
 
                 <div class="mt-4 col-12 text-center">
-                    <p class="mch-fs-17 iconWhatsapp">Me chame no whatsapp se prefirir </p>
+                    <p class="mch-fs-17 iconWhatsapp">{{"modalContact.whatsapp" | translate}}</p>
                     <a class="mt-5 mt-md-0 iconSocial  pi pi-whatsapp" href=" https://wa.me/5511963034276"
                         target="_blank"></a>
                 </div>
@@ -55,7 +55,7 @@
 
         <div class="row d-flex justify-content-center">
             <div class="col-12 col-md-12 mt-4">
-                <p-button [disabled]="!form.valid" (onClick)="save()" class="w-full" label="Enviar"></p-button>
+                <p-button [disabled]="!form.valid" (onClick)="save()" class="w-full" [label]="getLabel('modalContact.send')"></p-button>
             </div>
 
         </div>

@@ -99,7 +99,6 @@
             "desc": "HTTP (Hypertext Transfer Protocol) is the communication protocol used to transfer information on the World Wide Web. It defines how requests and responses should be formatted and transmitted between web clients and servers."
         }
     },
-
     "TB": {
         "skill": "Skills",
         "stack": "Stacks",
@@ -112,5 +111,15 @@
     },
     "ABOUTME": {
         "textUs": "<p class=\"d-block\">My name is Lucas, also known as <b>caslu</b>, and I am <b>26</b> years old.</p><p class=\"mt-2\">I am a passionate <b>frontend developer</b> with one year and seven months of experience in developer roles. Despite my extensive knowledge in frontend, I also work on the backend. My experiences include using the following technologies: Angular, Node.js, HTML, CSS, JavaScript, TypeScript, Bootstrap, Express, React.js, and PrimeNG. <label style=\"cursor: pointer; color: white;\" [routerLink]=\"['/stacks']\">(see stacks)</label></p><p class=\"mt-2\">Currently, I am in the 2nd semester of the <b>Analysis and Systems Development</b> course at <b>FIAP</b>. In addition to all this experience, when I'm not working, I'm always coding on personal projects.</p>"
+    },
+    "modalContact": {
+        "title": "Send Email",
+        "name": "Name",
+        "email": "Email",
+        "phone": "Phone",
+        "subject": "Subject",
+        "text": "Write here what you have been thinking",
+        "whatsapp": "Call me on whatsapp if you prefer",
+        "send": "Send"
     }
 }

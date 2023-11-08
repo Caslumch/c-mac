@@ -5,6 +5,8 @@ import { UserController } from 'src/app/core/controllers/user/user.controller';
 // import { FormArray, FormControlName, FormGroup, UntypedFormGroup } from '@angular/forms';
 import * as emailjs from 'emailjs-com';
 import { MessageService } from 'primeng/api';
+import { TranslateService } from '@ngx-translate/core';
+import { TraductionService } from 'src/app/core/services/translate.service';
 
 @Component({
   selector: 'app-modal-contato',
@@ -13,6 +15,8 @@ import { MessageService } from 'primeng/api';
 export class ModalContatoComponent extends BaseForm implements OnInit {
 
   constructor(
+    private traductionService: TraductionService,
+    private translate: TranslateService,
     private messageService: MessageService,
     private fb: UntypedFormBuilder,
     private userController: UserController
@@ -29,8 +33,19 @@ export class ModalContatoComponent extends BaseForm implements OnInit {
 
 
   ngOnInit(): void {
+    this.languageUser()
     this.createForm()
     this.ehMobile = window.screen.width < 992;
+  }
+
+  userLanguage: any
+  languageUser = () => {
+    this.userLanguage = this.traductionService.getUserLanguage();
+    this.translate.setDefaultLang(this.userLanguage);
+  }
+
+  getLabel(e: any): string {
+    return this.translate.instant(e);
   }
 
   createForm = () => {
