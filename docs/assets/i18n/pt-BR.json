@@ -120,6 +120,10 @@
         "subject": "Assunto",
         "text": "Escreva aqui o que você tem pensado",
         "whatsapp": "Me chame no Whatsapp se preferir",
-        "send": "Enviar"
+        "send": "Enviar",
+        "message" : {
+            "title" : "Sucesso",
+            "sub": "Email Enviado"
+        }
     }
 }

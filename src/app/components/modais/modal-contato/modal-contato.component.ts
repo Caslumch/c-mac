@@ -75,8 +75,7 @@ export class ModalContatoComponent extends BaseForm implements OnInit {
     emailjs.send('service_xgv1psc', 'template_2cuonkn', {
       to_name: this.destinatario,
       message: body,
-    })
-      .then((response) => {
+    }).then((response) => {
         this.saveLoad = false
         this.messageService.add({
           severity: 'success',
@@ -84,7 +83,6 @@ export class ModalContatoComponent extends BaseForm implements OnInit {
           detail: 'Email enviado',
           life: 3000,
         });
-
         this.clear()
       })
       .catch((error) => {

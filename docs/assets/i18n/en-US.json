@@ -120,6 +120,10 @@
         "subject": "Subject",
         "text": "Write here what you have been thinking",
         "whatsapp": "Call me on whatsapp if you prefer",
-        "send": "Send"
+        "send": "Send",
+        "message" : {
+            "title" : "Success",
+            "sub": "Email Sent"
+        }
     }
 }
