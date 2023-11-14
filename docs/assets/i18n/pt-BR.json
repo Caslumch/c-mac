@@ -33,6 +33,7 @@
     "TYPE-SKILL6": "Plataforma de Servidor",
     "TYPE-SKILL7": "Banco de Dados",
     "TYPE-SKILL8": "Protocolo",
+    "TYPE-SKILL9": "Versionamento",
     "TOOLTIPVIEW": "Visualizar",
     "STACK-DESC": "Aqui, listo alguns dos serviços e programas que fazem parte do meu dia a dia:",
     "TYPE-STACK1": "Código",
@@ -43,6 +44,7 @@
     "TYPE-STACK6": "Vídeo",
     "TYPE-STACK7": "Música",
     "TYPE-STACK8": "Produtividade",
+    "TYPE-SKILL10": "Framework",
     "projects": {
         "title": "Meus Projetos",
         "desc": "Essa página lista os principais projetos que venho desenvolvendo durante a minha jornada como programador. Confira outros projetos em meu Github",
@@ -97,6 +99,12 @@
         },
         "http": {
             "desc": "HTTP (Hypertext Transfer Protocol) é o protocolo de comunicação usado para transferir informações na World Wide Web. Ele define como as solicitações e respostas devem ser formatadas e transmitidas entre clientes da web e servidores."
+        },
+        "git": {
+            "desc": "O Git é um sistema de controle de versão distribuído usado para rastrear e gerenciar alterações em projetos de software. Ele permite que desenvolvedores colaborem eficientemente, mantendo um histórico preciso das mudanças no código. Conceitos-chave incluem repositórios, commits, branches e operações como merge, push e pull. Essa ferramenta é essencial para o desenvolvimento de software colaborativo e facilita a organização e o controle das versões de um projeto."
+        },
+        "react": {
+            "desc": "O ReactJS é uma biblioteca JavaScript de código aberto desenvolvida pelo Facebook para construir interfaces de usuário interativas e eficientes. Utilizado para criar componentes reutilizáveis, o React facilita a construção de aplicativos web escaláveis. Seu modelo de programação baseado em componentes permite uma abordagem declarativa para o desenvolvimento de interfaces, simplificando a manipulação eficiente do estado da aplicação e atualizações automáticas da interface em resposta a mudanças no estado. O React é frequentemente utilizado em conjunto com o JSX, uma extensão de sintaxe que mistura HTML com JavaScript, tornando a construção de interfaces mais intuitiva. Além disso, o React favorece a arquitetura de 'unidirecionalidade' de dados, facilitando o gerenciamento previsível do estado da aplicação."
         }
     },
     "TB": {

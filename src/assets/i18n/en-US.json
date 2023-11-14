@@ -43,6 +43,8 @@
     "TYPE-SKILL6": "Server Platform",
     "TYPE-SKILL7": "Database",
     "TYPE-SKILL8": "Protocol",
+    "TYPE-SKILL9": "Versioning",
+    "TYPE-SKILL10": "Framework",
     "projects": {
         "title": "My Projects",
         "desc": "This page lists the main projects I have been developing during my journey as a programmer. Check out other projects on my Github.",
@@ -97,6 +99,12 @@
         },
         "http": {
             "desc": "HTTP (Hypertext Transfer Protocol) is the communication protocol used to transfer information on the World Wide Web. It defines how requests and responses should be formatted and transmitted between web clients and servers."
+        },
+        "git": {
+            "desc": "Git is a distributed version control system used to track and manage changes in software projects. It enables developers to collaborate efficiently while maintaining an accurate history of code changes. Key concepts include repositories, commits, branches, and operations such as merge, push, and pull. This tool is essential for collaborative software development, making it easier to organize and control project versions."
+        },
+        "react": {
+            "desc": "ReactJS is an open-source JavaScript library developed by Facebook for building interactive and efficient user interfaces. Used to create reusable components, React makes it easy to build scalable web applications. Its component-based programming model allows for a declarative approach to interface development, simplifying the efficient manipulation of application state and automatic updates to the interface in response to state changes. React is often used in conjunction with JSX, a syntax extension that blends HTML with JavaScript, making interface development more intuitive. Additionally, React favors the 'unidirectional' data flow architecture, facilitating predictable state management in applications."
         }
     },
     "TB": {
