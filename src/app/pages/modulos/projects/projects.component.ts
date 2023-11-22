@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { UntypedFormBuilder, Validators } from '@angular/forms';
 import { TranslateService } from '@ngx-translate/core';
 import { BaseForm } from 'src/app/components/base-form/base-form.component';
@@ -30,18 +30,30 @@ export class ProjectsComponent extends BaseForm implements OnInit {
   ngOnInit(): void {
     this.logsProjects = this.projects;
     this.createForm()
+  };
+
+  mostrarImagem = false;
+  @HostListener('window:scroll', [])
+
+
+  onScroll(): void {
+    // Lógica para determinar quando mostrar a imagem
+    const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+
+    // Defina um valor apropriado para determinar quando mostrar a imagem
+    this.mostrarImagem = scrollPosition > 200;
   }
 
 
-userLanguage: any
-languageUser = () => {
-  this.userLanguage = this.traductionService.getUserLanguage();
-  this.translate.setDefaultLang(this.userLanguage);
-}
+  userLanguage: any
+  languageUser = () => {
+    this.userLanguage = this.traductionService.getUserLanguage();
+    this.translate.setDefaultLang(this.userLanguage);
+  }
 
-getLabel(e: any): string {
-  return this.translate.instant(e);
-}
+  getLabel(e: any): string {
+    return this.translate.instant(e);
+  }
 
   createForm = () => {
     this.form = this.form = this.fb.group({
@@ -54,17 +66,17 @@ getLabel(e: any): string {
   filterProjects = () => {
     this.logsProjects = this.projects;
     if (this.form.value.project) {
-      
+
       this.logsProjects = this.logsProjects.filter(
         (s: any) => s.nome
           .toLowerCase()
           .indexOf(this.form.value.project.toLowerCase()) >= 0
       );
     }
-    
+
   };
 
- viewProject = (e: any) => {
+  viewProject = (e: any) => {
     window.open(e.link, "_blank");
 
   }

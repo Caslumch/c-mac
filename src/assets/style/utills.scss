@@ -255,18 +255,23 @@ thumb {
 
 .custom-p-dialog {
   width: 17vw;
-  height: 8vw;
+  height: 7vw;
   border: 2px solid #D4FF5B;
   opacity: 0.9;
 }
 
-@media (max-width: 850px) {
+@media (max-width: 1695px) {
   .custom-p-dialog {
-    width: 95vw;
-    height: 40vw;
-    border: 2px solid #D4FF5B;
-    opacity: 0.9;
+    width: 20vw;
+
+  }
 }
+@media (max-width: 1514px) {
+  .custom-p-dialog {
+    width: 25vw;
+    height: 11vw;
+
+  }
 }
 
 .location {
@@ -485,14 +490,14 @@ thumb {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(201, 201, 201, 0.5); /* Cor de fundo com 50% de opacidade */
-  z-index: 1000; /* Um valor alto para garantir que a camada esteja acima de outros elementos */
-  backdrop-filter: blur(5px); 
+  background-color: rgba(201, 201, 201, 0.5);
+  /* Cor de fundo com 50% de opacidade */
+  z-index: 1000;
+  /* Um valor alto para garantir que a camada esteja acima de outros elementos */
+  backdrop-filter: blur(5px);
 }
 
-.descContact {
-  
-}
+.descContact {}
 
 @media (max-width: 670px) {
   .descContact {
@@ -506,7 +511,10 @@ thumb {
   left: 0;
   width: 100%;
   height: 100%;
-  backdrop-filter: blur(5px); /* Aplica o efeito de desfoque à camada */
-  z-index: 1; /* Ajuste o valor do z-index conforme necessário */
-  background-color: rgba(255, 255, 255, 0.5); /* Cor de fundo com transparência (neste caso, branco com 50% de transparência) */
+  backdrop-filter: blur(5px);
+  /* Aplica o efeito de desfoque à camada */
+  z-index: 1;
+  /* Ajuste o valor do z-index conforme necessário */
+  background-color: rgba(255, 255, 255, 0.5);
+  /* Cor de fundo com transparência (neste caso, branco com 50% de transparência) */
 }

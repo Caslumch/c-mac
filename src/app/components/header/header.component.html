@@ -1,5 +1,5 @@
-<nav class="navbar navbar-expand-lg navbar-dark navbar-custom"  >
-    <div class="container-fluid" >
+<nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
+    <div class="container-fluid">
         <div class="col-md-5 col-6 d-flex d-md-block text-start text-md-center">
             <a class="navbar-brand mr-auto" id="reload" href="#">
                 <img src="./assets/logo-site-c.png" (error)="handleImageError()" alt="mch"
@@ -8,35 +8,35 @@
         </div>
 
         <div class="m-md-0 m-2 row ">
-            <div class="m-md-0 m-2 col-12 col-md-2"> <button class=" navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
-                    aria-label="Toggle navigation">
+            <div class="m-md-0 m-2 col-12 col-md-2"> <button class=" navbar-toggler" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav"
+                    aria-expanded="false" aria-label="Toggle navigation">
                     <span class="menu-d pi pi-bars"></span>
                 </button></div>
         </div>
-        
-        <div  class="col-12 col-md-6  d-flex justify-content-initial justify-content-md-end text-md-end text-center">
+
+        <div class="col-12 col-md-6  d-flex justify-content-initial justify-content-md-end text-md-end text-center">
             <div class="dp-menu collapse text-center text-md-left align-items-left navbar-collapse" id="navbarNav">
-                <ul   
-                    class="navbar-nav options d-flex flex-column flex-md-row align-items-center">
+                <ul class="navbar-nav options d-flex flex-column flex-md-row align-items-center">
                     <li *ngFor="let o of optionsMenu" class="opt-navbar nav-item">
                         <div (mouseenter)="onMouseEnter($event, o)">
 
-                            <a  id="inicio" #rla="routerLinkActive" (mouseenter)="onMouseEnter($event, o)" (mouseenter)="langMenuLeave() " [routerLink]="['/' + o.routerLink]"
+                            <a id="inicio" #rla="routerLinkActive" (mouseenter)="onMouseEnter($event, o)"
+                                (mouseenter)="langMenuLeave() " [routerLink]="['/' + o.routerLink]"
                                 class="{{ rla.isActive ? 'typeOpt' : ' optMenu typeOpt z'}}" routerLinkActive
                                 [routerLinkActive]="['linkSelect']" href="#">{{o.langT | translate}}</a>
                             <i class="d-none d-md-inline ml-2 mch-color-grey2 {{o.icon ? ifIcon : ''}}"></i>
                         </div>
                         <ul *ngIf="seeMenu" class="ehMobile">
                             <li *ngFor="let s of optionsSubMenu">
-                                <a class="text-left x"  [routerLink]="['/' + s.routerLink]">
+                                <a class="text-left x" [routerLink]="['/' + s.routerLink]">
                                     <div class="panelElementMenu">
                                         <div class="menu-content">
                                             <label class="mch-fs-13 titleMenu">{{s.langT | translate}}</label>
-                                            <label
-                                                class="mch-fs-13 subtitleMenu mch-color-secundary">{{s.langS | translate}}</label>
-                                                
-                                                
+                                            <label class="mch-fs-13 subtitleMenu mch-color-secundary">{{s.langS |
+                                                translate}}</label>
+
+
                                         </div>
                                     </div>
                                 </a>
@@ -44,21 +44,24 @@
                         </ul>
 
                     </li>
-                    <a (mouseenter)="langMenuLeave() " [routerLinkActive]="['linkSelect']" href="./assets/CV.LUCAS MACHADO.pdf" download  class="  headerIconCV "   [pTooltip]="getLabel('CV')"
-                    tooltipPosition="top">
-                    Cv
+                    <a (mouseenter)="langMenuLeave() " [routerLinkActive]="['linkSelect']"
+                        href="./assets/CV.LUCAS MACHADO.pdf" download class="  headerIconCV "
+                        [pTooltip]="getLabel('CV')" tooltipPosition="top">
+                        Cv
                         <span class="mch-fs-10 pi pi-download"></span>
                         <!-- {{ typedText }} -->
                     </a>
                     <a (mouseenter)="menu.toggle($event)" class="ml-0 ml-md-4  headerIcon  mt-4 pi pi-language"></a>
                 </ul>
-                
+
                 <div class="  ml-0 ml-md-3 btn-navbar mt-4" [routerLink]="['/home']">{{"HOME" | translate}}</div>
             </div>
         </div>
     </div>
-    
+
 
 </nav>
-<p-menu #menu [model]="items"  [popup]="true">
-
+<p-menu #menu [model]="items" [popup]="true"></p-menu>
+<div *ngIf="saveLoad" class="overlayModalContact">
+    <app-loading></app-loading>
+</div>

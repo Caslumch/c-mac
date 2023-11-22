@@ -23,6 +23,9 @@ export class HeaderComponent implements OnInit {
 
   ifIcon: string = 'pi pi-angle-down'
 
+
+  saveLoad: boolean = false
+
   optionsMenu: any = [
     { option: 'About', id: 1, routerLink: 'about', icon: true, langT: 'SBh' }, //SBh de sobre header
     { option: 'Projects', id: 2, routerLink: 'projects', langT: 'PTh' },
@@ -50,14 +53,12 @@ export class HeaderComponent implements OnInit {
       items: [
         {
           label: 'English',
-          // icon: 'pi pi-refresh',
           command: () => {
             this.getLang('en-US');
           }
         },
         {
           label: 'Portugues',
-          // icon: 'pi pi-times',
           command: () => {
             this.getLang('pt-BR');
           }
@@ -76,16 +77,17 @@ export class HeaderComponent implements OnInit {
   }
 
   getLang = (lang: any) => {
-    this.traductionService.changeLanguage(lang)
-    this.languageUser();
-    //  location.reload();
+    this.saveLoad = true
+    this.traductionService.changeLanguage(lang).then(() => {
+      this.languageUser();
+    })
   }
 
   userLanguage: any
   languageUser = () => {
     this.userLanguage = this.traductionService.getUserLanguage();
     this.translate.setDefaultLang(this.userLanguage);
-    
+
   }
 
   getLabel(e: any): string {
@@ -149,7 +151,7 @@ export class HeaderComponent implements OnInit {
   //   
   //   if (e.option === "Cv") {
   //     const assetPath = '/assets/CV.LUCAS MACHADO.pdf';
-    
+
   //     this.http.get(assetPath, { responseType: 'blob' }).subscribe((fileBlob) => {
   //       const url = window.URL.createObjectURL(fileBlob);
   //       const link = document.createElement('a');

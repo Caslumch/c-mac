@@ -1,11 +1,3 @@
-<div *ngIf="saveLoad" class="overlayModalContact">
-    <div class="row d-flex justify-content-center text-center">
-        <div class="col-12 justify-content-center">
-            <i class=" mch-fs-40 pi pi-spin pi-spinner mch-color-greenNeon" style="margin-top: 50vh;"></i>
-        </div>
-    </div>
-</div>
-
 <div class="custom-dialog">
     <p-dialog [(visible)]="displayModal"
         [style]="ehMobile ? { width: '90vw', height: '200vw' } : {width: '20vw', height: '50vw'} ">
@@ -15,26 +7,28 @@
 
                 <div class="mt-4 col-12 col-md-12">
                     <div class="field">
-                        <input [placeholder]="getLabel('modalContact.name')" type="text" formControlName="nome" class="w-full"
-                            pInputText />
+                        <input [placeholder]="getLabel('modalContact.name')" type="text" formControlName="nome"
+                            class="w-full" pInputText />
                     </div>
                 </div>
                 <div class="mt-4 col-12 col-md-12">
                     <div class="field">
-                        <input [placeholder]="getLabel('modalContact.email')" type="text" formControlName="email" class="w-full" pInputText />
+                        <input [placeholder]="getLabel('modalContact.email')" type="text" formControlName="email"
+                            class="w-full" pInputText />
 
                     </div>
                 </div>
                 <div class="mt-4 col-12 col-md-12 form-group">
                     <div class="field">
-                        <input [placeholder]="getLabel('modalContact.phone')" type="text" formControlName="telefone" name="celular" class="w-full"
-                            mask="(00) 00000-0000" pInputText />
+                        <input [placeholder]="getLabel('modalContact.phone')" type="text" formControlName="telefone"
+                            name="celular" class="w-full" mask="(00) 00000-0000" pInputText />
                         <!-- <input placeholder="Digite seu Telefone"  mask="(00) 00000-0000" formControlName="telefone" type="text"  class="w-full" pInputText /> -->
                     </div>
                 </div>
                 <div class="mt-4 col-12 col-md-12">
                     <div class="field">
-                        <input [placeholder]="getLabel('modalContact.subject')" type="text" formControlName="assunto" class="w-full" pInputText />
+                        <input [placeholder]="getLabel('modalContact.subject')" type="text" formControlName="assunto"
+                            class="w-full" pInputText />
 
                     </div>
                 </div>
@@ -55,7 +49,8 @@
 
         <div class="row d-flex justify-content-center">
             <div class="col-12 col-md-12 mt-4">
-                <p-button [disabled]="!form.valid" (onClick)="save()" class="w-full" [label]="getLabel('modalContact.send')"></p-button>
+                <p-button [disabled]="!form.valid" (onClick)="save()" class="w-full"
+                    [label]="getLabel('modalContact.send')"></p-button>
             </div>
 
         </div>
@@ -63,3 +58,7 @@
     </p-dialog>
 </div>
 <p-toast position="top-right"></p-toast>
+
+<div *ngIf="saveLoad" class="overlayModalContact">
+    <app-loading></app-loading>
+</div>

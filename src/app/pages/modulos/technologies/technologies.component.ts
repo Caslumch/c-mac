@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, HostListener, OnInit, ViewChild } from '@angular/core';
 import { FormArray, FormControl, UntypedFormBuilder, Validators } from '@angular/forms';
 import { TranslateService } from '@ngx-translate/core';
 import { BaseForm } from 'src/app/components/base-form/base-form.component';
@@ -50,7 +50,8 @@ export class TechnologiesComponent extends BaseForm implements OnInit {
     this.logsSkill = this.skills;
     this.viewListOrNot = true
     this.createForm()
-  }
+  };
+
 
 
   userLanguage: any
