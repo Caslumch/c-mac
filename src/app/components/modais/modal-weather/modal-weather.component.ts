@@ -48,6 +48,6 @@ getLabel(e: any): string {
 
   openModal = () => (this.displayModal = true);
 
-  closeModal = () => (this.displayModal = true);
+  closeModal = () => (this.displayModal = false);
 
 }
