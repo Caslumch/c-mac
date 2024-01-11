@@ -53,7 +53,8 @@ export class HeaderComponent implements OnInit {
       items: [
         {
           label: 'English',
-          command: () => {
+          command: (e: any) => {
+            debugger;
             this.getLang('en-US');
           }
         },
@@ -71,6 +72,8 @@ export class HeaderComponent implements OnInit {
 
   ehMobile: any
   ngOnInit(): void {
+    this.menu;
+    debugger;
     this.ehMobile = window.screen.width < 933;
     this.verifyWidth();
     this.languageUser()
@@ -137,6 +140,13 @@ export class HeaderComponent implements OnInit {
     }
   }
 
+  mm = (e: any) => {
+    this.menu.toggle(e)
+    console.log(this.menu)
+    debugger;
+
+  }
+
   verifyWidth = () => {
     if (!this.ehMobile)
       this.optionsMenu = this.optionsMenu.filter((t: any) => t.option != 'Skills')
@@ -146,23 +156,5 @@ export class HeaderComponent implements OnInit {
     this.ifIcon = 'pi pi-angle-down'
 
   }
-
-  // changeRouter = (e: any) => {
-  //   
-  //   if (e.option === "Cv") {
-  //     const assetPath = '/assets/CV.LUCAS MACHADO.pdf';
-
-  //     this.http.get(assetPath, { responseType: 'blob' }).subscribe((fileBlob) => {
-  //       const url = window.URL.createObjectURL(fileBlob);
-  //       const link = document.createElement('a');
-  //       link.href = url;
-  //       link.download = '/assets/CV.LUCAS MACHADO.pdf'; // Nome do arquivo de download
-  //       document.body.appendChild(link);
-  //       link.click();
-  //       window.URL.revokeObjectURL(url);
-  //     });
-  //   }
-  // }
-
 
 }
