@@ -1,0 +1,139 @@
+{
+    "SBh": "About",
+    "PTh": "Projects",
+    "SKh": "Skills",
+    "CTh": "Contact",
+    "HOME": "Home",
+    "SUBabout": "About me",
+    "Subskills": "Skills",
+    "CV": "Download CV",
+    "SBhs": "Learn more about me and my journey",
+    "SKhs": "All the technologies I developed this application and more.",
+    "HELLO": "Hi, I’m Lucas Machado - Front-end developer.",
+    "SUB": "Bringing the web to life with code and design.",
+    "SOC": "Follow me on the networks",
+    "UT": "Recents Drops",
+    "PJ": "Projects",
+    "ST": "Stack's",
+    "FT": "Photography",
+    "VIAJ": "Let's Start Something Together?",
+    "SUBFOOT": "If you have a project in mind or just want to chat, feel free to send me a message.",
+    "FC": "Contact Me",
+    "ABOUT": "About me",
+    "CAREER": "Career",
+    "DEV-DESC": "Fullstack Developer",
+    "DEV-DESC2": "FrontEnd Developer",
+    "DATECAREER": "Jan 2022 – Sep 2023 • 1 year 7 months",
+    "DATECAREER2": "feb 2024 – the moment",
+    "STACK-DESC": "Here, I list some of the services and software that are part of my daily life:",
+    "TYPE-STACK1": "Code",
+    "TYPE-STACK2": "News",
+    "TYPE-STACK3": "Services",
+    "TYPE-STACK4": "Design",
+    "TYPE-STACK5": "Photography",
+    "TYPE-STACK6": "Video",
+    "TYPE-STACK7": "Music",
+    "TYPE-STACK8": "Productivity",
+    "PLACEHOLDER": "Search for the item you want",
+    "TOOLTIPVIEW": "To View",
+    "SKILL-DESC": "Here, I list some of the services and software that are part of my daily life:",
+    "TYPE-SKILL1": "Framework",
+    "TYPE-SKILL2": "Language",
+    "TYPE-SKILL3": "Style Language",
+    "TYPE-SKILL4": "Markup Language",
+    "TYPE-SKILL5": "Library",
+    "TYPE-SKILL6": "Server Platform",
+    "TYPE-SKILL7": "Database",
+    "TYPE-SKILL8": "Protocol",
+    "TYPE-SKILL9": "Versioning",
+    "TYPE-SKILL10": "Framework",
+    "projects": {
+        "title": "My Projects",
+        "desc": "This page lists the main projects I have been developing during my journey as a programmer. Check out other projects on my Github.",
+        "placeholder": "Search for the desired project",
+        "acessProject": "Access Project"
+    },
+    "contact": {
+        "sendDm": "Send me a DM",
+        "title": "Here are my socials!",
+        "popUpMap": "I'm here"
+    },
+    "modalWeather": {
+        "title": "the weather now in",
+        "humidity": "Humidity:"
+    },
+    "modalLang": {
+        "title": "Language"
+    },
+    "modalViewer": {
+        "angular": {
+            "desc": "Angular is a web development framework developed by Google. It is used to build robust and scalable web and mobile applications. Angular uses TypeScript as the programming language and provides a framework for creating dynamic and responsive user interfaces."
+        },
+        "bootstrap": {
+            "desc": "Bootstrap is an open-source front-end design library. It provides pre-defined components and styles to help create elegant and responsive web interfaces. Bootstrap is widely used to accelerate the development of websites and applications."
+        },
+        "typescript": {
+            "desc": "TypeScript is a programming language developed by Microsoft that is an extension of JavaScript. It adds static typing features, making it easier to develop more robust and scalable code."
+        },
+        "css": {
+            "desc": "CSS (Cascading Style Sheets) is a style language used to define the appearance and layout of HTML elements on a web page. It is essential for web page design and formatting."
+        },
+        "html": {
+            "desc": "HTML (Hypertext Markup Language) is the markup language used to create the structure of a web page. It defines the elements and organization of content on a page."
+        },
+        "primeng": {
+            "desc": "PrimeNG is a user interface component library for Angular. It provides a wide variety of ready-to-use components, such as buttons, tables, and charts, to facilitate the development of professional-looking web applications."
+        },
+        "rxjs": {
+            "desc": "RxJS is a library for reactive programming in JavaScript. It allows efficient handling of asynchronous data streams and events, making it easier to manipulate observables like event streams."
+        },
+        "nodejs": {
+            "desc": "Node.js is an open-source runtime environment based on JavaScript that allows code execution on the server side. It is widely used for building scalable and real-time web applications."
+        },
+        "express": {
+            "desc": "Express is a framework for Node.js that simplifies web application development. It provides an abstraction layer over Node.js, making it easy to create APIs and HTTP routes."
+        },
+        "sql": {
+            "desc": "SQL (Structured Query Language) is a query language used to interact with relational databases. It is widely used to retrieve, insert, update, and delete data in databases."
+        },
+        "mysql": {
+            "desc": "MySQL is an open-source relational database management system. It is widely used for storing and managing data in web and enterprise applications."
+        },
+        "http": {
+            "desc": "HTTP (Hypertext Transfer Protocol) is the communication protocol used to transfer information on the World Wide Web. It defines how requests and responses should be formatted and transmitted between web clients and servers."
+        },
+        "git": {
+            "desc": "Git is a distributed version control system used to track and manage changes in software projects. It enables developers to collaborate efficiently while maintaining an accurate history of code changes. Key concepts include repositories, commits, branches, and operations such as merge, push, and pull. This tool is essential for collaborative software development, making it easier to organize and control project versions."
+        },
+        "react": {
+            "desc": "ReactJS is an open-source JavaScript library developed by Facebook for building interactive and efficient user interfaces. Used to create reusable components, React makes it easy to build scalable web applications. Its component-based programming model allows for a declarative approach to interface development, simplifying the efficient manipulation of application state and automatic updates to the interface in response to state changes. React is often used in conjunction with JSX, a syntax extension that blends HTML with JavaScript, making interface development more intuitive. Additionally, React favors the 'unidirectional' data flow architecture, facilitating predictable state management in applications."
+        }
+    },
+    "TB": {
+        "skill": "Skills",
+        "stack": "Stacks",
+        "type": "Type",
+        "toView": "To View"
+    },
+    "TIP": {
+        "icons": "Display Large Icons",
+        "list": "Display List"
+    },
+    "ABOUTME": {
+        "textUs": "<p class=\"d-block\">My name is Lucas, also known as <b>caslu</b>, and I am <b>26</b> years old.</p><p class=\"mt-2\">I am a passionate <b>frontend developer</b> with one year and seven months of experience in developer roles. Despite my extensive knowledge in frontend, I also work on the backend. My experiences include using the following technologies: Angular, Node.js, HTML, CSS, JavaScript, TypeScript, Bootstrap, Express, React.js, and PrimeNG. <label style=\"cursor: pointer; color: white;\" [routerLink]=\"['/stacks']\">(see stacks)</label></p><p class=\"mt-2\">Currently, I am in the 2nd semester of the <b>Analysis and Systems Development</b> course at <b>FIAP</b>  (<b>Expected completion:</b> January 2025). In addition to all this experience, when I'm not working, I'm always coding on personal projects.</p>"
+    },
+    "modalContact": {
+        "title": "Send Email",
+        "name": "Name",
+        "email": "Email",
+        "phone": "Phone",
+        "subject": "Subject",
+        "text": "Write here what you have been thinking",
+        "whatsapp": "Call me on whatsapp if you prefer",
+        "send": "Send",
+        "message" : {
+            "title" : "Success",
+            "sub": "Email Sent"
+        }
+    }
+}

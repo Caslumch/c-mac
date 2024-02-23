@@ -1,0 +1,239 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+@import url("https://fonts.googleapis.com/css?family=Aldrich");
+
+.text-hi {
+    font-family: "Montserrat", sans-serif;
+    font-size: 50px
+}
+
+
+
+@media (max-width: 768px) {
+    .text-hi {
+        text-align: center;
+        font-size: 30px;
+        font-family: "Montserrat", sans-serif;
+    }
+}
+
+.file-img-login {
+
+    overflow: hidden;
+    margin-top: 34px;
+    max-width: 500px;
+    margin-left: 240px;
+    border-radius: 44PX;
+}
+
+.insights {
+    background-color: #232323;
+    border-radius: 31px;
+    max-width: 100%;
+    height: 250px;
+    top: 50px;
+}
+
+
+
+@media (max-width: 768px) {
+
+    .insights {
+        height: 380px;
+        top: 20px
+    }
+}
+
+
+.containerCsite {
+    color: white;
+    max-width: 1000px;
+    margin: 10px auto;
+    padding: 20px;
+    border-radius: 5px;
+    // background-color: #8f8f8f;
+}
+
+.titleInsights {
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
+.subTitleInsights {
+    color: grey;
+    margin-left: 30px;
+}
+
+.divider {
+    border-top: 1px solid #ffffff;
+    width: 100%;
+}
+
+.icon-large {
+    cursor: pointer;
+    font-size: 48px;
+    top: -20px;
+}
+
+.iconSocial {
+
+    color: #d3d3d3;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+.iconSocial:hover {
+    color: #8d8d8d;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+
+
+.panelElement {
+    position: relative;
+    transition: 0.5s;
+}
+
+.panelElement:hover {
+    transform: scale(1.02);
+    /* Aumenta o tamanho em 20% ao passar o mouse */
+    cursor: pointer;
+}
+
+.imgStacks {
+    max-height: 100%;
+    border-radius: 25px;
+    max-width: 100%;
+    width: 498px;
+    height: 140px;
+    // border: 1px solid #3a3a3a;
+    object-fit: cover;
+    overflow: hidden;
+
+}
+
+.imgStacks::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    // background-color: rgba(255, 0, 0, 0.5);
+    /* Cor vermelha (ajuste conforme necessário) */
+    opacity: 0;
+    /* Inicialmente, tornamos a camada de cor transparente */
+    border-radius: inherit;
+    transition: opacity 0.3s;
+    /* Adicionamos uma transição de opacidade para suavizar a mudança */
+    z-index: 1;
+}
+
+.imgStacks:hover::before {
+    opacity: 1;
+    /* Quando o mouse passar sobre a imagem, tornamos a camada de cor visível */
+}
+
+.image-container {
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* Filtro preto e branco ao passar o mouse */
+.image-container:hover .imgStacks {
+    filter: grayscale(100%);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(90, 90, 90, 0.279);
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+}
+
+.label {
+    font-family: "Aldrich", sans-serif;
+    color: white;
+    /* Cor do texto da label */
+    font-size: 18px;
+    text-align: center;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.titleDrops {
+    font-family: "Montserrat", sans-serif;
+}
+
+.typing-animation span {
+    border-right: 2px solid #fff;
+    padding-right: 10px;
+    animation: typing 1s steps(11, end) infinite;
+}
+
+@keyframes typing {
+    0%, 50% {
+        border-right-color: transparent;
+    }
+    51%, 100% {
+        border-right-color: #fff;
+    }
+}
+
+.modalInitial {
+    width: 17vw;
+    height: 8vw;
+    border: 2px solid #D4FF5B;
+    opacity: 0.9;
+    animation: fadeIn 3s;
+}
+
+.messageInit {
+    font-family: "Aldrich", sans-serif;
+    color:#dedede;
+    animation: fadeIn 2s;
+
+}
+
+// .btn-navbar-soc {
+//     font-family: "Aldrich", sans-serif;
+//     width: 272px;
+//     height: 47px;
+//     background-color: #D4FF5B;
+//     color: #000000;
+//     padding: 10px 20px;
+//     border-radius: 30px;
+//     text-align: center;
+//     text-decoration: none;
+//     display: inline-table;
+//     font-size: 16px;
+//     cursor: pointer;
+//     border: none;
+//     transition: 0.2s;
+// }
+
+// .btn-navbar-soc:hover {
+//     color: #fff;
+//     // transform: scale(1.05);
+//     /* Aumenta o tamanho em 20% ao passar o mouse */
+//     cursor: pointer;
+//     background-color: #3d3d3d;
+// }
+
+
+// .custom-btn {
+//     background: #D4FF5B;
+// }
+
+
+

@@ -1,0 +1,139 @@
+{
+    "SBh": "Sobre",
+    "PTh": "Projetos",
+    "SKh": "Skills",
+    "CTh": "Contato",
+    "HOME": "Ínicio",
+    "SUBabout": "Sobre Mim",
+    "CV": "Baixar CV",
+    "Subskills": "Skills",
+    "SBhs": "Conheça um pouco mais sobre mim e minha trajetória",
+    "SKhs": "Todas as tecnologias que eu desenvolvi esta aplicação e mais.",
+    "HELLO": "Olá, Eu sou Lucas Machado - front-end developer.",
+    "SUB": "Dando vida à web com código e design.",
+    "SOC": "Me Acompanhe nas Redes",
+    "UT": "ÚTIMOS DROPS",
+    "PJ": "Projetos",
+    "ST": "Stack's",
+    "FT": "Fotografia",
+    "VIAJ": "Vamos iniciar algo juntos?",
+    "SUBFOOT": "Se você tem algum projeto em mente, ou apenas quer bater um papo, sinta-se à vontade para me enviar uma mensagem.",
+    "FC": "Fale Comigo",
+    "ABOUT": "Sobre Mim",
+    "CAREER": "Carreira",
+    "DEV-DESC": "Desenvolvedor Fullstack",
+    "DEV-DESC2": "Desenvolvedor Frontend - Angular",
+    "DATECAREER": "jan 2022 – set 2023 • 1 ano 7 meses",
+    "DATECAREER2": "fev 2024 – o momento",
+    "SKILL-DESC": "Aqui, listo alguns dos serviços e programas que fazem parte do meu dia a dia:",
+    "PLACEHOLDER": "Pesquise pelo item desejado",
+    "TYPE-SKILL1": "Estrutura",
+    "TYPE-SKILL2": "Linguagem",
+    "TYPE-SKILL3": "Linguagem de Estilo",
+    "TYPE-SKILL4": "Linguagem de Marcação",
+    "TYPE-SKILL5": "Biblioteca",
+    "TYPE-SKILL6": "Plataforma de Servidor",
+    "TYPE-SKILL7": "Banco de Dados",
+    "TYPE-SKILL8": "Protocolo",
+    "TYPE-SKILL9": "Versionamento",
+    "TOOLTIPVIEW": "Visualizar",
+    "STACK-DESC": "Aqui, listo alguns dos serviços e programas que fazem parte do meu dia a dia:",
+    "TYPE-STACK1": "Código",
+    "TYPE-STACK2": "Notícias",
+    "TYPE-STACK3": "Serviços",
+    "TYPE-STACK4": "Design",
+    "TYPE-STACK5": "Fotografia",
+    "TYPE-STACK6": "Vídeo",
+    "TYPE-STACK7": "Música",
+    "TYPE-STACK8": "Produtividade",
+    "TYPE-SKILL10": "Framework",
+    "projects": {
+        "title": "Meus Projetos",
+        "desc": "Essa página lista os principais projetos que venho desenvolvendo durante a minha jornada como programador. Confira outros projetos em meu Github",
+        "placeholder": "Pesquise o projeto desejado",
+        "acessProject": "Acessar Projeto"
+    },
+    "contact": {
+        "sendDm": "Me envie uma DM",
+        "title": "Aqui estão minhas redes!",
+        "popUpMap": "Eu estou aqui"
+    },
+    "modalWeather": {
+        "title": "O Tempo agora em",
+        "humidity": "Umidade:"
+    },
+    "modalLang": {
+        "title": "ídioma"
+    },
+    "modalViewer": {
+        "angular": {
+            "desc": "Angular é um framework de desenvolvimento web desenvolvido pela Google. É usado para criar aplicativos web e móveis robustos e escaláveis. Angular utiliza o TypeScript como linguagem de programação e fornece um framework para criar interfaces de usuário dinâmicas e responsivas."
+        },
+        "bootstrap": {
+            "desc": "Bootstrap é uma biblioteca de design de front-end de código aberto. Ele fornece componentes e estilos predefinidos para ajudar a criar interfaces web elegantes e responsivas. Bootstrap é amplamente utilizado para acelerar o desenvolvimento de sites e aplicativos."
+        },
+        "typescript": {
+            "desc": "TypeScript é uma linguagem de programação desenvolvida pela Microsoft que é uma extensão do JavaScript. Ele adiciona recursos de tipagem estática, tornando mais fácil o desenvolvimento de código mais robusto e escalável."
+        },
+        "css": {
+            "desc": "CSS (Cascading Style Sheets) é uma linguagem de estilo usada para definir a aparência e o layout de elementos HTML em uma página web. É essencial para o design e formatação de páginas da web."
+        },
+        "html": {
+            "desc": "HTML (Hypertext Markup Language) é a linguagem de marcação usada para criar a estrutura de uma página web. Ela define os elementos e a organização do conteúdo em uma página."
+        },
+        "primeng": {
+            "desc": "PrimeNG é uma biblioteca de componentes de interface do usuário para o Angular. Ela fornece uma ampla variedade de componentes prontos para uso, como botões, tabelas e gráficos, para facilitar o desenvolvimento de aplicativos web com aparência profissional."
+        },
+        "rxjs": {
+            "desc": "RxJS é uma biblioteca para programação reativa em JavaScript. Ela permite o manuseio eficiente de fluxos de dados e eventos assíncronos, tornando mais fácil a manipulação de observáveis, como fluxos de eventos."
+        },
+        "nodejs": {
+            "desc": "Node.js é um ambiente de execução de código de código aberto baseado em JavaScript que permite a execução de código no lado do servidor. É amplamente utilizado para criar aplicativos web escaláveis e em tempo real."
+        },
+        "express": {
+            "desc": "Express é um framework para Node.js que simplifica o desenvolvimento de aplicativos web. Ele fornece uma camada de abstração sobre o Node.js, tornando fácil a criação de APIs e rotas HTTP."
+        },
+        "sql": {
+            "desc": "SQL (Structured Query Language) é uma linguagem de consulta usada para interagir com bancos de dados relacionais. É amplamente utilizado para recuperar, inserir, atualizar e excluir dados em bancos de dados."
+        },
+        "mysql": {
+            "desc": "MySQL é um sistema de gerenciamento de banco de dados relacional de código aberto. É amplamente utilizado para armazenar e gerenciar dados em aplicativos web e empresariais."
+        },
+        "http": {
+            "desc": "HTTP (Hypertext Transfer Protocol) é o protocolo de comunicação usado para transferir informações na World Wide Web. Ele define como as solicitações e respostas devem ser formatadas e transmitidas entre clientes da web e servidores."
+        },
+        "git": {
+            "desc": "O Git é um sistema de controle de versão distribuído usado para rastrear e gerenciar alterações em projetos de software. Ele permite que desenvolvedores colaborem eficientemente, mantendo um histórico preciso das mudanças no código. Conceitos-chave incluem repositórios, commits, branches e operações como merge, push e pull. Essa ferramenta é essencial para o desenvolvimento de software colaborativo e facilita a organização e o controle das versões de um projeto."
+        },
+        "react": {
+            "desc": "O ReactJS é uma biblioteca JavaScript de código aberto desenvolvida pelo Facebook para construir interfaces de usuário interativas e eficientes. Utilizado para criar componentes reutilizáveis, o React facilita a construção de aplicativos web escaláveis. Seu modelo de programação baseado em componentes permite uma abordagem declarativa para o desenvolvimento de interfaces, simplificando a manipulação eficiente do estado da aplicação e atualizações automáticas da interface em resposta a mudanças no estado. O React é frequentemente utilizado em conjunto com o JSX, uma extensão de sintaxe que mistura HTML com JavaScript, tornando a construção de interfaces mais intuitiva. Além disso, o React favorece a arquitetura de 'unidirecionalidade' de dados, facilitando o gerenciamento previsível do estado da aplicação."
+        }
+    },
+    "TB": {
+        "skill": "Skills",
+        "stack": "Stacks",
+        "type": "Tipo",
+        "toView": "Visualizar"
+    },
+    "TIP": {
+        "icons": "Exibir ícones Grandes",
+        "list": "Exibir Lista"
+    },
+    "ABOUTME": {
+        "textPt": "<p class=\"d-block\">Meu nome é Lucas, também conhecido como <b>caslu</b>, e tenho <b>26</b> anos.</p><p class=\"mt-2\">Sou um <b>desenvolvedor frontend</b> apaixonado por tecnologia. Tenho um ano e sete meses de experiência desempenhando funções de desenvolvedor, e apesar de meu conhecimento amplo em frontend, também trabalho no lado do backend. Minhas experiências incluem o uso das seguintes tecnologias: Angular, Node.js, HTML, CSS, JavaScript, TypeScript, Bootstrap, Express, React.js e PrimeNG. <label style=\"cursor: pointer; color: white;\" [routerLink]=\"['/stacks']\">(ver stacks)</label></p><p class=\"mt-2\">Atualmente, estou no 2º semestre do curso de <b>Análise e Desenvolvimento de Sistemas</b> na <b>FIAP</b> (<b>Previsão de conclusão:</b> janeiro de 2025). Além de toda essa bagagem, quando não estou trabalhando, estou sempre codando em projetos pessoais.</p>"
+    },
+    "modalContact": {
+        "title": "Envie um email",
+        "name": "Nome",
+        "email": "Email",
+        "phone": "Telefone",
+        "subject": "Assunto",
+        "text": "Escreva aqui o que você tem pensado",
+        "whatsapp": "Me chame no Whatsapp se preferir",
+        "send": "Enviar",
+        "message" : {
+            "title" : "Sucesso",
+            "sub": "Email Enviado"
+        }
+    }
+}

@@ -1,0 +1,55 @@
+$black: #000;
+$black2: #353535;
+$white: #fff;
+$white2: #ebebeb;
+$grey: #f2f2f2;
+$grey2: #ccc;
+$grey3: #f8f7f7;
+$greyicon: #3D3D3D;
+$green: #44ff0b;
+$yellow: #d7f41c;
+$primary: #f18500;
+$ligthprimary: #f1850038;
+$blackprimary: #272a4b;
+$secundary: #747474;
+$red: #f11c1c;
+$whiteblue: #e9f4ff;
+$pink: #c194dc;
+$pink2: #eed0ff;
+$ligthpink: #fec2ff;
+$transparent: transparent;
+$font-family: Montserrat;
+$primary2: #ffe8cb;
+$green2: #19D200;
+$green3: #749d5c;
+$blue: #0080ff;
+$greenNeon: #D4FF5B;
+
+
+$mch-colors: (
+    black: $black,
+    black2: $black2,
+    white: $white,
+    primary: $primary,
+    ligthprimary: $ligthprimary,
+    secundary: $secundary,
+
+    blackprimary: $blackprimary,
+    green: $green,
+    green2: $green2,
+    green3: $green3,
+    grey: $grey,
+    grey2: $grey2,
+    grey3: $grey3,
+    yellow: $yellow,
+    primary2: $primary2,
+    red: $red,
+    greyicon: $greyicon,
+    whiteblue: $whiteblue,
+    pink: $pink,
+    pink2: $pink2,
+    ligthpink: $ligthpink,
+    transparent: $transparent,
+    blue: $blue,
+    greenNeon: $greenNeon
+);
