@@ -28,7 +28,6 @@ export class AboutComponent implements OnInit {
   //     return this.translate.instant('ABOUTME.textUs');
   //   }
   // }
-
   translatedText: string = '';
   getLabel(): void {
     if (this.userLanguage === 'pt-BR') {

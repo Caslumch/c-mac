@@ -59,7 +59,6 @@ export class ModalContatoComponent extends BaseForm implements OnInit {
   }
 
   save = () => {
-
     this.form.value;
     const body = `
     De: ${this.form.value.nome},
