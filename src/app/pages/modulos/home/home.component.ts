@@ -57,13 +57,22 @@ export class HomeComponent implements OnInit {
     this.getAuth();
     setInterval(this.close, 11000);
     this.typeText();
+    this.getDriveTest()
 
+  }
+
+  getDriveTest = () => {
+    this.userController.getDrive().subscribe({
+      next: (r) => {
+        debugger;
+      }
+    })
   }
 
   languageUser = () => {
     this.userLanguage = this.traductionService.getUserLanguage();
     this.translate.setDefaultLang(this.userLanguage);
-    
+
   }
 
   getLabel(e: any): string {

@@ -10,6 +10,7 @@ import { DropdownModule } from 'primeng/dropdown';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { IConfig, NgxMaskModule } from 'ngx-mask';
+import { ExperienceComponent } from './pages/modulos/experience/experience.component';
 // import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 export function HttpLoaderFactory(http: HttpClient) {
@@ -22,6 +23,7 @@ const options: Partial<IConfig> = {};
 @NgModule({
   declarations: [
     AppComponent,
+    ExperienceComponent,
 
   ],
   imports: [

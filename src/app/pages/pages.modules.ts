@@ -24,6 +24,7 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { TranslationModule } from '../core/modules/translation.module';
 import { NgxMaskModule } from 'ngx-mask';
+import { ExperienceComponent } from './modulos/experience/experience.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
     return new TranslateHttpLoader(http);
@@ -46,6 +47,7 @@ const routes: Routes = [
             { path: 'stacks', component: stacksComponent },
             { path: 'tech', component: TechnologiesComponent },
             { path: 'overview', component: OverviewComponent },
+            { path: 'experience', component: ExperienceComponent },
         ],
     },
     {
