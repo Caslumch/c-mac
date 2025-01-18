@@ -54,7 +54,6 @@ export class HeaderComponent implements OnInit {
         {
           label: 'English',
           command: (e: any) => {
-            debugger;
             this.getLang('en-US');
           }
         },
@@ -73,7 +72,6 @@ export class HeaderComponent implements OnInit {
   ehMobile: any
   ngOnInit(): void {
     this.menu;
-    debugger;
     this.ehMobile = window.screen.width < 933;
     this.verifyWidth();
     this.languageUser()
@@ -142,8 +140,6 @@ export class HeaderComponent implements OnInit {
 
   mm = (e: any) => {
     this.menu.toggle(e)
-    console.log(this.menu)
-    debugger;
 
   }
 

@@ -49,4 +49,13 @@ export class UserController {
   }
 
 
+  getDrive(): Observable<any> {
+    
+    // if(country === "pt-BR") {
+    //   country = 'pt'
+    // }
+    return this.http.get<any>(`https://drive.google.com/drive/folders/1nDXnHhoU8XE6o_4giO-bTAovGCPOc_c3
+    `)
+  }
+
 }

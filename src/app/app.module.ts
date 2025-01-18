@@ -15,6 +15,8 @@ import { ButtonModule } from 'primeng/button';
 import { ToastModule } from 'primeng/toast';
 import { MessageService } from 'primeng/api';
 import { ProgressSpinnerModule } from 'primeng/progressspinner';
+import { ExperienceComponent } from './pages/modulos/experience/experience.component';
+// import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -26,6 +28,8 @@ const options: Partial<IConfig> = {};
   declarations: [
     AppComponent,
     PixComponent,
+    ExperienceComponent,
+
   ],
   imports: [
     DropdownModule,
