@@ -26,4 +26,22 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
+## DEPLOYMENT PROJECT IN GITHUB
+
+Run this project : 
+
+submited all files changes.
+
+git, add, commit e push. 
+
+delete folder docs 
+
+and npm run deploy: ghdocs 
+
+copy file index.html and rename = 404.html
+
+git add a commit and push 
+
+
+
 

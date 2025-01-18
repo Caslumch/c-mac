@@ -1,0 +1,26 @@
+<div class="pix-container">
+    <p-toast></p-toast>
+    
+    <!-- Loading -->
+    <div class="content" *ngIf="isLoading">
+        <p-progressSpinner></p-progressSpinner>
+        <p>Carregando...</p>
+    </div>
+
+    <!-- Solicitar Permissão -->
+    <div class="content" *ngIf="!isLoading && !locationPermissionGranted">
+        <h1>Permissão Necessária</h1>
+        <p>Precisamos da sua localização para continuar.</p>
+        <!-- <p-button label="Permitir Localização" (onClick)="requestLocation()" styleClass="p-button-primary"></p-button> -->
+    </div>
+
+    <!-- Conteúdo Principal -->
+    <div class="content" *ngIf="!isLoading && locationPermissionGranted">
+        <h1>Compartilhar Localização</h1>
+        <p>Localização obtida com sucesso!</p>
+        <div class="location-info">
+            <p><strong>Latitude:</strong> {{latitude}}</p>
+            <p><strong>Longitude:</strong> {{longitude}}</p>
+        </div>
+    </div>
+</div>

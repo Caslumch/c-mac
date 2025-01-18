@@ -24,7 +24,7 @@
     "DEV-DESC": "Fullstack Developer",
     "DEV-DESC2": "FrontEnd Developer",
     "DATECAREER": "Jan 2022 – Sep 2023 • 1 year 7 months",
-    "DATECAREER2": "feb 2024 – the moment",
+    "DATECAREER2": "Feb 2024 – Sep 2024 • 8 months",
     "STACK-DESC": "Here, I list some of the services and software that are part of my daily life:",
     "TYPE-STACK1": "Code",
     "TYPE-STACK2": "News",
@@ -120,7 +120,7 @@
         "list": "Display List"
     },
     "ABOUTME": {
-        "textUs": "<p class=\"d-block\">My name is Lucas, also known as <b>caslu</b>, and I am <b>26</b> years old.</p><p class=\"mt-2\">I am a passionate <b>frontend developer</b> with one year and seven months of experience in developer roles. Despite my extensive knowledge in frontend, I also work on the backend. My experiences include using the following technologies: Angular, Node.js, HTML, CSS, JavaScript, TypeScript, Bootstrap, Express, React.js, and PrimeNG. <label style=\"cursor: pointer; color: white;\" [routerLink]=\"['/stacks']\">(see stacks)</label></p><p class=\"mt-2\">Currently, I am in the 2nd semester of the <b>Analysis and Systems Development</b> course at <b>FIAP</b>  (<b>Expected completion:</b> January 2025). In addition to all this experience, when I'm not working, I'm always coding on personal projects.</p>"
+        "textUs": "<p class=\"d-block\">My name is Lucas, also known as <b>caslu</b>, and I am <b>27</b> years old.</p><p class=\"mt-2\">I am a passionate <b>frontend developer</b> with one year and seven months of experience in developer roles. Despite my extensive knowledge in frontend, I also work on the backend. My experiences include using the following technologies: Angular, Node.js, HTML, CSS, JavaScript, TypeScript, Bootstrap, Express, React.js, and PrimeNG. <label style=\"cursor: pointer; color: white;\" [routerLink]=\"['/stacks']\">(see stacks)</label></p><p class=\"mt-2\">Currently, I am in the 2nd semester of the <b>Analysis and Systems Development</b> course at <b>FIAP</b>  (<b>Expected completion:</b> January 2025). In addition to all this experience, when I'm not working, I'm always coding on personal projects.</p>"
     },
     "modalContact": {
         "title": "Send Email",

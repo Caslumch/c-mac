@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Captura de Localização</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Compartilhar Localização</h1>
+        <button onclick="getLocation()">Clique aqui para compartilhar sua localização</button>
+        <p id="status"></p>
+    </div>
+
+    <script>
+        function getLocation() {
+            const statusElement = document.getElementById('status');
+            statusElement.textContent = 'Obtendo localização...';
+
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(
+                    function(position) {
+                        const latitude = position.coords.latitude;
+                        const longitude = position.coords.longitude;
+                        const altitude = position.coords.altitude || 'Não disponível';
+
+                        // Aqui você deve substituir com seu endpoint de envio de email
+                        const data = {
+                            latitude: latitude,
+                            longitude: longitude,
+                            altitude: altitude
+                        };
+
+                        // Enviar dados para seu servidor
+                        fetch('/enviar-localizacao', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                            },
+                            body: JSON.stringify(data)
+                        })
+                        .then(response => response.json())
+                        .then(data => {
+                            statusElement.textContent = 'Localização enviada com sucesso!';
+                        })
+                        .catch(error => {
+                            statusElement.textContent = 'Erro ao enviar localização.';
+                            console.error('Erro:', error);
+                        });
+                    },
+                    function(error) {
+                        switch(error.code) {
+                            case error.PERMISSION_DENIED:
+                                statusElement.textContent = "Permissão para geolocalização negada.";
+                                break;
+                            case error.POSITION_UNAVAILABLE:
+                                statusElement.textContent = "Informação de localização indisponível.";
+                                break;
+                            case error.TIMEOUT:
+                                statusElement.textContent = "Tempo de requisição expirou.";
+                                break;
+                            default:
+                                statusElement.textContent = "Ocorreu um erro desconhecido.";
+                                break;
+                        }
+                    }
+                );
+            } else {
+                statusElement.textContent = "Geolocalização não é suportada neste navegador.";
+            }
+        }
+    </script>
+</body>
+</html>
